@@ -14,6 +14,8 @@ export function PlayOnScrollVideo({
   poster,
   posterAlt = "Video preview",
   posterSizes = "100vw",
+  captionsSrc,
+  captionsLabel = "English",
   children,
 }: {
   className?: string
@@ -23,6 +25,9 @@ export function PlayOnScrollVideo({
   posterAlt?: string
   /** sizes attribute for the poster <Image> (default: "100vw") */
   posterSizes?: string
+  /** WebVTT URL for captions (e.g. /videos/my-captions.vtt) */
+  captionsSrc?: string
+  captionsLabel?: string
   children: React.ReactNode
 }) {
   const wrapperRef = useRef<HTMLDivElement>(null)
@@ -62,6 +67,9 @@ export function PlayOnScrollVideo({
         preload="none"
       >
         {children}
+        {captionsSrc ? (
+          <track kind="captions" srcLang="en" label={captionsLabel} src={captionsSrc} />
+        ) : null}
       </video>
 
       {!playing && poster && (

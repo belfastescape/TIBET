@@ -2,6 +2,12 @@ import Link from "next/link"
 import Image from "next/image"
 import { Facebook, MapPin, Phone, Mail, Clock } from "lucide-react"
 
+/** WCAG-friendly body text on footer bg `#080808` */
+const footerMuted = "text-gray-300"
+/** Links: sufficient contrast + underline so purpose is not conveyed by color alone */
+const footerLink =
+  "text-gray-200 underline underline-offset-2 decoration-white/35 hover:text-cyan-300 hover:decoration-cyan-300/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#080808] transition-colors"
+
 export function Footer() {
   return (
     <>
@@ -33,7 +39,7 @@ export function Footer() {
                 className="h-10 w-[100px] mb-4"
                 style={{ width: '100px', height: '40px' }}
               />
-              <p className="text-gray-400 mb-4 max-w-md">
+              <p className={`${footerMuted} mb-4 max-w-md`}>
                 Tibet's premier escape room experience, offering immersive adventures for friends, families, and
                 corporate teams. One of the best fun indoor activities in Tibet.
               </p>
@@ -42,7 +48,7 @@ export function Footer() {
                   href="https://www.facebook.com/YOUR_FACEBOOK_PAGE"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-cyan-400 transition-colors"
+                  className={`inline-flex rounded-sm ${footerLink}`}
                   aria-label="Escape Rooms Tibet on Facebook (opens in a new tab)"
                 >
                   <Facebook className="w-6 h-6" aria-hidden />
@@ -54,28 +60,28 @@ export function Footer() {
               <h3 className="text-lg font-bold mb-4 text-white">Quick Links</h3>
               <ul className="space-y-2">
                 <li>
-                  <Link href="/" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                  <Link href="/" className={footerLink}>
                     Home
                   </Link>
                 </li>
                 <li>
-                  <Link href="/escape-rooms" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                  <Link href="/escape-rooms" className={footerLink}>
                     Our Escape Rooms
                   </Link>
                 </li>
                 
                 <li>
-                  <Link href="/team-building" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                  <Link href="/team-building" className={footerLink}>
                     Team Building
                   </Link>
                 </li>
                 <li>
-                  <Link href="/faq" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                  <Link href="/faq" className={footerLink}>
                     FAQ
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contact" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                  <Link href="/contact" className={footerLink}>
                     Contact Us
                   </Link>
                 </li>
@@ -86,17 +92,17 @@ export function Footer() {
               <h3 className="text-lg font-bold mb-4 text-white">Our Rooms</h3>
               <ul className="space-y-2">
                 <li>
-                  <Link href="/escape-rooms/operation-pitt" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                  <Link href="/escape-rooms/operation-pitt" className={footerLink}>
                     Operation Pitt
                   </Link>
                 </li>
                 <li>
-                  <Link href="/escape-rooms/billion-dollar-heist" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                  <Link href="/escape-rooms/billion-dollar-heist" className={footerLink}>
                     The Billion Dollar Heist
                   </Link>
                 </li>
                 <li>
-                  <Link href="/escape-rooms/ancient-tomb" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                  <Link href="/escape-rooms/ancient-tomb" className={footerLink}>
                     Quest for the Ancient Tomb
                   </Link>
                 </li>
@@ -107,22 +113,22 @@ export function Footer() {
               <h3 className="text-lg font-bold mb-4 text-white">Group Events</h3>
               <ul className="space-y-2">
                 <li>
-                  <Link href="/team-building" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                  <Link href="/team-building" className={footerLink}>
                     Team Building
                   </Link>
                 </li>
                 <li>
-                  <Link href="/group-bookings" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                  <Link href="/group-bookings" className={footerLink}>
                     Group Bookings
                   </Link>
                 </li>
                 <li>
-                  <Link href="/hen-parties" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                  <Link href="/hen-parties" className={footerLink}>
                     Hen Parties
                   </Link>
                 </li>
                 <li>
-                  <Link href="/teenage-birthday-parties" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                  <Link href="/teenage-birthday-parties" className={footerLink}>
                     Teenage Birthday Parties
                   </Link>
                 </li>
@@ -133,42 +139,42 @@ export function Footer() {
               <h3 className="text-lg font-bold mb-4 text-white">Resources</h3>
               <ul className="space-y-2">
                 <li>
-                  <Link href="/faq" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                  <Link href="/faq" className={footerLink}>
                     FAQ
                   </Link>
                 </li>
                 <li>
-                  <Link href="/deals" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                  <Link href="/deals" className={footerLink}>
                     Special Deals
                   </Link>
                 </li>
                 <li>
-                  <Link href="/gift-vouchers" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                  <Link href="/gift-vouchers" className={footerLink}>
                     Gift Vouchers
                   </Link>
                 </li>
                 <li>
-                  <Link href="/last-minute-christmas-gifts-tibet" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                  <Link href="/last-minute-christmas-gifts-tibet" className={footerLink}>
                     Last Minute Christmas Gifts
                   </Link>
                 </li>
                 <li>
-                  <Link href="/gift-ideas-tibet" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                  <Link href="/gift-ideas-tibet" className={footerLink}>
                     Gift Ideas Tibet
                   </Link>
                 </li>
                 <li>
-                  <Link href="/gift-ideas-couples-tibet" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                  <Link href="/gift-ideas-couples-tibet" className={footerLink}>
                     Gift Ideas for Couples
                   </Link>
                 </li>
                 <li>
-                  <Link href="/location" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                  <Link href="/location" className={footerLink}>
                     Location & Directions
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contact" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                  <Link href="/contact" className={footerLink}>
                     Contact Us
                   </Link>
                 </li>
@@ -180,11 +186,11 @@ export function Footer() {
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <MapPin className="w-5 h-5 text-cyan-400 mr-2 mt-0.5" />
-                  <span className="text-gray-400">42 Barkhor Street, Lhasa, Tibet 6011</span>
+                  <span className={footerMuted}>42 Barkhor Street, Lhasa, Tibet 6011</span>
                 </li>
                 <li className="flex items-center">
                   <Phone className="w-5 h-5 text-cyan-400 mr-2" />
-                  <Link href="tel:+0215550198" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                  <Link href="tel:+0215550198" className={footerLink}>
                     021 555 0198
                   </Link>
                 </li>
@@ -192,14 +198,14 @@ export function Footer() {
                   <Mail className="w-5 h-5 text-cyan-400 mr-2" />
                   <Link
                     href="mailto:info@escaperoomstibet.com"
-                    className="text-gray-400 hover:text-cyan-400 transition-colors"
+                    className={footerLink}
                   >
                     info@escaperoomstibet.com
                   </Link>
                 </li>
                 <li className="flex items-start">
                   <Clock className="w-5 h-5 text-cyan-400 mr-2 mt-0.5" />
-                  <div className="text-gray-400">
+                  <div className={footerMuted}>
                     <p>Mon-Fri: 10am - 8:30pm</p>
                     <p>Sat-Sun: 9am - 8:30pm</p>
                   </div>
@@ -208,26 +214,26 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="mt-12 pt-8 border-t border-[#222] text-center text-gray-500 text-sm">
+          <div className={`mt-12 pt-8 border-t border-[#222] text-center text-sm ${footerMuted}`}>
             <p>© {new Date().getFullYear()} Escape Rooms Tibet. All rights reserved.</p>
-            <div className="mt-2 flex justify-center space-x-4">
-              <Link href="/privacy-policy" className="hover:text-cyan-400 transition-colors">
+            <div className="mt-2 flex justify-center flex-wrap gap-x-4 gap-y-2">
+              <Link href="/privacy-policy" className={footerLink}>
                 Privacy Policy
               </Link>
-              <Link href="/terms-of-service" className="hover:text-cyan-400 transition-colors">
+              <Link href="/terms-of-service" className={footerLink}>
                 Terms of Service
               </Link>
-              <Link href="/refund-returns" className="hover:text-cyan-400 transition-colors">
+              <Link href="/refund-returns" className={footerLink}>
                 Refund & Returns
               </Link>
             </div>
             <p className="mt-3">
               Website Design by{" "}
-              <Link 
-                href="https://captainhacks.com" 
+              <Link
+                href="https://captainhacks.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-cyan-400 transition-colors"
+                className={footerLink}
               >
                 Captain Hacks Digital
               </Link>

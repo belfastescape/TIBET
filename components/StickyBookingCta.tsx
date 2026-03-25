@@ -1,4 +1,4 @@
-﻿"use client"
+"use client"
 
 import Link from "next/link"
 import { Phone } from "lucide-react"
@@ -38,7 +38,7 @@ export function StickyBookingCta() {
       <a
         href="tel:0215550198"
         onClick={handleCallClick}
-        className="w-[30%] min-h-full flex flex-col items-center justify-center py-3 px-3 bg-green-600 border-l border-green-500/30 active:bg-green-700 transition-colors"
+        className="w-[30%] min-h-full flex flex-col items-center justify-center py-3 px-3 bg-green-800 border-l border-green-700/50 text-white active:bg-green-900 transition-colors"
         aria-label="Call now: 021 555 0198"
       >
         <Phone className="w-8 h-8 text-white mb-1" aria-hidden />

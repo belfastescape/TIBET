@@ -49,6 +49,7 @@ export default function Home() {
           poster="/images/escape-rooms-tibet.webp"
           posterAlt="Escape Rooms Tibet intro"
           posterSizes="100vw"
+          captionsSrc="/videos/escape-rooms-tibet-intro-captions.vtt"
         >
           <source src="/videos/escape-rooms-tibet-intro.mp4" type="video/mp4" />
         </PlayOnScrollVideo>
