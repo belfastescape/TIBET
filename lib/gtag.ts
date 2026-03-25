@@ -1,5 +1,12 @@
-﻿// Google Analytics configuration
-export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID || 'YOUR_GA4_MEASUREMENT_ID'
+// Google Analytics 4 — set NEXT_PUBLIC_GA_ID in .env.local (e.g. G-XXXXXXXXXX from Admin → Data streams)
+const rawGaId = (process.env.NEXT_PUBLIC_GA_ID ?? '').trim()
+
+/** True when a GA4 web stream measurement ID is configured. */
+export function isGa4Configured(): boolean {
+  return /^G-[A-Z0-9]+$/i.test(rawGaId)
+}
+
+export const GA_MEASUREMENT_ID = isGa4Configured() ? rawGaId : ''
 
 /** Google Ads conversion ID (e.g. AW-123456789/AbCdEfGhIjKlMnOp). Set in env to record conversion value. */
 export const GOOGLE_ADS_CONVERSION_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_ID || ''
@@ -57,6 +64,7 @@ function ensureABVariant() {
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
 export const pageview = (url: string) => {
+  if (!isGa4Configured() || typeof window === 'undefined' || !window.gtag) return
   const variant = ensureABVariant()
   window.gtag('event', 'page_view', {
     send_to: GA_MEASUREMENT_ID,
@@ -74,6 +82,7 @@ export const event = ({ action, category, label, value }: {
   label: string
   value?: number
 }) => {
+  if (!isGa4Configured() || typeof window === 'undefined' || !window.gtag) return
   window.gtag('event', action, {
     event_category: category,
     event_label: label,

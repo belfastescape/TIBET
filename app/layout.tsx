@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import GoogleAnalytics from "@/components/GoogleAnalytics"
 import { JsonLd } from '@/components/JsonLd'
 import { inter } from './fonts'
+import { isGa4Configured } from '@/lib/gtag'
 
 // Dynamically import the ENTIRE main layout wrapper (Header + Footer)
 // This creates a separate code chunk for Header/Footer CSS
@@ -141,8 +142,9 @@ export default function RootLayout({
         {/* Preconnect to own domain for faster resource loading */}
         <link rel="preconnect" href="https://www.escaperoomstibet.com" />
         
-        {/* DNS prefetch placeholders — add your analytics/CDN domains here */}
-        {/* <link rel="dns-prefetch" href="https://www.googletagmanager.com" /> */}
+        {isGa4Configured() && (
+          <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        )}
         {/* <link rel="dns-prefetch" href="https://cdn.trustindex.io" /> */}
         {/* <link rel="dns-prefetch" href="https://www.google-analytics.com" /> */}
         

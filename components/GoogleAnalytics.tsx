@@ -3,7 +3,7 @@
 import Script from 'next/script'
 import { usePathname, useSearchParams } from 'next/navigation'
 import { useLayoutEffect, useEffect, useRef, Suspense } from 'react'
-import { pageview, getABVariant, GOOGLE_ADS_CONVERSION_ID, GA_MEASUREMENT_ID } from '@/lib/gtag'
+import { pageview, getABVariant, GOOGLE_ADS_CONVERSION_ID, GA_MEASUREMENT_ID, isGa4Configured } from '@/lib/gtag'
 
 function GoogleAnalyticsScript() {
   const pathname = usePathname()
@@ -94,6 +94,7 @@ function GoogleAnalyticsScript() {
 }
 
 export default function GoogleAnalytics() {
+  if (!isGa4Configured()) return null
   return (
     <Suspense fallback={null}>
       <GoogleAnalyticsScript />
