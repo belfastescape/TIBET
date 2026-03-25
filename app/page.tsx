@@ -86,7 +86,7 @@ export default function Home() {
               Escape the real world for an hour. Our immersive escape rooms are the perfect <Link href="/rainy-day-activities-tibet" className="text-cyan-400 hover:text-cyan-300 transition-colors">fun indoor activity in Tibet</Link> — whether you&apos;re with friends, family, or workmates.
             </p>
             <p className="text-lg md:text-xl text-gray-300 mb-12 leading-relaxed">
-              Work together, crack the puzzles, beat the clock. Three unique  escape rooms, each with its own story waiting to be solved.
+              Work together, crack the puzzles, beat the clock. Three unique  escape rooms, each with it's own story waiting to be solved.
             </p>
           </motion.div>
         </div>
