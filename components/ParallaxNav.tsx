@@ -1,4 +1,4 @@
-﻿"use client"
+"use client"
 
 import { useState, useRef, useCallback, useEffect } from "react"
 import Image from "next/image"
@@ -11,7 +11,7 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { label: ["OUR", "GAMES"],   image: "/images/portal-new.webp",                        href: "#escape-rooms" },
+  { label: ["OUR", "GAMES"],   image: "/images/escape-rooms-tibet.webp",                href: "#escape-rooms" },
   { label: ["BOOK", "NOW"],    image: "/images/billion-dollar-heist/laser-team-4.webp",        href: "/booking" },
   { label: ["GROUPS"],         image: "/images/operation-pitt-team.webp",            href: "/team-building-tibet" },
   { label: ["PRICES"],         image: "/images/ancient-tomb/examining-book.webp",         href: "/pricing" },
@@ -91,7 +91,7 @@ export default function ParallaxNav() {
         setMousePosition({ x: 0.5, y: 0.5 })
       }}
     >
-      {/* Background images — default hero is index 0 (portal-new.webp); hover shows other images */}
+      {/* Background images — default hero is index 0; hover shows other images */}
       {navItems.map((item, index) => {
         const isVisible = activeIndex === index || (activeIndex === null && index === 0)
         return (
@@ -118,7 +118,8 @@ export default function ParallaxNav() {
                 fill
                 className={index === 0 ? "object-cover object-left md:object-center" : "object-cover"}
                 sizes="100vw"
-                priority={index < 2}
+                quality={75}
+                priority={index === 0}
               />
             </div>
           </div>

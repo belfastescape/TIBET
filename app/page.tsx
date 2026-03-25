@@ -123,13 +123,13 @@ export default function Home() {
               style={{ transformOrigin: "center top", zIndex: 10 }}
             >
               <Image
-                src="/images/billion-dollar-heist/laser-team-4.webp"
+                src="/images/PHANTOM-ESCAPE-ROOM.webp"
                 alt="Billion Dollar Heist"
                 fill
                 className="object-cover"
                 loading="lazy"
-                quality={80}
-                sizes="90vw"
+                quality={75}
+                sizes="(max-width: 768px) 90vw, (max-width: 1280px) 85vw, 80vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
               <div className="relative z-10 w-full px-8 md:px-16 pb-12 md:pb-20">
@@ -164,13 +164,13 @@ export default function Home() {
               style={{ rotateX: card2RotateX, transformPerspective: 1200, transformOrigin: "center top", zIndex: 20 }}
             >
               <Image
-                src="/images/ancient-tomb/examining-book.webp"
+                src="/images/ancient-tomb-escape-room.webp"
                 alt="Quest for The Ancient Tomb"
                 fill
                 className="object-cover"
                 loading="lazy"
-                quality={80}
-                sizes="90vw"
+                quality={75}
+                sizes="(max-width: 768px) 90vw, (max-width: 1280px) 85vw, 80vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
               <div className="relative z-10 w-full px-8 md:px-16 pb-12 md:pb-20">
@@ -206,13 +206,13 @@ export default function Home() {
               style={{ rotateX: card1RotateX, transformPerspective: 1200, transformOrigin: "center top", zIndex: 30 }}
             >
               <Image
-                src="/images/spiesnoir.webp"
+                src="/images/agent-pitt-escape-room.webp"
                 alt="Operation Pitt"
                 fill
                 className="object-cover"
-                priority
-                quality={80}
-                sizes="90vw"
+                loading="lazy"
+                quality={75}
+                sizes="(max-width: 768px) 90vw, (max-width: 1280px) 85vw, 80vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
               <div className="relative z-10 w-full px-8 md:px-16 pb-12 md:pb-20">
