@@ -3,7 +3,6 @@
 import { usePathname } from 'next/navigation'
 import { Header } from './header'
 import { Footer } from './footer'
-import { StickyBookingCta } from '@/components/StickyBookingCta'
 
 interface MainLayoutWrapperProps {
   children: React.ReactNode
@@ -21,7 +20,6 @@ export default function MainLayoutWrapper({ children }: MainLayoutWrapperProps) 
       {showHeader && <Header />}
       {children}
       <Footer />
-      <StickyBookingCta />
     </>
   )
 }

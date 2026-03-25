@@ -1,30 +1,15 @@
 import type React from "react"
 import "./globals.css"
 import type { Metadata } from "next"
-import dynamic from "next/dynamic"
 import { ThemeProvider } from "@/components/theme-provider"
 import GoogleAnalytics from "@/components/GoogleAnalytics"
 import { JsonLd } from '@/components/JsonLd'
+import MainLayoutWrapper from '@/components/layout/main-layout-wrapper'
+import { StickyBookingCta } from '@/components/StickyBookingCta'
 import { inter } from './fonts'
 import { isGa4Configured } from '@/lib/gtag'
 
 const GA_ID = 'G-R4Y4HC2V3Q'
-
-// Dynamically import the ENTIRE main layout wrapper (Header + Footer)
-// This creates a separate code chunk for Header/Footer CSS
-const MainLayoutWrapper = dynamic(
-  () => import('@/components/layout/main-layout-wrapper'),
-  {
-    ssr: true,
-    loading: () => (
-      <header className="fixed top-0 left-0 right-0 z-50 bg-transparent py-5 border-b border-transparent">
-        <div className="container mx-auto px-4 flex justify-between items-center">
-          <div className="h-16 w-[160px]" />
-        </div>
-      </header>
-    ),
-  }
-)
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.escaperoomstibet.com'),
@@ -176,6 +161,7 @@ export default function RootLayout({
         <GoogleAnalytics />
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
           <MainLayoutWrapper>{children}</MainLayoutWrapper>
+          <StickyBookingCta />
         </ThemeProvider>
       </body>
     </html>

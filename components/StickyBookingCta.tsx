@@ -1,23 +1,12 @@
-"use client"
-
 import Link from "next/link"
 import { Phone } from "lucide-react"
-import { event as gtagEvent } from "@/lib/gtag"
+import { StickyCallAnalyticsLink } from "@/components/StickyCallAnalyticsLink"
 
 /**
- * Sticky mobile CTA bar at the bottom of the screen.
- * Book now (70% width) links to /booking. Call now button (30%) opens tel:0215550198.
- * Shown only on small viewports (hidden from md and up).
+ * Sticky mobile CTA — Server Component so "Check availability" / "Book now" are in the
+ * initial HTML and are not blocked on MainLayoutWrapper hydration or its JS chunk.
  */
 export function StickyBookingCta() {
-  const handleCallClick = () => {
-    gtagEvent({
-      action: "call now mobile",
-      category: "engagement",
-      label: "sticky bar call",
-    })
-  }
-
   return (
     <div
       className="fixed bottom-0 left-0 right-0 z-50 md:hidden flex items-stretch border-t border-white/10 shadow-[0_-4px_20px_rgba(0,0,0,0.4)] bg-black"
@@ -35,9 +24,8 @@ export function StickyBookingCta() {
           Book now
         </span>
       </Link>
-      <a
+      <StickyCallAnalyticsLink
         href="tel:0215550198"
-        onClick={handleCallClick}
         className="w-[30%] min-h-full flex flex-col items-center justify-center py-3 px-3 bg-green-800 border-l border-green-700/50 text-white active:bg-green-900 transition-colors"
         aria-label="Call now: 021 555 0198"
       >
@@ -45,7 +33,7 @@ export function StickyBookingCta() {
         <span className="text-sm font-semibold tracking-wide text-white uppercase">
           Call now
         </span>
-      </a>
+      </StickyCallAnalyticsLink>
     </div>
   )
 }
