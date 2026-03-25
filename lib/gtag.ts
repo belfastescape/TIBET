@@ -1,5 +1,6 @@
-// Google Analytics 4 — set NEXT_PUBLIC_GA_ID in .env.local (e.g. G-XXXXXXXXXX from Admin → Data streams)
-const rawGaId = (process.env.NEXT_PUBLIC_GA_ID ?? '').trim()
+// Google Analytics 4 — default is this site's production stream ID.
+// You can override it by setting NEXT_PUBLIC_GA_ID in your environment.
+const rawGaId = (process.env.NEXT_PUBLIC_GA_ID ?? 'G-R4Y4HC2V3Q').trim()
 
 /** True when a GA4 web stream measurement ID is configured. */
 export function isGa4Configured(): boolean {

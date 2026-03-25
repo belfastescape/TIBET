@@ -53,7 +53,7 @@ function GoogleAnalyticsScript() {
   return (
     <>
       <Script
-        strategy="lazyOnload"
+        strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
         onLoad={() => {
           const script = document.createElement('script')
@@ -63,7 +63,7 @@ function GoogleAnalyticsScript() {
       />
       <Script
         id="google-analytics"
-        strategy="lazyOnload"
+        strategy="afterInteractive"
       >
         {`
           window.dataLayer = window.dataLayer || [];
