@@ -6,7 +6,9 @@ import { ThemeProvider } from "@/components/theme-provider"
 import GoogleAnalytics from "@/components/GoogleAnalytics"
 import { JsonLd } from '@/components/JsonLd'
 import { inter } from './fonts'
-import { isGa4Configured, GA_MEASUREMENT_ID, getGtagBootstrapInlineScript } from '@/lib/gtag'
+import { isGa4Configured } from '@/lib/gtag'
+
+const GA_ID = 'G-R4Y4HC2V3Q'
 
 // Dynamically import the ENTIRE main layout wrapper (Header + Footer)
 // This creates a separate code chunk for Header/Footer CSS
@@ -158,18 +160,17 @@ export default function RootLayout({
         
         <JsonLd data={localBusinessSchema} />
         <JsonLd data={websiteSchema} />
-        {isGa4Configured() && (
-          <>
-            {/* GA4 — plain <script> tags so they appear in the initial server-rendered HTML.
-                next/script beforeInteractive is not supported in the App Router. */}
-            {/* eslint-disable-next-line @next/next/no-sync-scripts */}
-            <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`} />
-            <script
-              id="gtag-bootstrap"
-              dangerouslySetInnerHTML={{ __html: getGtagBootstrapInlineScript() }}
-            />
-          </>
-        )}
+        {/* GA4 — hardcoded plain script tags so they are present in the initial
+            server-rendered HTML. next/script beforeInteractive is unsupported in
+            the App Router, and NEXT_PUBLIC_* env vars can be empty on Vercel. */}
+        {/* eslint-disable-next-line @next/next/no-sync-scripts */}
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} />
+        <script
+          id="gtag-bootstrap"
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}');`
+          }}
+        />
       </head>
       <body className={`${inter.className} bg-[#0a0a0a] text-white min-h-screen`}>
         <GoogleAnalytics />
