@@ -36,21 +36,6 @@ export default function Home() {
   // Card 2 (Ancient Tomb) folds back during middle 40–80%
   const card2RotateX = useTransform(scrollYProgress, [0.4, 0.8], [0, -90])
 
-  const fadeIn = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-  }
-
-  const staggerContainer = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  }
-
   return (
     <div className="min-h-screen">
       {/* Parallax Navigation Hero */}
@@ -61,12 +46,11 @@ export default function Home() {
         <PlayOnScrollVideo
           className="absolute inset-0 w-full h-full"
           videoClassName="absolute inset-0 w-full h-full object-cover"
-          poster="/images/operation-pitt-team.webp"
-          posterAlt="Operation Pitt escape room"
+          poster="/images/escape-rooms-tibet.webp"
+          posterAlt="Escape Rooms Tibet intro"
           posterSizes="100vw"
         >
-          <source src="/videos/optimised/SPYMOVIEedit.webm" type="video/webm" />
-          <source src="/videos/SPYMOVIEedit.mp4" type="video/mp4" />
+          <source src="/videos/escape-rooms-tibet-intro.mp4" type="video/mp4" />
         </PlayOnScrollVideo>
         <div className="absolute inset-0 bg-black/30" />
       </section>
@@ -251,27 +235,6 @@ export default function Home() {
       <section className="py-16 px-4 bg-[#0c0c0c]">
         <PriceComparisonWidget />
       </section>
-
-      {/* Video Section */}
-      <motion.div
-            className="mb-16 flex justify-center px-4"
-            initial={false}
-            animate={isHydrated ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.1 }}
-          >
-            <div className="w-full max-w-4xl">
-              <PlayOnScrollVideo
-                className="w-full max-w-4xl"
-                videoClassName="w-full h-auto rounded-lg sm:rounded-xl shadow-2xl border border-[#222]"
-                poster="/images/ancient-tomb.png"
-                posterAlt="Quest for the Ancient Tomb escape room video"
-                posterSizes="(max-width: 896px) 100vw, 896px"
-              >
-                <source src="/videos/optimised/WANDMOVIE.webm" type="video/webm" />
-                Your browser does not support the video tag.
-              </PlayOnScrollVideo>
-            </div>
-          </motion.div>
 
       {/* Why Choose Us Section */}
       <section className="py-20 bg-[#0c0c0c]">
