@@ -1,4 +1,4 @@
-﻿"use client"
+"use client"
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
@@ -1061,11 +1061,11 @@ export default function TeamBuildingTibetPage() {
                     <Link
                       href="https://www.facebook.com/YOUR_FACEBOOK_PAGE"
                       className="w-10 h-10 bg-[#0a0a0a] rounded-full flex items-center justify-center border border-[#333] hover:border-cyan-500 transition-colors"
-                      aria-label="Facebook"
+                      aria-label="Escape Rooms Tibet on Facebook (opens in a new tab)"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <Facebook className="w-5 h-5 text-gray-300 hover:text-cyan-400 transition-colors" />
+                      <Facebook className="w-5 h-5 text-gray-300 hover:text-cyan-400 transition-colors" aria-hidden />
                     </Link>
                   </div>
                 </div>

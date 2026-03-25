@@ -1,4 +1,4 @@
-﻿"use client"
+"use client"
 
 import { useState, useEffect } from "react"
 import { Star, Users, UserRound, Minus, Plus, Sparkles, Mail, Check, Share2 } from "lucide-react"
@@ -211,24 +211,28 @@ export function PriceComparisonWidget() {
               </div>
               <div className="flex items-center justify-between">
                 <Button
+                  type="button"
                   variant="outline"
                   size="icon"
                   className="h-9 w-9 rounded-lg"
                   onClick={() => setAdults(Math.max(0, adults - 1))}
                   disabled={adults === 0}
+                  aria-label="Decrease number of adults"
                 >
-                  <Minus className="w-4 h-4" />
+                  <Minus className="w-4 h-4" aria-hidden />
                 </Button>
                 <span className="text-2xl font-bold text-foreground tabular-nums w-12 text-center">
                   {adults}
                 </span>
                 <Button
+                  type="button"
                   variant="outline"
                   size="icon"
                   className="h-9 w-9 rounded-lg"
                   onClick={() => setAdults(adults + 1)}
+                  aria-label="Increase number of adults"
                 >
-                  <Plus className="w-4 h-4" />
+                  <Plus className="w-4 h-4" aria-hidden />
                 </Button>
               </div>
             </div>
@@ -241,24 +245,28 @@ export function PriceComparisonWidget() {
               </div>
               <div className="flex items-center justify-between">
                 <Button
+                  type="button"
                   variant="outline"
                   size="icon"
                   className="h-9 w-9 rounded-lg"
                   onClick={() => setChildren(Math.max(0, children - 1))}
                   disabled={children === 0}
+                  aria-label="Decrease number of children"
                 >
-                  <Minus className="w-4 h-4" />
+                  <Minus className="w-4 h-4" aria-hidden />
                 </Button>
                 <span className="text-2xl font-bold text-foreground tabular-nums w-12 text-center">
                   {children}
                 </span>
                 <Button
+                  type="button"
                   variant="outline"
                   size="icon"
                   className="h-9 w-9 rounded-lg"
                   onClick={() => setChildren(children + 1)}
+                  aria-label="Increase number of children"
                 >
-                  <Plus className="w-4 h-4" />
+                  <Plus className="w-4 h-4" aria-hidden />
                 </Button>
               </div>
             </div>

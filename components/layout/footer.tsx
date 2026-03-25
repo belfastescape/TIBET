@@ -1,4 +1,4 @@
-﻿import Link from "next/link"
+import Link from "next/link"
 import Image from "next/image"
 import { Facebook, MapPin, Phone, Mail, Clock } from "lucide-react"
 
@@ -38,8 +38,14 @@ export function Footer() {
                 corporate teams. One of the best fun indoor activities in Tibet.
               </p>
               <div className="flex space-x-4">
-                <Link href="https://www.facebook.com/YOUR_FACEBOOK_PAGE" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                  <Facebook className="w-6 h-6" />
+                <Link
+                  href="https://www.facebook.com/YOUR_FACEBOOK_PAGE"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors"
+                  aria-label="Escape Rooms Tibet on Facebook (opens in a new tab)"
+                >
+                  <Facebook className="w-6 h-6" aria-hidden />
                 </Link>
               </div>
             </div>

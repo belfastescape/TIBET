@@ -1,4 +1,4 @@
-﻿"use client"
+"use client"
 
 import { useState, useEffect } from "react"
 import Image from "next/image"
@@ -335,10 +335,11 @@ export default function ContactPage() {
                 href="https://www.facebook.com/YOUR_FACEBOOK_PAGE"
                 target="_blank"
                 rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-gray-300 hover:text-cyan-400 transition-colors"
+                className="inline-flex items-center gap-2 text-gray-300 hover:text-cyan-400 transition-colors"
+                aria-label="Escape Rooms Tibet on Facebook (opens in a new tab)"
               >
-                <Facebook className="w-6 h-6" />
-                <span>Escape Rooms Tibet</span>
+                <Facebook className="w-6 h-6 shrink-0" aria-hidden />
+                <span>Facebook — Escape Rooms Tibet</span>
               </a>
                   </CardContent>
                 </Card>
