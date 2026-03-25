@@ -1,0 +1,223 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resova Widget Browser Test</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .status {
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .loading {
+            background-color: #e3f2fd;
+            color: #1976d2;
+            border: 1px solid #bbdefb;
+        }
+        .error {
+            background-color: #ffebee;
+            color: #c62828;
+            border: 1px solid #ffcdd2;
+        }
+        .success {
+            background-color: #e8f5e8;
+            color: #2e7d32;
+            border: 1px solid #c8e6c9;
+        }
+        #resova-wrapper {
+            min-height: 600px;
+            border: 2px dashed #ddd;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+        }
+        .browser-info {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .refresh-btn {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        .refresh-btn:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Resova Widget Browser Compatibility Test</h1>
+        
+        <div class="browser-info">
+            <h3>Browser Information:</h3>
+            <p><strong>User Agent:</strong> <span id="userAgent"></span></p>
+            <p><strong>Screen Resolution:</strong> <span id="screenRes"></span></p>
+            <p><strong>Viewport Size:</strong> <span id="viewportSize"></span></p>
+            <p><strong>JavaScript Enabled:</strong> ✅ Yes</p>
+        </div>
+
+        <div id="status" class="status loading">
+            🔄 Loading Resova widget...
+        </div>
+
+        <button class="refresh-btn" onclick="reloadWidget()">Reload Widget</button>
+        <button class="refresh-btn" onclick="location.reload()">Refresh Page</button>
+
+        <h2>Resova Booking Widget</h2>
+        <div id="resova-wrapper">
+            Waiting for widget to load...
+        </div>
+
+        <div id="console-log" style="margin-top: 20px;">
+            <h3>Console Log:</h3>
+            <div id="log-messages" style="background: #f8f9fa; padding: 10px; border-radius: 5px; font-family: monospace; white-space: pre-wrap; max-height: 200px; overflow-y: auto;"></div>
+        </div>
+    </div>
+
+    <script>
+        // Display browser information
+        document.getElementById('userAgent').textContent = navigator.userAgent;
+        document.getElementById('screenRes').textContent = screen.width + 'x' + screen.height;
+        document.getElementById('viewportSize').textContent = window.innerWidth + 'x' + window.innerHeight;
+
+        // Custom console logging
+        const logMessages = document.getElementById('log-messages');
+        const originalLog = console.log;
+        const originalError = console.error;
+        const originalWarn = console.warn;
+
+        function addLogMessage(type, message) {
+            const timestamp = new Date().toLocaleTimeString();
+            logMessages.textContent += `[${timestamp}] ${type.toUpperCase()}: ${message}\n`;
+            logMessages.scrollTop = logMessages.scrollHeight;
+        }
+
+        console.log = function(...args) {
+            originalLog.apply(console, args);
+            addLogMessage('log', args.join(' '));
+        };
+
+        console.error = function(...args) {
+            originalError.apply(console, args);
+            addLogMessage('error', args.join(' '));
+        };
+
+        console.warn = function(...args) {
+            originalWarn.apply(console, args);
+            addLogMessage('warn', args.join(' '));
+        };
+
+        let widgetScript = null;
+        let loadTimeout = null;
+
+        function loadResovaWidget() {
+            const statusEl = document.getElementById('status');
+            const wrapper = document.getElementById('resova-wrapper');
+            
+            statusEl.className = 'status loading';
+            statusEl.innerHTML = '🔄 Loading Resova widget...';
+            wrapper.innerHTML = 'Loading widget...';
+
+            console.log('Starting Resova widget load...');
+
+            try {
+                // Remove existing script if any
+                const existingScript = document.getElementById('resova-jssdk');
+                if (existingScript) {
+                    existingScript.remove();
+                    console.log('Removed existing script');
+                }
+
+                // Create new script
+                widgetScript = document.createElement('script');
+                widgetScript.id = 'resova-jssdk';
+                widgetScript.src = 'https://escaperoomstibet.resova.us/widget';
+                widgetScript.async = true;
+                widgetScript.defer = true;
+
+                widgetScript.onload = function() {
+                    console.log('Resova script loaded successfully');
+                    statusEl.className = 'status success';
+                    statusEl.innerHTML = '✅ Widget loaded successfully!';
+                    
+                    // Check if widget content appears
+                    setTimeout(() => {
+                        if (wrapper.children.length === 0) {
+                            console.warn('Widget script loaded but no content appeared in wrapper');
+                            statusEl.className = 'status error';
+                            statusEl.innerHTML = '⚠️ Widget script loaded but no content appeared';
+                        }
+                    }, 5000);
+                };
+
+                widgetScript.onerror = function() {
+                    console.error('Failed to load Resova widget script');
+                    statusEl.className = 'status error';
+                    statusEl.innerHTML = '❌ Failed to load widget script';
+                    wrapper.innerHTML = 'Failed to load widget';
+                };
+
+                // Add timeout
+                loadTimeout = setTimeout(() => {
+                    console.error('Widget loading timeout (15 seconds)');
+                    statusEl.className = 'status error';
+                    statusEl.innerHTML = '⏰ Widget loading timeout - check network connection';
+                }, 15000);
+
+                // Add to document head
+                document.head.appendChild(widgetScript);
+                console.log('Script added to document head');
+
+            } catch (error) {
+                console.error('Error loading widget:', error);
+                statusEl.className = 'status error';
+                statusEl.innerHTML = '❌ Error loading widget: ' + error.message;
+            }
+        }
+
+        function reloadWidget() {
+            console.log('Reloading widget...');
+            if (loadTimeout) {
+                clearTimeout(loadTimeout);
+            }
+            loadResovaWidget();
+        }
+
+        // Load widget when page is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', loadResovaWidget);
+        } else {
+            loadResovaWidget();
+        }
+
+        // Log browser compatibility information
+        console.log('Browser:', navigator.userAgent);
+        console.log('Viewport:', window.innerWidth + 'x' + window.innerHeight);
+        console.log('Document ready state:', document.readyState);
+    </script>
+</body>
+</html> 

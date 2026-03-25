@@ -1,0 +1,13 @@
+# Exclude large source/unoptimised video files — use /videos/optimised/ versions instead
+public/videos/source
+public/videos/captainhackssun.mp4
+public/videos/H265BEST.mp4
+public/videos/H265BEST.mov
+public/videos/escape-rooms-wellington-escape.mp4
+
+# Exclude large unused images
+public/abstract-geometric-flow.png
+public/images/holidaydeal.png
+
+# Exclude dev/build scripts
+scripts/
