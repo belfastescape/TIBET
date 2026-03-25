@@ -46,7 +46,7 @@ export default function Home() {
         <PlayOnScrollVideo
           className="absolute inset-0 w-full h-full"
           videoClassName="absolute inset-0 w-full h-full object-cover"
-          poster="/images/escape-rooms-tibet.webp"
+          poster="/images/escape-rooms-tibet-hero.webp"
           posterAlt="Escape Rooms Tibet intro"
           posterSizes="100vw"
           captionsSrc="/videos/escape-rooms-tibet-intro-captions.vtt"

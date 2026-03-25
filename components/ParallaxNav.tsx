@@ -11,7 +11,7 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { label: ["OUR", "GAMES"],   image: "/images/escape-rooms-tibet.webp",                href: "#escape-rooms" },
+  { label: ["OUR", "GAMES"],   image: "/images/escape-rooms-tibet-hero.webp",                href: "#escape-rooms" },
   { label: ["BOOK", "NOW"],    image: "/images/billion-dollar-heist/laser-team-4.webp",        href: "/booking" },
   { label: ["GROUPS"],         image: "/images/operation-pitt-team.webp",            href: "/team-building-tibet" },
   { label: ["PRICES"],         image: "/images/ancient-tomb/examining-book.webp",         href: "/pricing" },

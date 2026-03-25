@@ -136,9 +136,9 @@ export default function RootLayout({
         {/* <link rel="dns-prefetch" href="https://www.google-analytics.com" /> */}
         
         {/* Preload LCP image (optimized variant so browser fetches smaller file) */}
-        <link 
-          rel="preload" 
-          href="/_next/image?url=%2Fimages%2Fescape-room-portal.webp&amp;w=828&amp;q=65" 
+        <link
+          rel="preload"
+          href="/_next/image?url=%2Fimages%2Fescape-room-portal.webp&amp;w=828&amp;q=75"
           as="image"
           fetchPriority="high"
         />
