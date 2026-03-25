@@ -1,9 +1,8 @@
 'use client'
 
-import Script from 'next/script'
 import { usePathname, useSearchParams } from 'next/navigation'
 import { useLayoutEffect, useEffect, useRef, Suspense } from 'react'
-import { pageview, getABVariant, GOOGLE_ADS_CONVERSION_ID, GA_MEASUREMENT_ID, isGa4Configured } from '@/lib/gtag'
+import { pageview, getABVariant, isGa4Configured } from '@/lib/gtag'
 
 function GoogleAnalyticsScript() {
   const pathname = usePathname()
@@ -22,7 +21,7 @@ function GoogleAnalyticsScript() {
   }, [])
 
   useLayoutEffect(() => {
-    // Skip initial mount — inline script already sent page_view with user_properties
+    // Skip initial mount — root layout beforeInteractive script already sent page_view
     if (isInitialMount.current) {
       isInitialMount.current = false
       return
@@ -32,65 +31,30 @@ function GoogleAnalyticsScript() {
     pageview(url)
   }, [pathname, searchParams])
 
-  const patchHistory = `
-    (function(){
-      function getVariant(){
-        return window.location.pathname === '/homeA' ? 'homeA' : 'control';
-      }
-      var origPush = history.pushState;
-      var origReplace = history.replaceState;
-      history.pushState = function(){
-        if (window.gtag) window.gtag('set', 'user_properties', { ab_variant: getVariant() });
-        return origPush.apply(this, arguments);
-      };
-      history.replaceState = function(){
-        if (window.gtag) window.gtag('set', 'user_properties', { ab_variant: getVariant() });
-        return origReplace.apply(this, arguments);
-      };
-    })();
-  `
+  useEffect(() => {
+    const patchHistory = `
+      (function(){
+        function getVariant(){
+          return window.location.pathname === '/homeA' ? 'homeA' : 'control';
+        }
+        var origPush = history.pushState;
+        var origReplace = history.replaceState;
+        history.pushState = function(){
+          if (window.gtag) window.gtag('set', 'user_properties', { ab_variant: getVariant() });
+          return origPush.apply(this, arguments);
+        };
+        history.replaceState = function(){
+          if (window.gtag) window.gtag('set', 'user_properties', { ab_variant: getVariant() });
+          return origReplace.apply(this, arguments);
+        };
+      })();
+    `
+    const script = document.createElement('script')
+    script.textContent = patchHistory
+    document.head.appendChild(script)
+  }, [])
 
-  return (
-    <>
-      <Script
-        strategy="afterInteractive"
-        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-        onLoad={() => {
-          const script = document.createElement('script')
-          script.textContent = patchHistory
-          document.head.appendChild(script)
-        }}
-      />
-      <Script
-        id="google-analytics"
-        strategy="afterInteractive"
-      >
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          (function(){
-            function getVariant(){
-              return window.location.pathname === '/homeA' ? 'homeA' : 'control';
-            }
-            var variant = getVariant();
-            gtag('config', '${GA_MEASUREMENT_ID}', {
-              send_page_view: false,
-              user_properties: { ab_variant: variant },
-              ${process.env.NODE_ENV === 'development' ? 'debug_mode: true,' : ''}
-            });
-            ${GOOGLE_ADS_CONVERSION_ID ? `var _gadsId = "${GOOGLE_ADS_CONVERSION_ID}"; if (_gadsId) { var _gadsBase = _gadsId.split("/")[0]; if (_gadsBase) gtag("config", _gadsBase); }` : ''}
-            gtag('set', 'user_properties', { ab_variant: variant });
-            gtag('event', 'page_view', {
-              page_location: window.location.href,
-              page_title: document.title,
-              page_path: window.location.pathname
-            });
-          })();
-        `}
-      </Script>
-    </>
-  )
+  return null
 }
 
 export default function GoogleAnalytics() {

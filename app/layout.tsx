@@ -2,11 +2,12 @@ import type React from "react"
 import "./globals.css"
 import type { Metadata } from "next"
 import dynamic from "next/dynamic"
+import Script from "next/script"
 import { ThemeProvider } from "@/components/theme-provider"
 import GoogleAnalytics from "@/components/GoogleAnalytics"
 import { JsonLd } from '@/components/JsonLd'
 import { inter } from './fonts'
-import { isGa4Configured } from '@/lib/gtag'
+import { isGa4Configured, GA_MEASUREMENT_ID, getGtagBootstrapInlineScript } from '@/lib/gtag'
 
 // Dynamically import the ENTIRE main layout wrapper (Header + Footer)
 // This creates a separate code chunk for Header/Footer CSS
@@ -162,6 +163,18 @@ export default function RootLayout({
         {/* <Script id="reviews-cert" src="YOUR_REVIEW_PLATFORM_SCRIPT_URL" strategy="lazyOnload" /> */}
       </head>
       <body className={`${inter.className} bg-[#0a0a0a] text-white min-h-screen`}>
+        {isGa4Configured() && (
+          <>
+            <Script
+              id="gtag-js"
+              strategy="beforeInteractive"
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+            />
+            <Script id="gtag-bootstrap" strategy="beforeInteractive">
+              {getGtagBootstrapInlineScript()}
+            </Script>
+          </>
+        )}
         <GoogleAnalytics />
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
           <MainLayoutWrapper>{children}</MainLayoutWrapper>

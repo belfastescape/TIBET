@@ -12,6 +12,43 @@ export const GA_MEASUREMENT_ID = isGa4Configured() ? rawGaId : ''
 /** Google Ads conversion ID (e.g. AW-123456789/AbCdEfGhIjKlMnOp). Set in env to record conversion value. */
 export const GOOGLE_ADS_CONVERSION_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_ID || ''
 
+/**
+ * Inline bootstrap for root layout (`beforeInteractive`) so gtag appears in the **initial HTML**.
+ * Google's setup verifier and many crawlers do not run your React client bundle.
+ */
+export function getGtagBootstrapInlineScript(): string {
+  if (!isGa4Configured()) return ''
+  const id = GA_MEASUREMENT_ID
+  const ads = GOOGLE_ADS_CONVERSION_ID.trim()
+  const adsSnippet = ads
+    ? `var _gadsId = ${JSON.stringify(ads)}; if (_gadsId) { var _gadsBase = _gadsId.split("/")[0]; if (_gadsBase) gtag("config", _gadsBase); }`
+    : ''
+  const debugSnippet = process.env.NODE_ENV === 'development' ? 'debug_mode: true,' : ''
+  return `
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+(function(){
+  function getVariant(){
+    return window.location.pathname === '/homeA' ? 'homeA' : 'control';
+  }
+  var variant = getVariant();
+  gtag('config', ${JSON.stringify(id)}, {
+    send_page_view: false,
+    user_properties: { ab_variant: variant },
+    ${debugSnippet}
+  });
+  ${adsSnippet}
+  gtag('set', 'user_properties', { ab_variant: variant });
+  gtag('event', 'page_view', {
+    page_location: window.location.href,
+    page_title: document.title,
+    page_path: window.location.pathname
+  });
+})();
+`.trim()
+}
+
 // Declare gtag as a global function
 declare global {
   interface Window {
