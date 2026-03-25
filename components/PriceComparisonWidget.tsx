@@ -19,9 +19,9 @@ interface Competitor {
 
 const competitors: Competitor[] = [
   { name: "Escape Rooms Tibet", shortName: "OUR PRICE", adultPrice: 35, childPrice: 28, rating: 4.9, isUs: true },
-  { name: "Escape Mate", shortName: "ESCAPE MATE", adultPrice: 40, childPrice: 33, rating: 4.9, isUs: false },
-  { name: "Xcape", shortName: "XCAPE", adultPrice: 44, childPrice: 39, rating: 4.9, isUs: false },
-  { name: "Escape Masters", shortName: "ESCAPE MASTERS", adultPrice: 37, childPrice: 33, rating: 4.6, isUs: false },
+  { name: "Exodus Games", shortName: "EXODUS GAMES", adultPrice: 40, childPrice: 33, rating: 4.9, isUs: false },
+  { name: "XFACTOR", shortName: "XFACTOR", adultPrice: 44, childPrice: 39, rating: 4.9, isUs: false },
+  { name: "LLASHA LEGENDS", shortName: "LLASHS LEGENDS", adultPrice: 37, childPrice: 33, rating: 4.6, isUs: false },
 ]
 
 /** Overrides: (shortName, adults, children) -> fixed value or N/A. Returns null for N/A. */
