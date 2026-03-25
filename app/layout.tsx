@@ -2,7 +2,6 @@ import type React from "react"
 import "./globals.css"
 import type { Metadata } from "next"
 import dynamic from "next/dynamic"
-import Script from "next/script"
 import { ThemeProvider } from "@/components/theme-provider"
 import GoogleAnalytics from "@/components/GoogleAnalytics"
 import { JsonLd } from '@/components/JsonLd'
@@ -159,22 +158,20 @@ export default function RootLayout({
         
         <JsonLd data={localBusinessSchema} />
         <JsonLd data={websiteSchema} />
-        {/* Review platform certificate badge placeholder — add your provider script here */}
-        {/* <Script id="reviews-cert" src="YOUR_REVIEW_PLATFORM_SCRIPT_URL" strategy="lazyOnload" /> */}
-      </head>
-      <body className={`${inter.className} bg-[#0a0a0a] text-white min-h-screen`}>
         {isGa4Configured() && (
           <>
-            <Script
-              id="gtag-js"
-              strategy="beforeInteractive"
-              src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+            {/* GA4 — plain <script> tags so they appear in the initial server-rendered HTML.
+                next/script beforeInteractive is not supported in the App Router. */}
+            {/* eslint-disable-next-line @next/next/no-sync-scripts */}
+            <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`} />
+            <script
+              id="gtag-bootstrap"
+              dangerouslySetInnerHTML={{ __html: getGtagBootstrapInlineScript() }}
             />
-            <Script id="gtag-bootstrap" strategy="beforeInteractive">
-              {getGtagBootstrapInlineScript()}
-            </Script>
           </>
         )}
+      </head>
+      <body className={`${inter.className} bg-[#0a0a0a] text-white min-h-screen`}>
         <GoogleAnalytics />
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
           <MainLayoutWrapper>{children}</MainLayoutWrapper>
