@@ -38,7 +38,7 @@ export default function DiamondHeist() {
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/billion-dollar-heist.png"
+            src="/images/billion-dollar-heist-escape-room.webp"
             alt="The Billion Dollar Heist"
             fill
             className="object-cover opacity-40"

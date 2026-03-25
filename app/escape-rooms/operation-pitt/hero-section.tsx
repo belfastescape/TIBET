@@ -6,7 +6,7 @@ export function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/spiesnoir.webp"
+          src="/images/agent-pitt-escape-room.webp"
           alt="Operation Pitt escape room - a mysterious spy research facility"
           fill
           className="object-cover grayscale"

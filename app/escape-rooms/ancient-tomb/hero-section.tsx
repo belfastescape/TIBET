@@ -6,7 +6,7 @@ export function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/ancient-tomb.png"
+          src="/images/ancient-tomb-escape-room.webp"
           alt="Quest for the Ancient Tomb escape room - archaeological adventure"
           fill
           className="object-cover"
