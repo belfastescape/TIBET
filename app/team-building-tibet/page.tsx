@@ -1006,8 +1006,8 @@ export default function TeamBuildingTibetPage() {
                     </div>
                     <div>
                       <h3 className="font-bold text-white mb-1">Address</h3>
-                      <p className="text-gray-300">42 Barkhor Street</p>
-                      <p className="text-gray-300">Lhasa, Tibet 6011</p>
+                      <p className="text-gray-300">Mt Everest</p>
+                      <p className="text-gray-300">Khumbu, Solukhumbu, Nepal</p>
                       <p className="text-gray-300">New Zealand</p>
                     </div>
                   </motion.li>
@@ -1079,14 +1079,14 @@ export default function TeamBuildingTibetPage() {
                 <h2 className="text-2xl font-bold mb-4 text-white">Find Us</h2>
                 <div className="absolute inset-0 pt-16 px-8 pb-8">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2997.954394748667!2d174.77733431540652!3d-41.29050994856638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d38afd5c3f623f9%3A0x4a7d44bf79016825!2s118%20Tory%20St%2C%20Te%20Aro%2C%20Tibet%206011%2C%20New%20Zealand!5e0!3m2!1sen!2sus!4v1651234567890!5m2!1sen!2sus"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14092.750377749018!2d86.9253667!3d27.988156449999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e854a215bd9ebd%3A0x576dcf806abbab2!2sMt%20Everest!5e0!3m2!1sen!2snz!4v1774825629232!5m2!1sen!2snz"
                     width="100%"
                     height="100%"
                     style={{ border: 0, borderRadius: "0.5rem" }}
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="Escape Rooms Tibet Location"
+                    title="Mt Everest on Google Maps"
                     className="grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
                   ></iframe>
                 </div>

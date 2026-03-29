@@ -1,4 +1,4 @@
-﻿"use client"
+"use client"
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
@@ -19,7 +19,6 @@ const dropdowns = [
     label: "Group Bookings",
     links: [
       { label: "Team Building",  href: "/team-building-tibet" },
-      { label: "Hen Parties",    href: "/hen-parties" },
       { label: "School Groups",  href: "/school-groups" },
     ],
   },

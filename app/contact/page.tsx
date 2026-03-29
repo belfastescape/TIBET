@@ -269,8 +269,8 @@ export default function ContactPage() {
                         <MapPin className="w-6 h-6 text-cyan-400 flex-shrink-0 mt-1" />
                     <div>
                       <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
-                      <p className="text-gray-300">42 Barkhor Street</p>
-                      <p className="text-gray-300">Lhasa, Tibet 6011</p>
+                      <p className="text-gray-300">Mt Everest</p>
+                      <p className="text-gray-300">Khumbu, Solukhumbu, Nepal</p>
                       <p className="text-gray-300">New Zealand</p>
                     </div>
                   </div>
@@ -313,7 +313,7 @@ export default function ContactPage() {
                   <CardContent className="p-0">
                     <div className="aspect-[4/3] w-full">
                       <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2997.6544447!2d174.7751456!3d-41.2905099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d38afd4d917c5a5%3A0x8b8b8b8b8b8b8b8b!2s118%20Tory%20Street%2C%20Te%20Aro%2C%20Tibet%206011%2C%20New%20Zealand!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14092.750377749018!2d86.9253667!3d27.988156449999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e854a215bd9ebd%3A0x576dcf806abbab2!2sMt%20Everest!5e0!3m2!1sen!2snz!4v1774825629232!5m2!1sen!2snz"
                         width="100%"
                         height="100%"
                         style={{ border: 0 }}
@@ -321,7 +321,7 @@ export default function ContactPage() {
                         loading="lazy"
                         referrerPolicy="no-referrer-when-downgrade"
                         className="w-full h-full"
-                        title="Escape Rooms Tibet Location"
+                        title="Mt Everest on Google Maps"
                       />
                     </div>
                   </CardContent>

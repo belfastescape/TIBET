@@ -1,4 +1,4 @@
-﻿"use client"
+"use client"
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
@@ -291,7 +291,7 @@ export default function TermsOfServicePage() {
                     </div>
                     <div className="flex items-start">
                       <MapPin className="w-5 h-5 text-cyan-400 mr-3 mt-0.5 flex-shrink-0" />
-                      <span>118 Tory street, Tibet 6011</span>
+                      <span>Mt Everest, Khumbu, Solukhumbu, Nepal</span>
                     </div>
                   </div>
                 </div>

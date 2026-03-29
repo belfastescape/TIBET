@@ -37,7 +37,6 @@ const dropdowns = [
     label: "Group Bookings",
     links: [
       { label: "Team Building", href: "/team-building-tibet" },
-      { label: "Hen Parties",   href: "/hen-parties" },
       { label: "School Groups", href: "/school-groups" },
     ],
   },

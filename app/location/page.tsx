@@ -23,22 +23,29 @@ export default function LocationPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
-          <div className="w-full h-[320px] md:h-[400px] relative flex items-center justify-center bg-[#111]">
-            {/* Replace this placeholder with your Google Maps embed URL */}
-            <div className="text-center text-gray-400 px-8">
-              <p className="text-lg font-semibold mb-2 text-white">Map Placeholder</p>
-              <p className="text-sm">Add your Google Maps embed URL here</p>
-              <p className="text-xs mt-2 text-gray-500">42 Barkhor Street, Lhasa, Tibet</p>
-            </div>
+          <div className="w-full h-[320px] md:h-[400px] relative overflow-hidden bg-[#111]">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14092.750377749018!2d86.9253667!3d27.988156449999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e854a215bd9ebd%3A0x576dcf806abbab2!2sMt%20Everest!5e0!3m2!1sen!2snz!4v1774825629232!5m2!1sen!2snz"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="absolute inset-0 w-full h-full"
+              title="Mt Everest on Google Maps"
+            />
           </div>
           <div className="p-8 text-center">
             <h1 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-green-400 bg-clip-text text-transparent">
               Our Location
             </h1>
             <p className="text-xl text-gray-300 mb-4">
-              42 Barkhor Street, Tibet, New Zealand
+              Mt Everest, Khumbu, Solukhumbu, Nepal
             </p>
-            <p className="text-gray-400 mb-8">Find us in the heart of Tibet CBD, just a short walk from Courtenay Place.</p>
+            <p className="text-gray-400 mb-8">
+              Find us in the Khumbu region—domestic flights from Kathmandu connect to Lukla, with trekking routes through Namche Bazaar toward base camp.
+            </p>
           </div>
         </motion.div>
 
@@ -65,7 +72,7 @@ export default function LocationPage() {
               </div>
               <div className="flex items-center">
                 <MapPin className="w-5 h-5 text-cyan-400 mr-3" />
-                <p className="text-gray-300">42 Barkhor Street, Lhasa, Tibet</p>
+                <p className="text-gray-300">Mt Everest, Khumbu, Solukhumbu, Nepal</p>
               </div>
             </div>
           </motion.div>
@@ -84,7 +91,7 @@ export default function LocationPage() {
                   <h3 className="text-lg font-semibold text-white">Parking</h3>
                 </div>
                 <p className="text-gray-300 ml-8">
-                  Paid street parking available on Tory Street. Wilson and Tournament parking buildings nearby on Tory Street.
+                  Limited vehicle access in the high Khumbu; most visitors use flights to Lukla, then lodges and footpaths between villages.
                 </p>
               </div>
               <div>
@@ -93,7 +100,7 @@ export default function LocationPage() {
                   <h3 className="text-lg font-semibold text-white">Public Transport</h3>
                 </div>
                 <p className="text-gray-300 ml-8">
-                  Multiple bus stops within walking distance. 5-minute walk from Courtenay Place bus stops.
+                  Regional flights and shared ground transport serve towns in the Everest area; plan multi-day trekking from Lukla or Namche for the final approach.
                 </p>
               </div>
             </div>

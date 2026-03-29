@@ -123,11 +123,6 @@ export function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/hen-parties" className={footerLink}>
-                    Hen Parties
-                  </Link>
-                </li>
-                <li>
                   <Link href="/teenage-birthday-parties" className={footerLink}>
                     Teenage Birthday Parties
                   </Link>
@@ -186,7 +181,7 @@ export function Footer() {
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <MapPin className="w-5 h-5 text-cyan-400 mr-2 mt-0.5" />
-                  <span className={footerMuted}>42 Barkhor Street, Lhasa, Tibet 6011</span>
+                  <span className={footerMuted}>Mt Everest, Khumbu, Solukhumbu, Nepal</span>
                 </li>
                 <li className="flex items-center">
                   <Phone className="w-5 h-5 text-cyan-400 mr-2" />

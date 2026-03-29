@@ -1,4 +1,4 @@
-﻿"use client"
+"use client"
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
@@ -890,8 +890,8 @@ If you are wanting an escape room experience, we would 100% recommended this one
                   </div>
                   <div>
                     <h3 className="font-bold text-white mb-1">Address</h3>
-                    <p className="text-gray-300">42 Barkhor Street</p>
-                    <p className="text-gray-300">Lhasa, Tibet 6011</p>
+                    <p className="text-gray-300">Mt Everest</p>
+                    <p className="text-gray-300">Khumbu, Solukhumbu, Nepal</p>
                     <p className="text-gray-300">New Zealand</p>
                   </div>
                 </motion.li>

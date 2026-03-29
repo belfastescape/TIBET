@@ -1,4 +1,4 @@
-﻿"use client"
+"use client"
 
 import { useState, useEffect } from "react"
 import Image from "next/image"
@@ -32,7 +32,7 @@ const experiences = [
     description: "Give them a sweet, hands-on experience they'll love! They'll create three custom chocolate bars together at Tibet's artisan Chocolate Factory, learning about bean-to-bar craftsmanship while enjoying tastings and hot chocolate. Perfect for couples who enjoy creative activities - it's a delicious gift that brings them closer while making something special.",
     pricePerPerson: 65,
     duration: "1.5 hours",
-    location: "Tibet (Lhasa)",
+    location: "Mt Everest (Khumbu, Nepal)",
     bestFor: "Couples, Date Night, Creative Experience",
     isFeatured: false,
     link: null,
@@ -44,7 +44,7 @@ const experiences = [
     pricePerPerson: 90,
     priceNote: "Couples Voucher",
     duration: "1 hour",
-    location: "Tibet CBD",
+    location: "Mt Everest (Khumbu, Nepal)",
     bestFor: "Couples, Date Night, Adventure",
     isFeatured: true,
     link: "https://escaperoomstibet.com/gift-vouchers",

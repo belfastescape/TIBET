@@ -1,4 +1,4 @@
-﻿import type { Metadata, Viewport } from "next"
+import type { Metadata, Viewport } from "next"
 import { JsonLd } from '@/components/JsonLd'
 
 export const viewport: Viewport = {
@@ -63,11 +63,11 @@ const birthdayPartySchema = {
     "name": "Escape Rooms Tibet",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "42 Barkhor Street",
-      "addressLocality": "Lhasa",
-      "addressRegion": "Tibet",
-      "postalCode": "850000",
-      "addressCountry": "CN"
+      "streetAddress": "Mt Everest",
+      "addressLocality": "Solukhumbu",
+      "addressRegion": "Koshi Province",
+      "postalCode": "56000",
+      "addressCountry": "NP"
     },
     "telephone": "+64215550198",
     "url": "https://www.escaperoomstibet.com"
@@ -75,8 +75,8 @@ const birthdayPartySchema = {
   "serviceType": "Birthday Party Venue",
   "areaServed": {
     "@type": "City",
-    "name": "Tibet",
-    "addressCountry": "CN"
+    "name": "Solukhumbu",
+    "addressCountry": "NP"
   },
   "offers": {
     "@type": "Offer",

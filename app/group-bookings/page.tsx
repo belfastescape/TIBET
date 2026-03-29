@@ -1,4 +1,4 @@
-﻿"use client"
+"use client"
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
@@ -373,7 +373,7 @@ export default function GroupBookingsPage() {
                     </ul>
 
                     <div className="bg-[#0a0a0a] rounded-lg p-4 mb-6 border border-[#222]">
-                      <p className="text-cyan-400 font-medium mb-2"><Link href="/hen-parties" className="text-cyan-400 hover:text-cyan-300 transition-colors">Fun Tibet Hen Party Activity</Link></p>
+                      <p className="text-cyan-400 font-medium mb-2"><Link href="/group-bookings" className="text-cyan-400 hover:text-cyan-300 transition-colors">Group &amp; celebration packages</Link></p>
                       <p className="text-white">Starting at $33 per person.</p>
                     </div>
 
@@ -537,12 +537,11 @@ export default function GroupBookingsPage() {
                 variants={fadeIn}
               >
                 <h3 className="text-2xl font-bold text-white mb-6">Visit Us</h3>
-                <p className="text-gray-300 mb-2">42 Barkhor Street</p>
-                <p className="text-gray-300 mb-2">Lhasa, Tibet 6011</p>
-                <p className="text-gray-300 mb-4">New Zealand</p>
+                <p className="text-gray-300 mb-2">Mt Everest</p>
+                <p className="text-gray-300 mb-4">Khumbu, Solukhumbu, Nepal</p>
                 <div className="mt-6">
                   <Link
-                    href="https://maps.google.com/?q=Escape+Rooms+Tibet"
+                    href="https://www.google.com/maps/place/Mt+Everest/@27.9881564,86.9253667,12z"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300"

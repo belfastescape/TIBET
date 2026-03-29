@@ -241,7 +241,7 @@ function EscapeNowContent() {
               {
                 title: "Larger Groups",
                 front: "/images/billion-dollar-heist/laser-team-2.webp",
-                back: "Birthday , hen party or school / youth groups?<br />We can run multiple rooms simultaneously .<br />Operation Pitt can take up to 14 people between the 2 rooms in a head to head challenge.",
+                back: "Birthday, celebration, or school / youth groups?<br />We can run multiple rooms simultaneously .<br />Operation Pitt can take up to 14 people between the 2 rooms in a head to head challenge.",
               },
               {
                 title: "Big Groups / Team Building etc.",

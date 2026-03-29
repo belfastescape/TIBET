@@ -1,4 +1,4 @@
-﻿export const teamBuildingSchema = {
+export const teamBuildingSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "Team Building Escape Room Activities Tibet",
@@ -8,11 +8,11 @@
     "name": "Escape Rooms Tibet",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "42 Barkhor Street",
-      "addressLocality": "Lhasa",
-      "addressRegion": "Tibet",
-      "postalCode": "850000",
-      "addressCountry": "CN"
+      "streetAddress": "Mt Everest",
+      "addressLocality": "Solukhumbu",
+      "addressRegion": "Koshi Province",
+      "postalCode": "56000",
+      "addressCountry": "NP"
     },
     "telephone": "+64215550198",
     "url": "https://www.escaperoomstibet.com"
@@ -20,8 +20,8 @@
   "serviceType": "Team Building Activities",
   "areaServed": {
     "@type": "City",
-    "name": "Tibet",
-    "addressCountry": "CN"
+    "name": "Solukhumbu",
+    "addressCountry": "NP"
   },
   "offers": {
     "@type": "Offer",

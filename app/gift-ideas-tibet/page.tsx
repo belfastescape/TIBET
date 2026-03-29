@@ -1,4 +1,4 @@
-﻿"use client"
+"use client"
 
 import { useState, useEffect } from "react"
 import Image from "next/image"
@@ -44,7 +44,7 @@ const experiences = [
     pricePerPerson: 130,
     priceNote: "for up to 8 people",
     duration: "1 hour",
-    location: "Tibet CBD",
+    location: "Mt Everest (Khumbu, Nepal)",
     bestFor: "Families, Groups, Couples",
     isFeatured: true,
     link: "https://escaperoomstibet.com/gift-vouchers",
@@ -79,7 +79,7 @@ const experiences = [
     description: "Become a chocolatier for the day at Tibet's beloved Chocolate Factory! Create and flavor three of your own unique chocolate bars using ethically-sourced ingredients. This hands-on experience includes a 15-minute educational talk about bean-to-bar chocolate making, chocolate tastings, a hot chocolate, and 20% off in-store purchases. Perfect for chocolate lovers and families wanting a delicious, creative Tibet experience.",
     pricePerPerson: 65,
     duration: "1.5 hours",
-    location: "Tibet (Lhasa)",
+    location: "Mt Everest (Khumbu, Nepal)",
     bestFor: "Families, Chocolate Lovers, Creative Fun",
     isFeatured: false,
     link: null,
@@ -571,7 +571,7 @@ export default function GiftIdeasTibetPage() {
                 <MapPin className="w-10 h-10 text-yellow-500 mb-4" />
                 <h3 className="text-xl font-bold text-white mb-2">Explore the Region</h3>
                 <p className="text-gray-300">
-                  From Tibet CBD to Kapiti Coast and Wairarapa, discover hidden gems and iconic attractions across the greater Tibet region with these curated experiences.
+                  From Mt Everest and the Khumbu to Kapiti Coast and Wairarapa, discover hidden gems and iconic attractions across the greater Tibet region with these curated experiences.
                 </p>
               </CardContent>
             </Card>

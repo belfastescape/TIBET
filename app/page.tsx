@@ -283,7 +283,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold mb-3 text-white">Perfect for Groups</h3>
               <p className="text-gray-300">
-                Whether it's a family outing, <Link href="/teenage-birthday-parties" className="text-cyan-400 hover:text-cyan-300 transition-colors"> a teenage birthday party</Link>, <Link href="/hen-parties" className="text-yellow-400 hover:text-yellow-300 transition-colors">part of your hen party activities </Link>, or <Link href="/team-building-tibet" className="text-cyan-400 hover:text-cyan-300 transition-colors">a team building event in Tibet</Link>, our escape rooms are designed for
+                Whether it&apos;s a family outing, <Link href="/teenage-birthday-parties" className="text-cyan-400 hover:text-cyan-300 transition-colors"> a teenage birthday party</Link>, or <Link href="/team-building-tibet" className="text-cyan-400 hover:text-cyan-300 transition-colors">a team building event in Tibet</Link>, our escape rooms are designed for
                 groups of all sizes.
               </p>
             </motion.div>
@@ -299,8 +299,8 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold mb-3 text-white">Central Location</h3>
               <p className="text-gray-300">
-                Conveniently located in Tibet CBD, we're easily accessible by public transport and close to
-                restaurants and cafes.
+                Conveniently located in the Khumbu at Mt Everest, with regional access via Kathmandu and Lukla, and
+                lodges and dining in nearby villages.
               </p>
             </motion.div>
           </div>

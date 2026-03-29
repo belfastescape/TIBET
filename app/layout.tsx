@@ -66,22 +66,22 @@ export default function RootLayout({
     "url": "https://www.escaperoomstibet.com",
     "logo": "https://www.escaperoomstibet.com/images/logo.png",
     "image": "https://www.escaperoomstibet.com/images/escape-room-portal-large.webp",
-    "description": "Tibet's premier escape room experience. Perfect for team building, birthday parties, hen parties, and group activities. Three immersive themed rooms in the heart of Tibet CBD.",
+    "description": "Tibet's premier escape room experience. Perfect for team building, birthday parties, and group activities. Three immersive themed rooms in the Khumbu region at Mt Everest.",
     "priceRange": "$$",
     "currenciesAccepted": "NZD",
     "paymentAccepted": "Cash, Credit Card, Debit Card",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "42 Barkhor Street",
-      "addressLocality": "Lhasa",
-      "addressRegion": "Tibet",
-      "postalCode": "850000",
-      "addressCountry": "CN"
+      "streetAddress": "Mt Everest",
+      "addressLocality": "Solukhumbu",
+      "addressRegion": "Koshi Province",
+      "postalCode": "56000",
+      "addressCountry": "NP"
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 29.6522,
-      "longitude": 91.1197
+      "latitude": 27.9881564,
+      "longitude": 86.9253667
     },
     "telephone": "+64215550198",
     "email": "info@escaperoomstibet.com",
@@ -102,11 +102,11 @@ export default function RootLayout({
     "sameAs": [
       "https://www.facebook.com/YOUR_FACEBOOK_PAGE"
     ],
-    "hasMap": "https://maps.google.com/?cid=YOUR_GOOGLE_MAPS_CID",
+    "hasMap": "https://www.google.com/maps/place/Mt+Everest/@27.9881564,86.9253667,12z",
     "areaServed": {
       "@type": "City",
-      "name": "Tibet",
-      "addressCountry": "CN"
+      "name": "Solukhumbu",
+      "addressCountry": "NP"
     },
     "keywords": "escape room tibet, escape rooms tibet, team building tibet, birthday party venue tibet, tourist attraction tibet, indoor activities tibet, things to do tibet"
   }
