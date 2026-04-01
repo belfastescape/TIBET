@@ -17,7 +17,7 @@ export const viewport: Viewport = {
 
 const title = "Quest for the Ancient Tomb | Family-friendly escape room"
 const description =
-  "Fantasy tomb adventure with magical puzzles—ideal for beginners and families. 2–6 players, 60 minutes."
+  "Step into magic and mystery—solve mystical puzzles and retrieve the legendary Ancient Tomb before dark forces claim it. Perfect for families and fantasy fans. 2–6 players, 60 minutes."
 
 export const metadata: Metadata = {
   title,

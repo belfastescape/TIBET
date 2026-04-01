@@ -14,15 +14,14 @@ export function DescriptionSection() {
             <Card className="border-[6px] border-white bg-[#111] flex-1">
               <CardContent className="py-[80px] px-[52px] flex flex-col justify-center h-full">
                 <p className="text-gray-300 leading-relaxed text-base md:text-lg">
-                  Deep beneath the city, explorers have uncovered a legendary ancient tomb — but
-                  its treasures are protected by fiendish traps and cryptic puzzles left behind
-                  by a long-lost civilisation.
+                  Step into a world of magic and mystery where ancient spells and enchanted artifacts await.
                 </p>
                 <p className="mt-4 text-gray-300 leading-relaxed text-base md:text-lg">
-                  Your team of intrepid archaeologists must decipher ancient inscriptions, navigate
-                  hidden chambers, and claim the relic before the tomb seals forever. A fantastic
-                  adventure for families and groups of all experience levels — with 60 minutes on
-                  the clock and history at stake.
+                  Your team must work together to master the magical arts, solve mystical puzzles, and retrieve the
+                  legendary Ancient Tomb before dark forces claim it forever.
+                </p>
+                <p className="mt-4 text-gray-300 leading-relaxed text-base md:text-lg">
+                  Perfect for families and fantasy enthusiasts!
                 </p>
               </CardContent>
             </Card>

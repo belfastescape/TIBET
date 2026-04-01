@@ -1,11 +1,13 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Quest for the Ancient Tomb | Archaeological Escape Room Adventure",
-  description: "Uncover the secrets of a legendary ancient tomb. Navigate hidden chambers, decode cryptic inscriptions, and claim the relic before the tunnels collapse. Perfect for families and beginners — 60 minutes, 2–6 players.",
+  title: "Quest for the Ancient Tomb | Magical Fantasy Escape Room",
+  description:
+    "Step into magic and mystery—solve mystical puzzles and retrieve the legendary Ancient Tomb before dark forces claim it. Perfect for families and fantasy fans. 2–6 players, 60 minutes.",
   openGraph: {
-    title: "Quest for the Ancient Tomb | Archaeological Escape Room Adventure",
-    description: "Uncover the secrets of a legendary ancient tomb. Navigate hidden chambers, decode cryptic inscriptions, and claim the relic before the tunnels collapse. Perfect for families and beginners — 60 minutes, 2–6 players.",
+    title: "Quest for the Ancient Tomb | Magical Fantasy Escape Room",
+    description:
+      "Step into magic and mystery—solve mystical puzzles and retrieve the legendary Ancient Tomb before dark forces claim it. Perfect for families and fantasy fans. 2–6 players, 60 minutes.",
     type: "website",
   },
 } 

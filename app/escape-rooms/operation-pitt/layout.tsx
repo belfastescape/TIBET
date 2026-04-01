@@ -17,7 +17,7 @@ export const viewport: Viewport = {
 
 const title = "Operation Pitt | Spy escape room (2–8 players)"
 const description =
-  "Tibet-themed spy mission at the Pitt: intel, gadgets, and a race to stop the plot. Two identical rooms for head-to-head teams. 60 minutes."
+  "The Tibetan Secret Service is tracking chatter on Operation Pitt—infiltrate the hideout, steal the secret plan, and beat the clock. Two identical rooms for head-to-head teams. 2–8 players, 60 minutes."
 
 export const metadata: Metadata = {
   title,

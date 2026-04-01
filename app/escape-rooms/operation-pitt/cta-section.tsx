@@ -55,7 +55,7 @@ function ShareCard({ delay = 0 }: { delay?: number }) {
       try {
         await navigator.share({
           title: "Operation Pitt – Escape Rooms Tibet",
-          text: "Check out Operation Pitt at Escape Rooms Tibet — a Tibet spy thriller for 2–8 players!",
+          text: "Check out Operation Pitt at Escape Rooms Tibet — Tibetan Secret Service spy mission; two rooms for head-to-head play. 2–8 players!",
           url: window.location.href,
         })
       } catch {

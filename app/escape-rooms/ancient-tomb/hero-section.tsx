@@ -7,7 +7,7 @@ export function HeroSection() {
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/ancient-tomb-escape-room.webp"
-          alt="Quest for the Ancient Tomb escape room - archaeological adventure"
+          alt="Quest for the Ancient Tomb escape room — magical fantasy adventure"
           fill
           className="object-cover"
           priority
@@ -23,7 +23,7 @@ export function HeroSection() {
             <br />
             <span className="text-amber-400">Ancient Tomb</span>
           </h1>
-          <p className="mt-4 text-lg text-gray-400 font-mono">An Archaeological Adventure Escape Room &mdash; Ages 10+</p>
+          <p className="mt-4 text-lg text-gray-400 font-mono">A Magical Fantasy Escape Room &mdash; Ages 10+</p>
         </div>
       </div>
     </section>

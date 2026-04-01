@@ -17,7 +17,7 @@ export const viewport: Viewport = {
 
 const title = "The Billion Dollar Heist | Multi-room escape game"
 const description =
-  "Our toughest vault job: multiple rooms, layered puzzles, and a laser gauntlet. Best for experienced crews of 2–7. 60 minutes."
+  "The Phantom syndicate has stashed a billion-dollar haul inside the world's most secure vault. Can your crew crack the security and walk away with the ultimate prize?"
 
 export const metadata: Metadata = {
   title,

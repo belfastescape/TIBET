@@ -63,8 +63,8 @@ export default function DiamondHeist() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-3xl">
-              The world&apos;s most secure vault holds a billion-dollar haul. Can your crew crack the
-              security, bypass the laser grid, and walk away with the ultimate prize?
+              The Phantom syndicate has stashed a billion-dollar haul inside the world&apos;s most secure vault.
+              Can your crew crack the security and walk away with the ultimate prize?
             </p>
           </motion.div>
 
@@ -112,9 +112,8 @@ export default function DiamondHeist() {
                 <h2 className="text-3xl font-bold mb-6 text-white">Your Mission Briefing</h2>
                 <div className="prose prose-lg prose-invert max-w-none">
                   <p className="text-gray-300">
-                    The Phantom syndicate has pulled off the biggest heist in history — a billion-dollar haul
-                    stashed inside their custom-built ultra-secure vault. Every security system known to
-                    humankind stands between you and the prize.
+                    The Phantom syndicate has stashed a billion-dollar haul inside the world&apos;s most secure vault.
+                    Can your crew crack the security and walk away with the ultimate prize?
                   </p>
                   <p className="text-gray-300 mt-4">
                     Your crew of elite thieves has been hired to break in, bypass the infamous laser grid,

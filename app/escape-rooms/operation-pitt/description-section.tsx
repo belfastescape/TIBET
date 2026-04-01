@@ -14,14 +14,15 @@ export function DescriptionSection() {
             <Card className="border-[6px] border-white bg-[#111] flex-1">
             <CardContent className="py-[80px] px-[52px] flex flex-col justify-center h-full">
               <p className="text-gray-300 leading-relaxed text-base md:text-lg">
-                Notorious criminal mastermind Viktor Pitt has stolen top-secret
-                launch codes and vanished into his fortified underground bunker.
-                Your team of elite agents has been dispatched to stop him.
+                The Tibetan Secret Service is hearing a lot of internet intelligence about something called Operation
+                Pitt.
               </p>
               <p className="mt-4 text-gray-300 leading-relaxed text-base md:text-lg">
-                You have 60 minutes to infiltrate his lair, crack his encryption
-                systems, and neutralise the threat before he triggers a city-wide
-                catastrophe. The clock is ticking — do you have what it takes?
+                Your team must go into the spy&apos;s hideout to see if you can steal the secret plan, before it is too
+                late.
+              </p>
+              <p className="mt-4 text-gray-300 leading-relaxed text-base md:text-lg">
+                We have 2 identical versions of this game, so it can be played in a head-to-head team challenge.
               </p>
             </CardContent>
           </Card>

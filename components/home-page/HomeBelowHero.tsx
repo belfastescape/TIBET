@@ -95,8 +95,8 @@ export function HomeBelowHero() {
                   </span>
                   <h3 className="text-4xl md:text-6xl font-bold text-white mb-4">Billion Dollar Heist</h3>
                   <p className="text-gray-200 text-lg md:text-xl mb-8 max-w-xl">
-                    The Phantom crew has parked a ten-figure score inside a vault built to stop anyone cold. Can your
-                    squad slip past the systems and claim the score?
+                    The Phantom syndicate has stashed a billion-dollar haul inside the world&apos;s most secure vault.
+                    Can your crew crack the security and walk away with the ultimate prize?
                   </p>
                   <div className="flex flex-wrap gap-4">
                     <Link href="/booking">
@@ -138,9 +138,9 @@ export function HomeBelowHero() {
                   </span>
                   <h3 className="text-4xl md:text-6xl font-bold text-white mb-4">Quest for The Ancient Tomb</h3>
                   <p className="text-gray-200 text-lg md:text-xl mb-8 max-w-xl">
-                    Cross into a realm of charms and relics where every riddle pulls you deeper. Cooperate to bend the
-                    story your way, decode enchanted challenges, and secure the fabled Ancient Tomb before rival powers
-                    do. A strong pick for families and anyone who loves fantasy lore.
+                    Step into a world of magic and mystery where ancient spells and enchanted artifacts await. Your team
+                    must work together to master the magical arts, solve mystical puzzles, and retrieve the legendary
+                    Ancient Tomb before dark forces claim it forever. Perfect for families and fantasy enthusiasts!
                   </p>
                   <div className="flex flex-wrap gap-4">
                     <Link href="/booking">
@@ -182,9 +182,10 @@ export function HomeBelowHero() {
                   </span>
                   <h3 className="text-4xl md:text-6xl font-bold text-white mb-4">Operation Pitt</h3>
                   <p className="text-gray-200 text-lg md:text-xl mb-8 max-w-xl">
-                    Intelligence points to chatter around “Operation Pitt”—and a threat to the Pitt itself. Infiltrate
-                    the operative’s safe house, lift the blueprint, and get out before the window closes. We run two
-                    matching sets, so two squads can race side by side.
+                    The Tibetan Secret Service is hearing a lot of internet intelligence about something called Operation
+                    Pitt. Your team must go into the spy&apos;s hideout to see if you can steal the secret plan, before it
+                    is too late. We have 2 identical versions of this game, so it can be played in a head-to-head team
+                    challenge.
                   </p>
                   <div className="flex flex-wrap gap-4">
                     <Link href="/booking">

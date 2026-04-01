@@ -117,7 +117,8 @@ export default function EscapeRoomsPage() {
     {
       id: "operation-pitt",
       name: "Operation Pitt",
-      description: "Classic spy-thriller energy—run it twice in parallel for a head-to-head race between two teams.",
+      description:
+        "Tibetan Secret Service intel on Operation Pitt—raid the spy hideout and steal the plan. Two identical rooms for head-to-head team play.",
       image: "/images/spiesnoir.webp",
 
       minPeople: 2,
@@ -129,7 +130,7 @@ export default function EscapeRoomsPage() {
       id: "billion-dollar-heist",
       name: "The Billion Dollar Heist",
       description:
-        "Orchestrate a vault job on a legendary score—multi-room flow that rewards planning, communication, and cool heads.",
+        "The Phantom syndicate has stashed a billion-dollar haul inside the world's most secure vault. Can your crew crack the security and walk away with the ultimate prize?",
       image: "/images/billion-dollar-heist/laser-team-4.webp",
     
       minPeople: 2,
@@ -141,7 +142,7 @@ export default function EscapeRoomsPage() {
       id: "ancient-tomb",
       name: "Quest for the Ancient Tomb",
       description:
-        "A fantasy-tinged trail of riddles toward a fabled relic—welcoming for mixed-age crews and first-time escapers.",
+        "Step into magic and mystery—solve mystical puzzles and retrieve the legendary Ancient Tomb before dark forces claim it. Perfect for families and fantasy fans.",
       image: "/images/ancient-tomb.png",
       
       minPeople: 2,

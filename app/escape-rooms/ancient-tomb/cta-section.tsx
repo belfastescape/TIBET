@@ -55,7 +55,7 @@ function ShareCard({ delay = 0 }: { delay?: number }) {
       try {
         await navigator.share({
           title: "Quest for the Ancient Tomb – Escape Rooms Tibet",
-          text: "Check out Quest for the Ancient Tomb at Escape Rooms Tibet — an archaeological adventure for 2–6 players!",
+          text: "Check out Quest for the Ancient Tomb at Escape Rooms Tibet — a magical fantasy adventure for 2–6 players!",
           url: window.location.href,
         })
       } catch {
