@@ -14,16 +14,6 @@ export const indexableRobots: Metadata["robots"] = {
   },
 }
 
-/** Thank-you, utility routes — keep out of search results */
-export const noIndexRobots: Metadata["robots"] = {
-  index: false,
-  follow: false,
-  googleBot: {
-    index: false,
-    follow: false,
-  },
-}
-
 type OgArgs = {
   title: string
   description: string

@@ -1,4 +1,4 @@
-﻿import type { Metadata, Viewport } from "next"
+import type { Metadata, Viewport } from "next"
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -31,17 +31,6 @@ export const metadata: Metadata = {
     title: "Group Bookings | Escape Rooms Tibet",
     description: "Book your group event at Escape Rooms Tibet. Perfect for corporate teams, birthday parties, and special occasions.",
     images: ["https://www.escaperoomstibet.com/images/escape-room-portal-large.webp"],
-  },
-  robots: {
-    index: false,
-    follow: false,
-    googleBot: {
-      index: false,
-      follow: false,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
   },
 }
 

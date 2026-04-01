@@ -1,4 +1,4 @@
-﻿import type { Metadata, Viewport } from "next"
+import type { Metadata, Viewport } from "next"
 
 export const viewport: Viewport = {
   themeColor: [
@@ -38,17 +38,6 @@ export const metadata: Metadata = {
     description:
       "Learn about Escape Rooms Tibet, our mission, and our commitment to providing the best escape room experience in Tibet.",
     images: ["https://www.escaperoomstibet.com/images/escape-room-portal-large.webp"],
-  },
-  robots: {
-    index: false,
-    follow: false,
-    googleBot: {
-      index: false,
-      follow: false,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
   },
 }
 
