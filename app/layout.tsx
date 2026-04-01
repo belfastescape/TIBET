@@ -11,9 +11,7 @@ import { indexableRobots } from "@/lib/seo/metadata-helpers"
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: {
-    default: `${SITE_NAME} | Escape rooms & team events in the Everest region`,
-  },
+  title: `${SITE_NAME} | Escape rooms & team events in the Everest region`,
   description: defaultDescription,
   applicationName: SITE_NAME,
   alternates: {
