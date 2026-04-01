@@ -1,4 +1,5 @@
 import type React from "react"
+import { Suspense } from "react"
 import "./globals.css"
 import type { Metadata } from "next"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -8,6 +9,7 @@ import { inter } from "./fonts"
 import { SiteGraphJsonLd } from "@/components/seo/SiteGraphJsonLd"
 import { DEFAULT_OG_IMAGE_URL, defaultDescription, SITE_NAME, SITE_URL } from "@/lib/seo/site"
 import { indexableRobots } from "@/lib/seo/metadata-helpers"
+import GoogleAnalytics from "@/components/GoogleAnalytics"
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -71,6 +73,9 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
           <MainLayoutWrapper>{children}</MainLayoutWrapper>
           <StickyBookingCta />
+          <Suspense fallback={null}>
+            <GoogleAnalytics />
+          </Suspense>
         </ThemeProvider>
       </body>
     </html>
