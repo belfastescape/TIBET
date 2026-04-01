@@ -122,11 +122,6 @@ export function Footer() {
                     Group Bookings
                   </Link>
                 </li>
-                <li>
-                  <Link href="/teenage-birthday-parties" className={footerLink}>
-                    Teenage Birthday Parties
-                  </Link>
-                </li>
               </ul>
             </div>
 
@@ -139,28 +134,13 @@ export function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/deals" className={footerLink}>
-                    Special Deals
-                  </Link>
-                </li>
-                <li>
                   <Link href="/gift-vouchers" className={footerLink}>
                     Gift Vouchers
                   </Link>
                 </li>
                 <li>
-                  <Link href="/last-minute-christmas-gifts-tibet" className={footerLink}>
-                    Last Minute Christmas Gifts
-                  </Link>
-                </li>
-                <li>
                   <Link href="/gift-ideas-tibet" className={footerLink}>
                     Gift Ideas Tibet
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/gift-ideas-couples-tibet" className={footerLink}>
-                    Gift Ideas for Couples
                   </Link>
                 </li>
                 <li>

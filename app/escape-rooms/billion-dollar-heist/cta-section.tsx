@@ -1,10 +1,9 @@
-﻿"use client"
+"use client"
 
 import { useState } from "react"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { Share2 } from "lucide-react"
-import { event as gtagEvent } from "@/lib/gtag"
 
 const buttonStyles: Record<string, { border: string; glow: string; text: string }> = {
   white:  { border: "border-white",        glow: "bg-white/70",        text: "text-white group-hover:text-white" },
@@ -52,7 +51,6 @@ function ShareCard({ delay = 0 }: { delay?: number }) {
 
   const handleShare = async () => {
     if (typeof window === "undefined") return
-    gtagEvent({ action: "share", category: "Game Page", label: "share diamond page", value: 1 })
     if (navigator.share) {
       try {
         await navigator.share({

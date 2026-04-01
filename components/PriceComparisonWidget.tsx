@@ -5,7 +5,6 @@ import { Star, Users, UserRound, Minus, Plus, Sparkles, Mail, Check, Share2 } fr
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
-import { event as gtagEvent } from "@/lib/gtag"
 import Link from "next/link"
 
 interface Competitor {
@@ -84,14 +83,6 @@ export function PriceComparisonWidget() {
 
   const handleCalculate = () => {
     if (adults + children > 0) {
-      if (typeof window !== "undefined") {
-        gtagEvent({
-          action: "compare_prices",
-          category: "Price Comparison Widget",
-          label: "Compare Prices",
-          value: adults + children,
-        })
-      }
       setShowResults(true)
       setAnimateResults(false)
       setTimeout(() => setAnimateResults(true), 50)
@@ -125,15 +116,6 @@ export function PriceComparisonWidget() {
   }
 
   const handleShare = async () => {
-    if (typeof window !== "undefined") {
-      gtagEvent({
-        action: "share",
-        category: "Price Comparison Widget",
-        label: "Share with friends",
-        value: adults + children,
-      })
-    }
-
     const pricePart = ourPrice !== null
       ? averageSavings !== null && averageSavings > 0
         ? ` for just $${ourPrice} at Escape Rooms Tibet - that's $${averageSavings} less than the average competitor!`

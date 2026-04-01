@@ -18,27 +18,22 @@ const navItems: NavItem[] = [
 ]
 
 const secondaryLinks = [
-  { label: "Teenage Birthday Parties", href: "/teenage-birthday-parties" },
   { label: "Gift Vouchers", href: "/gift-vouchers" },
-  { label: "Deals",         href: "/deals" },
-  { label: "Contact",       href: "/contact" },
+  { label: "Contact", href: "/contact" },
 ]
 
 const dropdowns = [
   {
     label: "Our Games",
     links: [
-      { label: "Operation Pitt",       href: "/escape-rooms/operation-pitt" },
-      { label: "The Billion Dollar Heist",        href: "/escape-rooms/billion-dollar-heist" },
+      { label: "Operation Pitt", href: "/escape-rooms/operation-pitt" },
+      { label: "The Billion Dollar Heist", href: "/escape-rooms/billion-dollar-heist" },
       { label: "Quest for the Ancient Tomb", href: "/escape-rooms/ancient-tomb" },
     ],
   },
   {
     label: "Group Bookings",
-    links: [
-      { label: "Team Building", href: "/team-building-tibet" },
-      { label: "School Groups", href: "/school-groups" },
-    ],
+    links: [{ label: "Team Building", href: "/team-building-tibet" }],
   },
 ]
 

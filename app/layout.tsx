@@ -2,14 +2,10 @@ import type React from "react"
 import "./globals.css"
 import type { Metadata } from "next"
 import { ThemeProvider } from "@/components/theme-provider"
-import GoogleAnalytics from "@/components/GoogleAnalytics"
 import { JsonLd } from '@/components/JsonLd'
 import MainLayoutWrapper from '@/components/layout/main-layout-wrapper'
 import { StickyBookingCta } from '@/components/StickyBookingCta'
 import { inter } from './fonts'
-import { isGa4Configured } from '@/lib/gtag'
-
-const GA_ID = 'G-R4Y4HC2V3Q'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.escaperoomstibet.com'),
@@ -129,12 +125,6 @@ export default function RootLayout({
         {/* Preconnect to own domain for faster resource loading */}
         <link rel="preconnect" href="https://www.escaperoomstibet.com" />
         
-        {isGa4Configured() && (
-          <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        )}
-        {/* <link rel="dns-prefetch" href="https://cdn.trustindex.io" /> */}
-        {/* <link rel="dns-prefetch" href="https://www.google-analytics.com" /> */}
-        
         {/* Preload LCP image (optimized variant so browser fetches smaller file) */}
         <link
           rel="preload"
@@ -145,20 +135,8 @@ export default function RootLayout({
         
         <JsonLd data={localBusinessSchema} />
         <JsonLd data={websiteSchema} />
-        {/* GA4 — hardcoded plain script tags so they are present in the initial
-            server-rendered HTML. next/script beforeInteractive is unsupported in
-            the App Router, and NEXT_PUBLIC_* env vars can be empty on Vercel. */}
-        {/* eslint-disable-next-line @next/next/no-sync-scripts */}
-        <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} />
-        <script
-          id="gtag-bootstrap"
-          dangerouslySetInnerHTML={{
-            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}');`
-          }}
-        />
       </head>
       <body className={`${inter.className} bg-[#0a0a0a] text-white min-h-screen`}>
-        <GoogleAnalytics />
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
           <MainLayoutWrapper>{children}</MainLayoutWrapper>
           <StickyBookingCta />

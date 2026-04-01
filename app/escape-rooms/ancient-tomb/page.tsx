@@ -1,4 +1,4 @@
-﻿"use client"
+"use client"
 
 import Link from "next/link"
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb"
@@ -46,7 +46,7 @@ export default function MagicWandPage() {
           </h2>
           <p className="mt-8 text-lg md:text-xl text-gray-400 leading-relaxed max-w-2xl mx-auto">
             Quest for the Ancient Tomb is our most family-friendly adventure. Check out our{" "}
-            <Link href="/teenage-birthday-parties" className="text-white underline underline-offset-4 hover:text-gray-300 transition-colors font-semibold">
+            <Link href="/group-bookings" className="text-white underline underline-offset-4 hover:text-gray-300 transition-colors font-semibold">
               teenage birthday party deal
             </Link>
             {" "}or browse{" "}

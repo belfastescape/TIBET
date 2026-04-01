@@ -77,6 +77,36 @@ const nextConfig = {
   turbopack: {},
   // IMPROVEMENT: Compress output
   compress: true,
+  async redirects() {
+    const booking = [
+      '/book',
+      '/book-now',
+      '/how-to-book',
+      '/escapenow',
+      '/escapenow1',
+    ]
+    const home = [
+      '/homeA',
+      '/are-escape-rooms-a-good-idea-for-10-year-old-birthday-parties',
+      '/birthday-parties',
+      '/deals',
+      '/discounts',
+      '/evening-deal',
+      '/gift-ideas-couples-tibet',
+      '/last-minute-christmas-gifts-tibet',
+      '/rainy-day-activities-tibet',
+      '/school-groups',
+      '/school-trip-activities-tibet',
+      '/teenage-birthday-parties',
+      '/teenage-birthday-party',
+      '/winter-teams-deal',
+    ]
+    return [
+      ...booking.map((source) => ({ source, destination: '/booking', permanent: true })),
+      ...home.map((source) => ({ source, destination: '/', permanent: true })),
+      { source: '/thank-you1', destination: '/thank-you', permanent: true },
+    ]
+  },
 }
 
 module.exports = nextConfig

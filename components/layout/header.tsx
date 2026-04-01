@@ -17,18 +17,13 @@ const dropdowns = [
   },
   {
     label: "Group Bookings",
-    links: [
-      { label: "Team Building",  href: "/team-building-tibet" },
-      { label: "School Groups",  href: "/school-groups" },
-    ],
+    links: [{ label: "Team Building", href: "/team-building-tibet" }],
   },
 ]
 
 const plainLinks = [
-  { label: "Teenage Birthday Parties", href: "/teenage-birthday-parties" },
   { label: "Gift Vouchers", href: "/gift-vouchers" },
-  { label: "Deals",         href: "/deals" },
-  { label: "Contact",       href: "/contact" },
+  { label: "Contact", href: "/contact" },
 ]
 
 export function Header() {

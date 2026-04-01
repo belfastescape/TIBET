@@ -9,7 +9,6 @@ import { Clock, Users, ArrowRight, MapPin, PartyPopper } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import ParallaxNav from "@/components/ParallaxNav"
-import { useABTracking } from "@/hooks/use-ab-tracking"
 import { PlayOnScrollVideo } from "@/components/PlayOnScrollVideo"
 
 const PriceComparisonWidget = dynamic(
@@ -19,7 +18,6 @@ const PriceComparisonWidget = dynamic(
 
 export default function Home() {
   const [isHydrated, setIsHydrated] = useState(false)
-  useABTracking('control')
 
   useEffect(() => {
     setIsHydrated(true)
@@ -68,7 +66,8 @@ export default function Home() {
               Escape Room Tibet
             </h1>
             <p className="text-lg md:text-xl text-gray-300 mb-6 leading-relaxed">
-              Escape the real world for an hour. Our immersive escape rooms are the perfect <Link href="/rainy-day-activities-tibet" className="text-cyan-400 hover:text-cyan-300 transition-colors">fun indoor activity in Tibet</Link> — whether you&apos;re with friends, family, or workmates.
+              Escape the real world for an hour. Our immersive escape rooms are the perfect fun indoor activity in Tibet
+              — whether you&apos;re with friends, family, or workmates.
             </p>
             <p className="text-lg md:text-xl text-gray-300 mb-12 leading-relaxed">
               Work together, crack the puzzles, beat the clock. Three unique  escape rooms, each with its own story waiting to be solved.
@@ -283,7 +282,11 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold mb-3 text-white">Perfect for Groups</h3>
               <p className="text-gray-300">
-                Whether it&apos;s a family outing, <Link href="/teenage-birthday-parties" className="text-cyan-400 hover:text-cyan-300 transition-colors"> a teenage birthday party</Link>, or <Link href="/team-building-tibet" className="text-cyan-400 hover:text-cyan-300 transition-colors">a team building event in Tibet</Link>, our escape rooms are designed for
+                Whether it&apos;s a family outing, a teenage birthday party, or{' '}
+                <Link href="/team-building-tibet" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                  a team building event in Tibet
+                </Link>
+                , our escape rooms are designed for
                 groups of all sizes.
               </p>
             </motion.div>

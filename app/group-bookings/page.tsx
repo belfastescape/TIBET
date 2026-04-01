@@ -311,7 +311,7 @@ export default function GroupBookingsPage() {
                     </ul>
 
                     <div className="bg-[#0a0a0a] rounded-lg p-4 mb-6 border border-[#222]">
-                      <p className="text-cyan-400 font-medium mb-2"><Link href="/school-groups" className="text-cyan-400 hover:text-cyan-300 transition-colors">School Group Deal</Link></p>
+                      <p className="text-cyan-400 font-medium mb-2">School Group Deal</p>
                       <p className="text-white">Starting at $25 per student (min. 10 students)</p>
                       <p className="text-gray-400 text-sm mt-2">We can do evening sessions starting aroundabout 7-730pm. Contact Us to see if we can do it.</p>
                     </div>

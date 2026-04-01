@@ -62,7 +62,7 @@ export default function OperationPitt() {
               corporate team building
             </Link>
             {" "}and{" "}
-            <Link href="/teenage-birthday-parties" className="text-white underline underline-offset-4 hover:text-gray-300 transition-colors font-semibold">
+            <Link href="/group-bookings" className="text-white underline underline-offset-4 hover:text-gray-300 transition-colors font-semibold">
               teenage birthday parties
             </Link>
             . Two rooms, one winner.
