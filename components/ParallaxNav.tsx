@@ -13,7 +13,7 @@ interface NavItem {
 const navItems: NavItem[] = [
   { label: ["OUR", "ROOMS"],   image: "/images/escape-rooms-tibet-hero.webp",                href: "#escape-rooms" },
   { label: ["RESERVE"],    image: "/images/billion-dollar-heist/laser-team-4.webp",        href: "/booking" },
-  { label: ["GROUPS"],         image: "/images/operation-pitt-team.webp",            href: "/team-building-tibet" },
+  { label: ["GROUPS"],         image: "/images/operation-pitt-team.webp",            href: "/team-building" },
   { label: ["RATES"],         image: "/images/ancient-tomb/examining-book.webp",         href: "/pricing" },
 ]
 
@@ -33,7 +33,7 @@ const dropdowns = [
   },
   {
     label: "Groups & events",
-    links: [{ label: "Team Building", href: "/team-building-tibet" }],
+    links: [{ label: "Team Building", href: "/team-building" }],
   },
 ]
 

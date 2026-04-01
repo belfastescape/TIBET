@@ -58,7 +58,7 @@ export default function OperationPitt() {
           </h2>
           <p className="mt-8 text-lg md:text-xl text-gray-400 leading-relaxed max-w-2xl mx-auto">
             Operation Pitt is equally brilliant for{" "}
-            <Link href="/team-building-tibet" className="text-white underline underline-offset-4 hover:text-gray-300 transition-colors font-semibold">
+            <Link href="/team-building" className="text-white underline underline-offset-4 hover:text-gray-300 transition-colors font-semibold">
               corporate team building
             </Link>
             {" "}and{" "}

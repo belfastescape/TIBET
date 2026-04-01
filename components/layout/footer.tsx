@@ -135,11 +135,6 @@ export function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/gift-ideas-tibet" className={footerLink}>
-                    Gift Ideas Tibet
-                  </Link>
-                </li>
-                <li>
                   <Link href="/location" className={footerLink}>
                     Location & Directions
                   </Link>

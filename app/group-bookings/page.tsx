@@ -205,7 +205,7 @@ export default function GroupBookingsPage() {
                     </div>
 
                     <p className="text-gray-300 mb-6">
-                      Our escape rooms are perfect for <Link href="/team-building-tibet" className="text-cyan-400 hover:text-cyan-300 transition-colors">corporate team building</Link>. They naturally encourage communication,
+                      Our escape rooms are perfect for <Link href="/team-building" className="text-cyan-400 hover:text-cyan-300 transition-colors">corporate team building</Link>. They naturally encourage communication,
                       problem-solving, and collaboration - all essential skills in the workplace.
                     </p>
 

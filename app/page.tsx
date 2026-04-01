@@ -278,7 +278,7 @@ export default function Home() {
               <h3 className="text-xl font-bold mb-3 text-white">Built for crews</h3>
               <p className="text-gray-300">
                 From Sunday family hangs to teen birthdays to{' '}
-                <Link href="/team-building-tibet" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                <Link href="/team-building" className="text-cyan-400 hover:text-cyan-300 transition-colors">
                   workplace offsites in Tibet
                 </Link>
                 , our rooms scale from intimate pairs to bigger parties.

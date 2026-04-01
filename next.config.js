@@ -82,8 +82,6 @@ const nextConfig = {
       '/book',
       '/book-now',
       '/how-to-book',
-      '/escapenow',
-      '/escapenow1',
     ]
     const home = [
       '/homeA',
@@ -104,7 +102,6 @@ const nextConfig = {
     return [
       ...booking.map((source) => ({ source, destination: '/booking', permanent: true })),
       ...home.map((source) => ({ source, destination: '/', permanent: true })),
-      { source: '/thank-you1', destination: '/thank-you', permanent: true },
     ]
   },
 }

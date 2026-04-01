@@ -17,7 +17,7 @@ const dropdowns = [
   },
   {
     label: "Groups & events",
-    links: [{ label: "Team Building", href: "/team-building-tibet" }],
+    links: [{ label: "Team Building", href: "/team-building" }],
   },
 ]
 
