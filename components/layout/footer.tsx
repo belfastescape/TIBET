@@ -16,9 +16,12 @@ export function Footer() {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-2xl font-bold text-white mb-4">Who we are</h2>
             <p className="text-gray-400 leading-relaxed">
-              Since 2021 we’ve welcomed players to live puzzle adventures in Tibet’s city centre. We’re here to spark
-              curiosity, reward cooperation, and send groups out laughing about what just happened. Our compass points to
-              guest care, collaboration, and fresh ideas—whether you’re here with mates, relatives, or colleagues.
+              Escape Rooms Tibet was established in 2021 with a vision to provide exhilarating escape room adventures in
+              the heart of the Khumbu region. Our mission is to create unforgettable experiences that challenge the mind and
+              foster teamwork. We pride ourselves on our core values: Customer Satisfaction, Teamwork, and Innovation.
+              These principles guide us in delivering exceptional entertainment for friends, families, and corporate
+              groups alike. Join us for an adventure that promises excitement and collaboration, making every visit a
+              memorable one.
             </p>
           </div>
         </div>
@@ -62,7 +65,7 @@ export function Footer() {
                 </li>
                 <li>
                   <Link href="/escape-rooms" className={footerLink}>
-                    All rooms
+                    Our Escape Rooms
                   </Link>
                 </li>
                 

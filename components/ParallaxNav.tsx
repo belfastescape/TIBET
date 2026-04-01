@@ -11,9 +11,9 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { label: ["OUR", "ROOMS"],   image: "/images/escape-rooms-tibet-hero.webp",                href: "#escape-rooms" },
-  { label: ["RESERVE"],    image: "/images/billion-dollar-heist/laser-team-4.webp",        href: "/booking" },
-  { label: ["GROUPS"],         image: "/images/operation-pitt-team.webp",            href: "/team-building" },
+  { label: ["OUR", "GAMES"],   image: "/images/escape-rooms-tibet-hero.webp",                href: "#escape-rooms" },
+  { label: ["BOOK", "NOW"],    image: "/images/billion-dollar-heist/laser-team-4.webp",        href: "/booking" },
+  { label: ["GROUP", "BOOKINGS"],         image: "/images/operation-pitt-team.webp",            href: "/group-bookings" },
   { label: ["RATES"],         image: "/images/ancient-tomb/examining-book.webp",         href: "/pricing" },
 ]
 
@@ -24,7 +24,7 @@ const secondaryLinks = [
 
 const dropdowns = [
   {
-    label: "Our rooms",
+    label: "Our Games",
     links: [
       { label: "Operation Pitt", href: "/escape-rooms/operation-pitt" },
       { label: "The Billion Dollar Heist", href: "/escape-rooms/billion-dollar-heist" },
@@ -32,8 +32,11 @@ const dropdowns = [
     ],
   },
   {
-    label: "Groups & events",
-    links: [{ label: "Team Building", href: "/team-building" }],
+    label: "Group Bookings",
+    links: [
+      { label: "Group Bookings", href: "/group-bookings" },
+      { label: "Team Building", href: "/team-building" },
+    ],
   },
 ]
 
@@ -168,12 +171,12 @@ export default function ParallaxNav() {
               </Link>
             ))}
 
-            {/* Reserve CTA */}
+            {/* Book Now CTA */}
             <Link
               href="/booking"
               className="bg-gradient-to-r from-cyan-500 to-green-500 hover:from-cyan-600 hover:to-green-600 text-white text-sm font-medium px-4 py-2 rounded-md transition-all duration-200"
             >
-              Reserve
+              Book Now
             </Link>
           </nav>
 
@@ -248,7 +251,7 @@ export default function ParallaxNav() {
               onClick={() => setMobileMenuOpen(false)}
               className="mt-4 bg-gradient-to-r from-cyan-500 to-green-500 hover:from-cyan-600 hover:to-green-600 text-white font-medium text-lg px-10 py-4 rounded-md"
             >
-              Reserve
+              Book Now
             </Link>
           </div>
         )}

@@ -118,8 +118,8 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         </nav>
 
         <div className="p-6 border-t border-[#222] space-y-4">
-          <Link href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors">
-            Reserve
+          <Link href="/booking" className="text-gray-300 hover:text-cyan-400 transition-colors">
+            Book Now
           </Link>
 
           <div className="pt-4">

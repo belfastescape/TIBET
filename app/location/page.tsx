@@ -44,7 +44,8 @@ export default function LocationPage() {
               Mt Everest, Khumbu, Solukhumbu, Nepal
             </p>
             <p className="text-gray-400 mb-8">
-              Find us in the Khumbu region—domestic flights from Kathmandu connect to Lukla, with trekking routes through Namche Bazaar toward base camp.
+              Find us in the heart of the Khumbu region, accessible via flights from Kathmandu to Lukla and trekking routes
+              through Namche Bazaar.
             </p>
           </div>
         </motion.div>
@@ -87,7 +88,8 @@ export default function LocationPage() {
                   <h3 className="text-lg font-semibold text-white">Parking</h3>
                 </div>
                 <p className="text-gray-300 ml-8">
-                  Limited vehicle access in the high Khumbu; most visitors use flights to Lukla, then lodges and footpaths between villages.
+                  Vehicle access is limited in the high Khumbu region. Most visitors arrive via flights to Lukla, followed
+                  by trekking along established footpaths between villages.
                 </p>
               </div>
               <div>
@@ -96,7 +98,8 @@ export default function LocationPage() {
                   <h3 className="text-lg font-semibold text-white">Public Transport</h3>
                 </div>
                 <p className="text-gray-300 ml-8">
-                  Regional flights and shared ground transport serve towns in the Everest area; plan multi-day trekking from Lukla or Namche for the final approach.
+                  Regional flights connect Kathmandu to Lukla. From there, plan for multi-day trekking through Namche Bazaar
+                  to reach our location near Mount Everest.
                 </p>
               </div>
             </div>

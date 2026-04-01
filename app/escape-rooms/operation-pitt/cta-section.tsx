@@ -175,7 +175,7 @@ export function CtaSection() {
             title="Want to book this game?"
             subtitle="Check out all availability on our booking page."
             href="/booking"
-            label="Reserve"
+            label="Book Now"
             variant="primary"
             buttonColor="green"
             delay={0.1}
@@ -185,7 +185,7 @@ export function CtaSection() {
             title="Check out our other games."
             subtitle="Browse our other escape rooms here."
             href="/escape-rooms"
-            label="All of our rooms"
+            label="Our Escape Rooms"
             buttonColor="yellow"
             delay={0.3}
           />

@@ -79,10 +79,10 @@ function RoomCard({ room }: RoomCardProps) {
             href={`/escape-rooms/${room.id}`}
             className="text-cyan-400 hover:text-cyan-300 transition-colors inline-flex items-center"
           >
-            Full briefing <ArrowRight className="w-4 h-4 ml-1" />
+            Room Details <ArrowRight className="w-4 h-4 ml-1" />
           </Link>
           <Link href="/booking" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-            Reserve
+            Book Now
           </Link>
         </div>
       </div>
@@ -177,10 +177,11 @@ export default function EscapeRoomsPage() {
             variants={fadeIn}
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-green-400 bg-clip-text text-transparent">
-              Browse our live games
+              Our Escape Rooms
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Three original scenarios—spy, heist, and tomb—each tuned for a different mood and difficulty.
+              Choose your adventure from our range of immersive escape room experiences, each with unique themes and
+              challenges.
             </p>
           </motion.div>
         </div>
@@ -198,12 +199,12 @@ export default function EscapeRoomsPage() {
           >
             <Tabs defaultValue="all" className="w-full" onValueChange={setFilter}>
               <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
-                <h2 className="text-3xl font-bold text-white">Filter by vibe</h2>
+                <h2 className="text-3xl font-bold text-white">Choose Your Adventure</h2>
                 <TabsList className="bg-[#111] border border-[#222]">
-                  <TabsTrigger value="all">Every room</TabsTrigger>
-                  <TabsTrigger value="beginner">Easier</TabsTrigger>
-                  <TabsTrigger value="family-friendly">All ages</TabsTrigger>
-                  <TabsTrigger value="expert">Tougher</TabsTrigger>
+                  <TabsTrigger value="all">All Rooms</TabsTrigger>
+                  <TabsTrigger value="beginner">Beginner</TabsTrigger>
+                  <TabsTrigger value="family-friendly">Family</TabsTrigger>
+                  <TabsTrigger value="expert">Expert</TabsTrigger>
                 </TabsList>
               </div>
 
@@ -274,10 +275,10 @@ export default function EscapeRoomsPage() {
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div>
-                <h2 className="text-3xl font-bold mb-4 text-white">Bigger groups</h2>
+                <h2 className="text-3xl font-bold mb-4 text-white">Group Bookings</h2>
                 <p className="text-gray-300 mb-6">
-                  Hosting a crowd? We can spin several rooms at once so nobody waits on the sidelines—great for work
-                  offsites, birthdays, or any excuse to compete in parallel storylines.
+                  Planning a larger event? We can accommodate groups of all sizes by running multiple rooms simultaneously.
+                  Perfect for corporate team building, birthday parties, or any special occasion.
                 </p>
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-start">
@@ -330,41 +331,45 @@ export default function EscapeRoomsPage() {
             variants={fadeIn}
           >
             <h2 className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-cyan-400 to-green-400 bg-clip-text text-transparent">
-              Room FAQs
+              Frequently Asked Questions
             </h2>
 
             <div className="space-y-4">
               <div className="bg-[#111] rounded-lg border border-[#222] p-6">
-                <h3 className="text-xl font-bold mb-2 text-white">How do I pick between games?</h3>
+                <h3 className="text-xl font-bold mb-2 text-white">How do I choose the right room?</h3>
                 <p className="text-gray-300">
-                  New to the format? Operation Pitt sits around a 3/5 on our scale. After a few wins, Quest for the
-                  Ancient Tomb (about 4/5) or The Billion Dollar Heist (about 4.5/5) raise the bar. Theme matters too—spy,
-                  vault, or fantasy—choose what your crew will talk about all week.
+                  If you&apos;re new to escape rooms, we recommend starting with Operation Pitt (difficulty 3/5). For
+                  experienced players looking for a challenge, try Quest for the Ancient Tomb (4/5) or The Billion Dollar
+                  Heist (4.5/5). Each room has a different theme, so you can also choose based on what interests you most!
                 </p>
               </div>
 
               <div className="bg-[#111] rounded-lg border border-[#222] p-6">
-                <h3 className="text-xl font-bold mb-2 text-white">What if the clock runs out?</h3>
+                <h3 className="text-xl font-bold mb-2 text-white">What if we don&apos;t escape in time?</h3>
                 <p className="text-gray-300">
-                  Plenty of teams need the full hour, especially on harder rooms. If time’s up, we’ll usually give you a
-                  little runway to see the finale—our stories are written to land, not to cut off mid-reveal.
+                  Don&apos;t worry! Many teams don&apos;t escape in 60 minutes, especially in our more challenging rooms.
+                  If you don&apos;t make it out in time, we will give you extra time to complete your game. All of our games
+                  are story-based, so we want you to experience the end of the story even if you run a bit over time.
                 </p>
               </div>
 
               <div className="bg-[#111] rounded-lg border border-[#222] p-6">
-                <h3 className="text-xl font-bold mb-2 text-white">Photography during play?</h3>
+                <h3 className="text-xl font-bold mb-2 text-white">Can we take photos inside the rooms?</h3>
                 <p className="text-gray-300">
-                  Snap away in the lobby; inside the sets we keep cameras tucked away so puzzles stay secret for the
-                  next group. We’ll grab a team shot afterward so you still go home with proof.
+                  You can take photos of your team while you are playing your game. However, we&apos;re happy to take a
+                  group photo of your team after your experience. It&apos;s probably better that way so you don&apos;t miss
+                  out on any of the experience.
                 </p>
               </div>
 
               <div className="bg-[#111] rounded-lg border border-[#222] p-6">
-                <h3 className="text-xl font-bold mb-2 text-white">Gift vouchers?</h3>
+                <h3 className="text-xl font-bold mb-2 text-white">Do you offer gift vouchers?</h3>
                 <p className="text-gray-300">
-                  Yes—buy through the booking flow. Codes last twelve months from purchase, deliver by email, and we can
-                  send a souvenir card on request. If life gets in the way and the date lapses, ask us—we’d rather extend
-                  than leave credit on the table.
+                  Yes! Escape room experiences make great gifts. You can purchase gifts on our booking page. Vouchers are
+                  valid for 12 months from the date of purchase and can be emailed directly to the recipient or to you to
+                  give in person. Check out our souvenir gift card that we will send out to you for free. They make great
+                  little mementos. NB. If your date expires, we will always extend the voucher date. We want as many people
+                  to play our games as possible.
                 </p>
               </div>
             </div>
@@ -384,13 +389,14 @@ export default function EscapeRoomsPage() {
           >
             <div className="p-8 md:p-12 text-center">
               <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-green-400 bg-clip-text text-transparent">
-                Pick a date
+                Ready for Your Next Adventure?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Lock in a slot and see how your crew handles the pressure when the countdown starts.
+                Book your escape room experience today and put your problem-solving skills to the test. The clock is
+                ticking!
               </p>
               <Link href="/booking" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                Reserve online
+                Book online
               </Link>
             </div>
           </motion.div>

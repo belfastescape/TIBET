@@ -447,7 +447,7 @@ export function PriceComparisonWidget() {
                 {/* CTA */}
                 <Link href="/booking">
                   <Button className="w-full h-12 text-base font-semibold rounded-xl">
-                    Reserve at this rate
+                    Book at this rate
                   </Button>
                 </Link>
               </div>

@@ -558,7 +558,7 @@ export default function GiftVouchersPage() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-              Why Tibet Locals Choose Our Gift Cards & Vouchers
+              Why Locals Choose Our Gift Cards & Vouchers
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our gift cards Tibet - the perfect experience gift idea for anyone on your Christmas list

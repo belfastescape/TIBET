@@ -227,10 +227,10 @@ export default function FAQPage() {
             variants={fadeIn}
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-green-400 bg-clip-text text-transparent">
-              Answers to common questions
+              Frequently Asked Questions
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Booking, gameplay, groups—what you need to know before you walk through our door.
+              Find answers to common questions about our escape rooms, booking process, and more.
             </p>
           </motion.div>
         </div>
@@ -281,11 +281,11 @@ export default function FAQPage() {
             <Tabs defaultValue="all" value={activeCategory} onValueChange={setActiveCategory} className="w-full">
               <div className="mb-8 overflow-x-auto">
                 <TabsList className="bg-[#111] border border-[#222] p-1 inline-flex min-w-full md:min-w-0">
-                  <TabsTrigger value="all">Everything</TabsTrigger>
-                  <TabsTrigger value="general">Basics</TabsTrigger>
-                  <TabsTrigger value="booking">Booking & rates</TabsTrigger>
-                  <TabsTrigger value="experience">During the game</TabsTrigger>
-                  <TabsTrigger value="groups">Teams & groups</TabsTrigger>
+                  <TabsTrigger value="all">All Questions</TabsTrigger>
+                  <TabsTrigger value="general">General Info</TabsTrigger>
+                  <TabsTrigger value="booking">Booking & Pricing</TabsTrigger>
+                  <TabsTrigger value="experience">Game Experience</TabsTrigger>
+                  <TabsTrigger value="groups">Group Bookings</TabsTrigger>
                   <TabsTrigger value="accessibility">Accessibility</TabsTrigger>
                   <TabsTrigger value="location">Location</TabsTrigger>
                 </TabsList>
@@ -467,14 +467,15 @@ export default function FAQPage() {
           >
             <div className="p-8 md:p-12 text-center">
               <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-green-400 bg-clip-text text-transparent">
-                Time to lock in a slot?
+                Ready to Book Your Adventure?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                You’ve got the basics—now bring your crew and see how you fare before the timer hits zero.
+                Now that you have all the information you need, it&apos;s time to put your problem-solving skills to the
+                test. The clock is ticking!
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="bg-gradient-to-r from-cyan-500 to-green-500 hover:from-cyan-600 hover:to-green-600 text-white text-lg py-6 px-8">
-                  Reserve a game
+                <Button className="bg-gradient-to-r from-cyan-500 to-green-500 hover:from-cyan-600 hover:to-green-600 text-white text-lg py-6 px-8" asChild>
+                  <Link href="/booking">Book Now</Link>
                 </Button>
                 <Link href="/contact">
                   <Button

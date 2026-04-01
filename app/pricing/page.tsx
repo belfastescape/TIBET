@@ -273,7 +273,7 @@ export default function PricingPage() {
                     </CardContent>
                     <CardFooter>
                       <Link href="/booking" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                        Reserve
+                        Book Now
                       </Link>
                     </CardFooter>
                   </Card>
@@ -314,7 +314,7 @@ export default function PricingPage() {
                     </CardContent>
                     <CardFooter>
                       <Link href="/booking" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                        Reserve
+                        Book Now
                       </Link>
                     </CardFooter>
                   </Card>
@@ -363,7 +363,7 @@ export default function PricingPage() {
                     </CardContent>
                     <CardFooter>
                       <Link href="/booking" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                        Reserve
+                        Book Now
                       </Link>
                     </CardFooter>
                   </Card>

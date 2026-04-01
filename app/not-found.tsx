@@ -65,7 +65,7 @@ export default function NotFound() {
               </div>
               <div className="p-3">
                 <span className="text-cyan-400 text-sm font-medium group-hover:text-cyan-300">
-                  Reserve →
+                  Book Now →
                 </span>
               </div>
             </Link>
@@ -75,7 +75,7 @@ export default function NotFound() {
           href="/booking"
           className="mt-10 inline-flex items-center justify-center rounded-md bg-[#1a1a1a] border border-[#333] px-6 py-3 text-sm font-medium text-white hover:bg-[#222] hover:border-cyan-500/30 transition-colors"
         >
-          Reserve
+          Book Now
         </Link>
       </div>
   )
