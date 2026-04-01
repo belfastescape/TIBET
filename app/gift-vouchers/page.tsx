@@ -536,13 +536,6 @@ export default function GiftVouchersPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="tel:0215550198"
-                  className="text-red-400 hover:text-red-300 transition-colors font-semibold"
-                >
-                  📞 021 555 0198
-                </a>
-                <span className="text-gray-600 hidden sm:inline">|</span>
-                <a
                   href="mailto:info@escaperoomstibet.com"
                   className="text-green-400 hover:text-green-300 transition-colors font-semibold"
                 >
@@ -736,7 +729,7 @@ export default function GiftVouchersPage() {
                     How do recipients book their experience?
                   </AccordionTrigger>
                   <AccordionContent className="text-gray-300">
-                    It's easy! Recipients can book online through our website or call us directly. They simply provide their
+                    It's easy! Recipients can book online through our website or contact us by email. They simply provide their
                     voucher code during booking. We'll guide them through choosing their escape room, date, and time. Our
                     Tibet escape rooms are conveniently located in the city centre.
                   </AccordionContent>

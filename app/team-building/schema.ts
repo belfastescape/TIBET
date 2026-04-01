@@ -14,7 +14,6 @@ export const teamBuildingSchema = {
       "postalCode": "56000",
       "addressCountry": "NP"
     },
-    "telephone": "+64215550198",
     "url": "https://www.escaperoomstibet.com"
   },
   "serviceType": "Team Building Activities",

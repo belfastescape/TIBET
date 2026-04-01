@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next"
+import type { Metadata } from "next"
 import { JsonLd } from '@/components/JsonLd'
 
 export const metadata: Metadata = {
@@ -56,7 +56,7 @@ const faqSchema = {
       "name": "How do I book a room?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Booking is easy! You can book directly through our website by selecting your preferred room, date, and time. Payment is required at the time of booking to secure your reservation. Alternatively, you can call us at 021 555 0198 during business hours to book over the phone. We recommend booking in advance, especially for weekends and holidays, as our rooms often fill up quickly."
+        "text": "Booking is easy! You can book directly through our website by selecting your preferred room, date, and time. Payment is required at the time of booking to secure your reservation. You can also reach us via our contact page or email if you need help. We recommend booking in advance, especially for weekends and holidays, as our rooms often fill up quickly."
       }
     },
     {
@@ -64,7 +64,7 @@ const faqSchema = {
       "name": "Do you offer gift vouchers?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes! Escape room experiences make great gifts. You can purchase gift vouchers for specific rooms or for any value. Vouchers are valid for 12 months from the date of purchase and can be emailed directly to the recipient or to you to give in person. You can purchase gift vouchers through our website or by calling us at 021 555 0198."
+        "text": "Yes! Escape room experiences make great gifts. You can purchase gift vouchers for specific rooms or for any value. Vouchers are valid for 12 months from the date of purchase and can be emailed directly to the recipient or to you to give in person. You can purchase gift vouchers through our website or contact us by email if you need assistance."
       }
     },
     {

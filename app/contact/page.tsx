@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import Image from "next/image"
 import { motion } from "framer-motion"
-import { MapPin, Phone, Mail, Facebook, Send, User, MessageSquare } from "lucide-react"
+import { MapPin, Mail, Facebook, Send, User, MessageSquare } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -15,7 +15,6 @@ export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    phone: '',
     subject: '',
     message: ''
   })
@@ -56,7 +55,7 @@ export default function ContactPage() {
 
       if (response.ok) {
         setSubmitStatus('success')
-        setFormData({ name: '', email: '', phone: '', subject: '', message: '' })
+        setFormData({ name: '', email: '', subject: '', message: '' })
         console.log('Email sent successfully:', data)
       } else {
         setSubmitStatus('error')
@@ -159,40 +158,22 @@ export default function ContactPage() {
                         </div>
 
                         <div className="space-y-2">
-                          <Label htmlFor="phone" className="text-gray-300 text-sm font-medium">
-                            Phone
+                          <Label htmlFor="email" className="text-gray-300 text-sm font-medium">
+                            Email *
                           </Label>
                           <div className="relative">
-                            <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-500" />
+                            <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-500" />
                             <Input
-                              id="phone"
-                              name="phone"
-                              type="tel"
-                              value={formData.phone}
+                              id="email"
+                              name="email"
+                              type="email"
+                              required
+                              value={formData.email}
                               onChange={handleInputChange}
                               className="pl-10 bg-[#0a0a0a] border-[#333] text-white placeholder-gray-500 focus:border-cyan-500 focus:ring-cyan-500/20"
-                              placeholder="Your phone number"
+                              placeholder="your.email@example.com"
                             />
                           </div>
-                        </div>
-                      </div>
-
-                      <div className="space-y-2">
-                        <Label htmlFor="email" className="text-gray-300 text-sm font-medium">
-                          Email *
-                        </Label>
-                        <div className="relative">
-                          <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-500" />
-                          <Input
-                            id="email"
-                            name="email"
-                            type="email"
-                            required
-                            value={formData.email}
-                            onChange={handleInputChange}
-                            className="pl-10 bg-[#0a0a0a] border-[#333] text-white placeholder-gray-500 focus:border-cyan-500 focus:ring-cyan-500/20"
-                            placeholder="your.email@example.com"
-                          />
                         </div>
                       </div>
 
@@ -278,20 +259,6 @@ export default function ContactPage() {
               </Card>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Card className="bg-[#111] border-[#222]">
-                      <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                          <Phone className="w-6 h-6 text-cyan-400 flex-shrink-0 mt-1" />
-                    <div>
-                      <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
-                            <a href="tel:+64215550198" className="text-gray-300 hover:text-cyan-400 transition-colors">
-                        +64 21 227 9255
-                      </a>
-                    </div>
-                  </div>
-                      </CardContent>
-                    </Card>
-
                     <Card className="bg-[#111] border-[#222]">
                       <CardContent className="p-6">
                   <div className="flex items-start gap-4">

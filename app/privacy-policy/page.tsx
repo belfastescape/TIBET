@@ -91,7 +91,7 @@ export default function PrivacyPolicyPage() {
                   <ul className="list-none space-y-2 ml-4">
                     <li className="flex items-start">
                       <ChevronRight className="w-5 h-5 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
-                      <span><strong>Contact information:</strong> name, email address, phone number</span>
+                      <span><strong>Contact information:</strong> name, email address, and other details you choose to provide</span>
                     </li>
                     <li className="flex items-start">
                       <ChevronRight className="w-5 h-5 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />

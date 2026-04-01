@@ -557,10 +557,9 @@ export default function GroupBookingsPage() {
                 variants={fadeIn}
               >
                 <h3 className="text-2xl font-bold text-white mb-6">Contact Details</h3>
-                <p className="text-gray-300 mb-2">Phone: 021 555 0198</p>
                 <p className="text-gray-300 mb-4">Email: info@escaperoomstibet.com</p>
                 <p className="text-gray-300">
-                  For group bookings and special arrangements, please use our contact page or give us a call.
+                  For group bookings and special arrangements, please use our contact page or email us.
                 </p>
               </motion.div>
             </div>

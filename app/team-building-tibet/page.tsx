@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { motion } from "framer-motion"
-import { CheckCircle2, Users, Star, ArrowRight, Building2, Brain, Puzzle, Send, MapPin, Phone, Mail, Clock, Facebook, User, MessageSquare } from "lucide-react"
+import { CheckCircle2, Users, Star, ArrowRight, Building2, Brain, Puzzle, Send, MapPin, Mail, Clock, Facebook, User, MessageSquare } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
@@ -21,7 +21,6 @@ export default function TeamBuildingTibetPage() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    phone: "",
     subject: "Team Building Tibet Enquiry",
     message: "",
   })
@@ -48,7 +47,7 @@ export default function TeamBuildingTibetPage() {
       const data = await response.json()
       if (response.ok) {
         setSubmitStatus("success")
-        setFormData({ name: "", email: "", phone: "", subject: "Team Building Tibet Enquiry", message: "" })
+        setFormData({ name: "", email: "", subject: "Team Building Tibet Enquiry", message: "" })
       } else {
         setSubmitStatus("error")
         setErrorMessage(data.details || data.error || "Something went wrong. Please try again.")
@@ -909,23 +908,7 @@ export default function TeamBuildingTibetPage() {
                       </div>
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="tb-phone" className="text-gray-300 text-sm font-medium">Phone</Label>
-                      <div className="relative">
-                        <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" />
-                        <Input
-                          id="tb-phone"
-                          name="phone"
-                          type="tel"
-                          value={formData.phone}
-                          onChange={handleInputChange}
-                          className="pl-10 bg-[#0a0a0a] border-[#333] text-white placeholder-gray-500 focus:border-cyan-500 focus:ring-cyan-500/20"
-                          placeholder="Your phone number"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="tb-email" className="text-gray-300 text-sm font-medium">Email *</Label>
+                      <Label htmlFor="tb-email" className="text-gray-300 text-sm font-medium">Email *</Label>
                     <div className="relative">
                       <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" />
                       <Input
@@ -938,6 +921,7 @@ export default function TeamBuildingTibetPage() {
                         className="pl-10 bg-[#0a0a0a] border-[#333] text-white placeholder-gray-500 focus:border-cyan-500 focus:ring-cyan-500/20"
                         placeholder="your.email@example.com"
                       />
+                    </div>
                     </div>
                   </div>
                   <div className="space-y-2">
@@ -1009,20 +993,6 @@ export default function TeamBuildingTibetPage() {
                       <p className="text-gray-300">Mt Everest</p>
                       <p className="text-gray-300">Khumbu, Solukhumbu, Nepal</p>
                       <p className="text-gray-300">New Zealand</p>
-                    </div>
-                  </motion.li>
-
-                  <motion.li variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6 } } }} className="flex items-start">
-                    <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-green-500 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                      <Phone className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-white mb-1">Phone</h3>
-                      <p className="text-gray-300">
-                        <Link href="tel:+64215550198" className="hover:text-cyan-400 transition-colors">
-                          021 555 0198
-                        </Link>
-                      </p>
                     </div>
                   </motion.li>
 

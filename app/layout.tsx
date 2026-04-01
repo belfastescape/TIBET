@@ -79,7 +79,6 @@ export default function RootLayout({
       "latitude": 27.9881564,
       "longitude": 86.9253667
     },
-    "telephone": "+64215550198",
     "email": "info@escaperoomstibet.com",
     "openingHoursSpecification": [
       {

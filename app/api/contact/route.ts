@@ -1,9 +1,9 @@
-﻿import { NextRequest, NextResponse } from 'next/server'
+import { NextRequest, NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
 
 export async function POST(request: NextRequest) {
   try {
-    const { name, email, phone, subject, message } = await request.json()
+    const { name, email, subject, message } = await request.json()
 
     // Debug: Log environment variables (without exposing password)
     console.log('Environment check:', {
@@ -77,7 +77,6 @@ export async function POST(request: NextRequest) {
             <h3 style="margin-top: 0; color: #333;">Contact Details</h3>
             <p><strong>Name:</strong> ${name}</p>
             <p><strong>Email:</strong> ${email}</p>
-            ${phone ? `<p><strong>Phone:</strong> ${phone}</p>` : ''}
             <p><strong>Subject:</strong> ${subject}</p>
           </div>
           
@@ -99,7 +98,6 @@ New Contact Form Submission
 
 Name: ${name}
 Email: ${email}
-${phone ? `Phone: ${phone}` : ''}
 Subject: ${subject}
 
 Message:

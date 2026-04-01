@@ -36,13 +36,6 @@ export default function BookingPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:0215550198"
-                className="text-cyan-400 hover:text-cyan-300 transition-colors"
-              >
-                Call: 021 555 0198
-              </a>
-              <span className="text-gray-500 hidden sm:inline">|</span>
-              <a
                 href="mailto:info@escaperoomstibet.com"
                 className="text-cyan-400 hover:text-cyan-300 transition-colors"
               >

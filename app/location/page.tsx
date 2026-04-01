@@ -5,7 +5,7 @@ import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { MapPin, Phone, Mail, Clock, Bus, Car, ArrowRight } from "lucide-react"
+import { MapPin, Mail, Clock, Bus, Car, ArrowRight } from "lucide-react"
 
 export default function LocationPage() {
   const [isVisible, setIsVisible] = useState(false)
@@ -58,10 +58,6 @@ export default function LocationPage() {
           >
             <h2 className="text-2xl font-bold mb-6 text-white">Contact Information</h2>
             <div className="space-y-4">
-              <div className="flex items-center">
-                <Phone className="w-5 h-5 text-cyan-400 mr-3" />
-                <p className="text-gray-300">021 555 0198</p>
-              </div>
               <div className="flex items-center">
                 <Mail className="w-5 h-5 text-cyan-400 mr-3" />
                 <p className="text-gray-300">info@escaperoomstibet.com</p>

@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { motion } from "framer-motion"
-import { Users, Clock, CheckCircle2, ArrowRight, Building2, Brain, Puzzle, MapPin, Phone, Mail, Facebook, Star } from "lucide-react"
+import { Users, Clock, CheckCircle2, ArrowRight, Building2, Brain, Puzzle, MapPin, Mail, Facebook, Star } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
@@ -893,20 +893,6 @@ If you are wanting an escape room experience, we would 100% recommended this one
                     <p className="text-gray-300">Mt Everest</p>
                     <p className="text-gray-300">Khumbu, Solukhumbu, Nepal</p>
                     <p className="text-gray-300">New Zealand</p>
-                  </div>
-                </motion.li>
-
-                <motion.li variants={fadeIn} className="flex items-start">
-                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-green-500 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                    <Phone className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-white mb-1">Phone</h3>
-                    <p className="text-gray-300">
-                      <Link href="tel:+64215550198" className="hover:text-cyan-400 transition-colors">
-                        021 555 0198
-                      </Link>
-                    </p>
                   </div>
                 </motion.li>
 

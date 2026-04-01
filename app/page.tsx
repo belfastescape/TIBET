@@ -376,7 +376,7 @@ export default function Home() {
                 </AccordionTrigger>
                 <AccordionContent className="text-gray-300">
                   We highly recommend booking in advance, especially for weekends and holidays. You can book online
-                  through our website or call us directly.
+                  through our website or contact us online.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>

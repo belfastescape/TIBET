@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Facebook, MapPin, Phone, Mail, Clock } from "lucide-react"
+import { Facebook, MapPin, Mail, Clock } from "lucide-react"
 
 /** WCAG-friendly body text on footer bg `#080808` */
 const footerMuted = "text-gray-300"
@@ -162,12 +162,6 @@ export function Footer() {
                 <li className="flex items-start">
                   <MapPin className="w-5 h-5 text-cyan-400 mr-2 mt-0.5" />
                   <span className={footerMuted}>Mt Everest, Khumbu, Solukhumbu, Nepal</span>
-                </li>
-                <li className="flex items-center">
-                  <Phone className="w-5 h-5 text-cyan-400 mr-2" />
-                  <Link href="tel:+0215550198" className={footerLink}>
-                    021 555 0198
-                  </Link>
                 </li>
                 <li className="flex items-center">
                   <Mail className="w-5 h-5 text-cyan-400 mr-2" />

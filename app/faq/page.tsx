@@ -1,4 +1,4 @@
-﻿"use client"
+"use client"
 
 import React, { useState, useEffect } from "react"
 import Image from "next/image"
@@ -71,10 +71,10 @@ export default function FAQPage() {
 
     // Booking & Pricing
     {
-      id: "how-to-book",
+      id: "book-a-room",
       question: "How do I book a room?",
       answer:
-        "Booking is easy! You can book directly through our website by selecting your preferred room, date, and time. Payment is required at the time of booking to secure your reservation. Alternatively, you can call us at 021 555 0198 during business hours to book over the phone. We recommend booking in advance, especially for weekends and holidays, as our rooms often fill up quickly.",
+        "Booking is easy! You can book directly through our website by selecting your preferred room, date, and time. Payment is required at the time of booking to secure your reservation. You can also reach us via our contact page or email if you need help. We recommend booking in advance, especially for weekends and holidays, as our rooms often fill up quickly.",
       category: "booking",
       tags: ["reservation", "payment"],
     },
@@ -91,7 +91,7 @@ export default function FAQPage() {
       id: "gift-vouchers",
       question: "Do you offer gift vouchers?",
       answer:
-        "Yes! Escape room experiences make great gifts. You can purchase gift vouchers for specific rooms or for any value. Vouchers are valid for 12 months from the date of purchase and can be emailed directly to the recipient or to you to give in person. You can purchase gift vouchers through our website or by calling us at 021 555 0198.",
+        "Yes! Escape room experiences make great gifts. You can purchase gift vouchers for specific rooms or for any value. Vouchers are valid for 12 months from the date of purchase and can be emailed directly to the recipient or to you to give in person. You can purchase gift vouchers through our website or contact us by email if you need assistance.",
       category: "booking",
       tags: ["gifts", "vouchers"],
     },
@@ -396,11 +396,6 @@ export default function FAQPage() {
                         Contact Us
                       </Button>
                     </Link>
-                    <Link href="tel:+212279255" className="flex-1">
-                      <Button variant="outline" className="w-full border-cyan-500 text-cyan-400 hover:bg-cyan-500/10">
-                        Tel 021 555 0198
-                      </Button>
-                    </Link>
                   </div>
                 </div>
               </div>
@@ -438,7 +433,7 @@ export default function FAQPage() {
                 {
                   question: "How much does it cost?",
                   answer: "Adultprices range from $35-$45 per person, and under 16's $25-$28 ,with group discounts available.",
-                  link: "#pricing",
+                  link: "/pricing",
                 },
                 {
                   question: "What is your cancellation policy?",

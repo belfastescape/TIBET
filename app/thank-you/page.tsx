@@ -1,4 +1,4 @@
-﻿"use client"
+"use client"
 
 import { motion } from "framer-motion"
 import { CheckCircle2, ArrowLeft } from "lucide-react"
@@ -31,7 +31,6 @@ export default function ThankYouPage() {
           <p className="text-lg text-gray-400 mb-8">
             If you have any questions or need to modify your booking, you can:<br />
             • Email us at info@escaperoomstibet.com<br />
-            • Call us at 021 555 0198<br />
             • Visit our contact page
           </p>
           <Button
