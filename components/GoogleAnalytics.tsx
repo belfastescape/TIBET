@@ -2,7 +2,7 @@
 
 import Script from "next/script"
 import { usePathname, useSearchParams } from "next/navigation"
-import { useEffect, useRef } from "react"
+import { useEffect, useState } from "react"
 
 /** Set `NEXT_PUBLIC_GA_MEASUREMENT_ID` in `.env.local` to override (optional). */
 const GA_MEASUREMENT_ID =
@@ -14,17 +14,18 @@ declare global {
   }
 }
 
+/**
+ * Loads gtag after the window `load` event (`lazyOnload`) so it does not compete
+ * with LCP/FCP. Inline init runs after `gtag/js` loads; page views follow on SPA navigations.
+ */
 export default function GoogleAnalytics() {
   const pathname = usePathname()
   const searchParams = useSearchParams()
-  const isFirstNavigation = useRef(true)
+  const [gtagReady, setGtagReady] = useState(false)
+  const [libraryLoaded, setLibraryLoaded] = useState(false)
 
   useEffect(() => {
-    if (typeof window === "undefined" || !window.gtag) return
-    if (isFirstNavigation.current) {
-      isFirstNavigation.current = false
-      return
-    }
+    if (!gtagReady || typeof window === "undefined" || !window.gtag) return
     const query = searchParams?.toString()
     const pagePath = query ? `${pathname}?${query}` : pathname
     try {
@@ -34,23 +35,29 @@ export default function GoogleAnalytics() {
     } catch {
       /* ignore */
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [pathname, searchParams?.toString()])
+  }, [gtagReady, pathname, searchParams])
 
   return (
     <>
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-        strategy="afterInteractive"
+        strategy="lazyOnload"
+        onLoad={() => setLibraryLoaded(true)}
       />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
+      {libraryLoaded ? (
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          onLoad={() => setGtagReady(true)}
+        >
+          {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
+          window.gtag = gtag;
           gtag('js', new Date());
-          gtag('config', '${GA_MEASUREMENT_ID}');
         `}
-      </Script>
+        </Script>
+      ) : null}
     </>
   )
 }
