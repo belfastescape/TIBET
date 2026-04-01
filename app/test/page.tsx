@@ -1,4 +1,4 @@
-﻿"use client"
+"use client"
 
 import { motion, useAnimationControls, useScroll, useTransform } from "framer-motion"
 import { useEffect, useState, useRef } from "react"
@@ -16,7 +16,7 @@ export default function TestPage() {
     offset: ["start", "end start"],
   })
 
-  // Transform scrollYProgress to control the "WELLINGTON" animation
+  // Transform scrollYProgress to control the "TIBET" scroll-in opacity
   const tibetOpacity = useTransform(scrollYProgress, [0, 0.1, 0.2], [0, 0.5, 1])
 
   useEffect(() => {
@@ -137,14 +137,14 @@ export default function TestPage() {
             </div>
           </div>
 
-          {/* WELLINGTON scroll animation - positioned underneath TEAM BUILDING */}
+          {/* Region name scroll animation — underneath TEAM BUILDING */}
           <motion.div
             className="text-[3.35rem] sm:text-[5.35rem] md:text-[6.7rem] font-extrabold text-white mt-1"
             style={{
               opacity: tibetOpacity,
             }}
           >
-            WELLINGTON
+            TIBET
           </motion.div>
         </div>
 

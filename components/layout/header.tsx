@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils"
 
 const dropdowns = [
   {
-    label: "Our Games",
+    label: "Our rooms",
     links: [
       { label: "Operation Pitt",        href: "/escape-rooms/operation-pitt" },
       { label: "The Billion Dollar Heist",         href: "/escape-rooms/billion-dollar-heist" },
@@ -16,7 +16,7 @@ const dropdowns = [
     ],
   },
   {
-    label: "Group Bookings",
+    label: "Groups & events",
     links: [{ label: "Team Building", href: "/team-building-tibet" }],
   },
 ]
@@ -92,10 +92,10 @@ export function Header() {
               </Link>
             ))}
 
-            {/* Book Now button */}
+            {/* Reserve CTA */}
             <Link href="/booking">
               <Button className="bg-gradient-to-r from-cyan-500 to-green-500 hover:from-cyan-600 hover:to-green-600 text-white">
-                Book Now
+                Reserve
               </Button>
             </Link>
           </nav>
@@ -172,7 +172,7 @@ export function Header() {
 
           <Link href="/booking" onClick={() => setMobileMenuOpen(false)} className="mt-4">
             <Button className="bg-gradient-to-r from-cyan-500 to-green-500 hover:from-cyan-600 hover:to-green-600 text-white text-lg px-10 py-4">
-              Book Now
+              Reserve
             </Button>
           </Link>
         </div>

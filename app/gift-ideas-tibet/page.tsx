@@ -611,10 +611,10 @@ export default function GiftIdeasTibetPage() {
           >
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-                Frequently Asked Questions
+                Gift ideas: common questions
               </h2>
               <p className="text-xl text-gray-300">
-                Everything you need to know about gift experiences in Tibet, Kapiti & Wairarapa
+                Quick answers for shoppers in Tibet, Kāpiti, and Wairarapa
               </p>
             </div>
 

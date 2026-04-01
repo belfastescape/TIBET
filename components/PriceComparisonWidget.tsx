@@ -169,10 +169,10 @@ export function PriceComparisonWidget() {
             </div>
             <div>
               <h2 className="text-lg font-bold tracking-tight text-foreground">
-                INSTANT LOCAL PRICE COMPARISON
+                LOCAL RATE CHECKER
               </h2>
               <p className="text-sm text-muted-foreground">
-                See how we stack up against the competition
+                Ballpark totals beside other venues in the area
               </p>
             </div>
           </div>
@@ -181,7 +181,7 @@ export function PriceComparisonWidget() {
         {/* Input Section */}
         <div className="p-6">
           <p className="text-foreground font-medium mb-5">
-            How many people are you looking to book for?
+            How many players are on the ticket?
           </p>
 
           <div className="grid grid-cols-2 gap-4 mb-6">
@@ -261,7 +261,7 @@ export function PriceComparisonWidget() {
               onClick={handleCalculate}
               disabled={adults + children === 0}
             >
-              Compare Prices
+              Show comparison
             </Button>
           )}
 
@@ -279,7 +279,7 @@ export function PriceComparisonWidget() {
                   {adults === 2 && children === 0 ? (
                     <>
                       <p className="text-white font-bold text-lg">
-                        ESCAPE ROOMS WELLINGTON
+                        ESCAPE ROOMS TIBET
                       </p>
                       <p className="text-yellow-400 font-semibold text-sm tracking-wide">
                         BEST LOCATION. HIGHEST RATING
@@ -291,7 +291,7 @@ export function PriceComparisonWidget() {
                         Save ${averageSavings} on average with us!
                       </p>
                       <p className="text-muted-foreground text-sm">
-                        Compared to average competitor pricing for {adults + children} {adults + children === 1 ? 'person' : 'people'}
+                        Versus typical rival pricing for {adults + children} {adults + children === 1 ? 'person' : 'people'}
                       </p>
                     </>
                   )}
@@ -415,7 +415,7 @@ export function PriceComparisonWidget() {
                   <div className="flex items-center gap-2 mb-3">
                     <Mail className="w-4 h-4 text-primary" />
                     <span className="text-sm font-medium text-foreground">
-                      Send this guaranteed price quote to your email
+                      Email me this quote snapshot
                     </span>
                   </div>
                   
@@ -447,7 +447,7 @@ export function PriceComparisonWidget() {
                 {/* CTA */}
                 <Link href="/booking">
                   <Button className="w-full h-12 text-base font-semibold rounded-xl">
-                    Book Now & Save
+                    Reserve at this rate
                   </Button>
                 </Link>
               </div>

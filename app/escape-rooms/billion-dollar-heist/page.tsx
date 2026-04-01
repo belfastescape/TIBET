@@ -89,7 +89,7 @@ export default function DiamondHeist() {
               href="/booking" 
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-green-500 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-green-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
-              Book Now
+              Reserve
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
           </motion.div>
@@ -378,11 +378,11 @@ export default function DiamondHeist() {
                   <div className="p-6">
                     <h3 className="text-xl font-bold mb-4 text-white">Accept Your Mission</h3>
                     <p className="text-gray-300 mb-4">
-                      Ready to test your skills with our most challenging room? Book now and see if you have what it
-                      takes to steal the diamond.
+                      Ready to test your skills with our most challenging room? Lock in a time and see if you have what
+                      it takes to steal the diamond.
                     </p>
                     <Link href="/booking" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                      Book Now
+                      Reserve
                     </Link>
                   </div>
                 </motion.div>
@@ -545,7 +545,7 @@ export default function DiamondHeist() {
                   href="/booking" 
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-green-500 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-green-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
-                  Book Now
+                  Reserve
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
               </div>

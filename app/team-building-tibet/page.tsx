@@ -409,10 +409,10 @@ export default function TeamBuildingTibetPage() {
             variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6 } } }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-green-400 bg-clip-text text-transparent">
-              Frequently Asked Questions
+              Workplace events: Q&amp;A
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to know about team building at Escape Rooms Tibet.
+              Planning an offsite or morale day? Start here.
             </p>
           </motion.div>
 
@@ -427,77 +427,73 @@ export default function TeamBuildingTibetPage() {
               {/* FAQ items copied from the original page */}
               <AccordionItem value="item-1" className="border border-[#222] rounded-lg overflow-hidden bg-[#111]">
                 <AccordionTrigger className="px-6 py-4 text-white hover:text-cyan-400 transition-colors">
-                  How many people can participate in team building?
+                  What headcount can you handle?
                 </AccordionTrigger>
                 <AccordionContent className="px-6 pb-4 text-gray-300">
-                  We can accommodate teams of all sizes, from small departments of 8-10 people to large corporate groups
-                  of up to 30 people. 
+                  From tight-knit pods of 8–10 up to corporate waves around 30—we scale by running multiple rooms and
+                  mirrored missions.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2" className="border border-[#222] rounded-lg overflow-hidden bg-[#111]">
                 <AccordionTrigger className="px-6 py-4 text-white hover:text-cyan-400 transition-colors">
-                  Do we need any special skills or preparation?
+                  Any prerequisites or prep?
                 </AccordionTrigger>
                 <AccordionContent className="px-6 pb-4 text-gray-300">
-                  No special skills or preparation are required. Our escape rooms are designed to be accessible to
-                  everyone, regardless of experience level. We recommend comfortable clothing and an open mind. The most
-                  important things to bring are good communication skills and a willingness to work together as a team.
+                  No résumé required. Wear something easy to move in and come ready to talk. Curiosity and cooperation
+                  beat niche expertise every time.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-3" className="border border-[#222] rounded-lg overflow-hidden bg-[#111]">
                 <AccordionTrigger className="px-6 py-4 text-white hover:text-cyan-400 transition-colors">
-                  How far in advance should we book?
+                  How early should we pencil a date?
                 </AccordionTrigger>
                 <AccordionContent className="px-6 pb-4 text-gray-300">
-                  For small teams (under 10 people), we recommend booking at least 2 weeks in advance. For larger
-                  corporate groups or custom packages, 3-4 weeks notice is ideal, especially during peak seasons.
-                  However, we can sometimes accommodate last-minute bookings, so don't hesitate to contact us even if
-                  your event is coming up soon.
+                  Under ten guests: aim for two weeks out. Bigger builds or bespoke packages: three to four weeks is
+                  safer in peak season. Still, ping us for short notice—we sometimes have gaps.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-4" className="border border-[#222] rounded-lg overflow-hidden bg-[#111]">
                 <AccordionTrigger className="px-6 py-4 text-white hover:text-cyan-400 transition-colors">
-                  What makes escape rooms good for team building?
+                  Why run a team event in a puzzle room?
                 </AccordionTrigger>
                 <AccordionContent className="px-6 pb-4 text-gray-300">
-                  Escape rooms naturally encourage the skills that make teams successful: communication, leadership,
-                  problem-solving, and collaboration. The time pressure creates an environment where team dynamics
-                  become apparent. The shared experience of working toward a common goal helps build trust and
-                  camaraderie, while the post-game debrief allows teams to reflect on their performance and identify
-                  areas for improvement.
+                  The format forces clear talk, quick decisions, and shared wins under a deadline—so strengths and blind
+                  spots show up naturally. Afterwards, a short debrief turns the play into takeaways you can use Monday.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-5" className="border border-[#222] rounded-lg overflow-hidden bg-[#111]">
                 <AccordionTrigger className="px-6 py-4 text-white hover:text-cyan-400 transition-colors">
-                  Can you customize the experience for our company?
+                  Can you tailor things for our org?
                 </AccordionTrigger>
                 <AccordionContent className="px-6 pb-4 text-gray-300">
-                  Yes! Just ask us to see what we can do.
+                  Often, yes—tell us your goals and constraints and we’ll see what’s possible within the format.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-6" className="border border-[#222] rounded-lg overflow-hidden bg-[#111]">
                 <AccordionTrigger className="px-6 py-4 text-white hover:text-cyan-400 transition-colors">
-                  What's included in the team debrief?
+                  What does the debrief cover?
                 </AccordionTrigger>
                 <AccordionContent className="px-6 pb-4 text-gray-300">
-                  Our team debriefs vary  include a basic review of your team's
-                  performance, highlighting team strengths etc.
+                  A concise recap of how the group moved through the game—what clicked, what stalled, and where
+                  collaboration shone—tailored to what you want to reinforce.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-7" className="border border-[#222] rounded-lg overflow-hidden bg-[#111]">
                 <AccordionTrigger className="px-6 py-4 text-white hover:text-cyan-400 transition-colors">
-                  Do you offer catering for team events?
+                  Do you cater on-site?
                 </AccordionTrigger>
                 <AccordionContent className="px-6 pb-4 text-gray-300">
-                  No. We are surrounded by many of the city's best restaurants and bars. We are happy to suggest close by restaurant's and pubs. Just ask us.
+                  We don’t run a kitchen, but we’re near solid dining and drink options—ask and we’ll point you to spots
+                  walking distance away.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-8" className="border border-[#222] rounded-lg overflow-hidden bg-[#111]">
                 <AccordionTrigger className="px-6 py-4 text-white hover:text-cyan-400 transition-colors">
-                  What is your cancellation policy for team bookings?
+                  Cancellation for large team bookings?
                 </AccordionTrigger>
                 <AccordionContent className="px-6 pb-4 text-gray-300">
-                  We are very flexible. We realise that even the best laid plans have to be changed sometimes.Just let us know asap.
+                  Plans shift—we get it. Message us as soon as dates move and we’ll work within the policy to find a fair
+                  outcome.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-9" className="border border-[#222] rounded-lg overflow-hidden bg-[#111]">
@@ -707,7 +703,7 @@ export default function TeamBuildingTibetPage() {
                     </li>
                   </ul>
                   <Link href="/contact" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                    Book Now
+                    Reserve
                   </Link>
                 </div>
               </motion.div>
@@ -762,7 +758,7 @@ export default function TeamBuildingTibetPage() {
                     </li>
                   </ul>
                   <Link href="/contact" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                    Book Now
+                    Reserve
                   </Link>
                 </div>
               </motion.div>
@@ -817,7 +813,7 @@ export default function TeamBuildingTibetPage() {
                     </li>
                   </ul>
                   <Link href="/contact" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                    Book Now
+                    Reserve
                   </Link>
                 </div>
               </motion.div>

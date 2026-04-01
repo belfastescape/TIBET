@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Book Now - Escape Rooms Tibet',
-  description: 'Book your escape room adventure. Choose from our thrilling experiences: Operation Pitt, The Billion Dollar Heist, and Quest for the Ancient Tomb. Easy online booking available.',
+  title: 'Reserve a room - Escape Rooms Tibet',
+  description: 'Choose a time slot for Operation Pitt, The Billion Dollar Heist, or Quest for the Ancient Tomb. Secure checkout and instant confirmation.',
   robots: {
     index: false,
     follow: false,

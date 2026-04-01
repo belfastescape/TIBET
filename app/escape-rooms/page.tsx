@@ -1,4 +1,4 @@
-﻿"use client"
+"use client"
 
 import { useState, useEffect } from "react"
 import Image from "next/image"
@@ -79,10 +79,10 @@ function RoomCard({ room }: RoomCardProps) {
             href={`/escape-rooms/${room.id}`}
             className="text-cyan-400 hover:text-cyan-300 transition-colors inline-flex items-center"
           >
-            Room Details <ArrowRight className="w-4 h-4 ml-1" />
+            Full briefing <ArrowRight className="w-4 h-4 ml-1" />
           </Link>
           <Link href="/booking" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-            Book Now
+            Reserve
           </Link>
         </div>
       </div>
@@ -117,7 +117,7 @@ export default function EscapeRoomsPage() {
     {
       id: "operation-pitt",
       name: "Operation Pitt",
-      description: "Our Classic spy themed escape room. Available as a Head to Head Challenge between 2 teams.",
+      description: "Classic spy-thriller energy—run it twice in parallel for a head-to-head race between two teams.",
       image: "/images/spiesnoir.webp",
 
       minPeople: 2,
@@ -129,7 +129,7 @@ export default function EscapeRoomsPage() {
       id: "billion-dollar-heist",
       name: "The Billion Dollar Heist",
       description:
-        "Plan the perfect heist to steal a priceless diamond in this thrilling challenge that tests your team's strategic thinking.",
+        "Orchestrate a vault job on a legendary score—multi-room flow that rewards planning, communication, and cool heads.",
       image: "/images/billion-dollar-heist/laser-team-4.webp",
     
       minPeople: 2,
@@ -141,7 +141,7 @@ export default function EscapeRoomsPage() {
       id: "ancient-tomb",
       name: "Quest for the Ancient Tomb",
       description:
-        "Embark on a magical journey to find the legendary wand in this enchanting and puzzle-filled adventure.",
+        "A fantasy-tinged trail of riddles toward a fabled relic—welcoming for mixed-age crews and first-time escapers.",
       image: "/images/ancient-tomb.png",
       
       minPeople: 2,
@@ -176,11 +176,10 @@ export default function EscapeRoomsPage() {
             variants={fadeIn}
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-green-400 bg-clip-text text-transparent">
-              Our Escape Rooms
+              Browse our live games
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Choose your adventure from our range of immersive escape room experiences, each with unique themes and
-              challenges.
+              Three original scenarios—spy, heist, and tomb—each tuned for a different mood and difficulty.
             </p>
           </motion.div>
         </div>
@@ -198,12 +197,12 @@ export default function EscapeRoomsPage() {
           >
             <Tabs defaultValue="all" className="w-full" onValueChange={setFilter}>
               <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
-                <h2 className="text-3xl font-bold text-white">Choose Your Adventure</h2>
+                <h2 className="text-3xl font-bold text-white">Filter by vibe</h2>
                 <TabsList className="bg-[#111] border border-[#222]">
-                  <TabsTrigger value="all">All Rooms</TabsTrigger>
-                  <TabsTrigger value="beginner">Beginner</TabsTrigger>
-                  <TabsTrigger value="family-friendly">Family</TabsTrigger>
-                  <TabsTrigger value="expert">Expert</TabsTrigger>
+                  <TabsTrigger value="all">Every room</TabsTrigger>
+                  <TabsTrigger value="beginner">Easier</TabsTrigger>
+                  <TabsTrigger value="family-friendly">All ages</TabsTrigger>
+                  <TabsTrigger value="expert">Tougher</TabsTrigger>
                 </TabsList>
               </div>
 
@@ -274,34 +273,34 @@ export default function EscapeRoomsPage() {
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div>
-                <h2 className="text-3xl font-bold mb-4 text-white">Group Bookings</h2>
+                <h2 className="text-3xl font-bold mb-4 text-white">Bigger groups</h2>
                 <p className="text-gray-300 mb-6">
-                  Planning a larger event? We can accommodate groups of all sizes by running multiple rooms
-                  simultaneously. Perfect for corporate team building, birthday parties, or any special occasion.
+                  Hosting a crowd? We can spin several rooms at once so nobody waits on the sidelines—great for work
+                  offsites, birthdays, or any excuse to compete in parallel storylines.
                 </p>
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-start">
                     <div className="w-6 h-6 rounded-full bg-gradient-to-r from-cyan-500 to-green-500 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold text-sm">1</span>
                     </div>
-                    <span className="text-gray-300">Multiple rooms running in parallel</span>
+                    <span className="text-gray-300">Concurrent games across multiple sets</span>
                   </li>
                   <li className="flex items-start">
                     <div className="w-6 h-6 rounded-full bg-gradient-to-r from-cyan-500 to-green-500 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold text-sm">2</span>
                     </div>
-                    <span className="text-gray-300">Head to Head Team Challenge available</span>
+                    <span className="text-gray-300">Mirror missions for head-to-head bragging rights</span>
                   </li>
                   <li className="flex items-start">
                     <div className="w-6 h-6 rounded-full bg-gradient-to-r from-cyan-500 to-green-500 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold text-sm">3</span>
                     </div>
-                    <span className="text-gray-300">Up to 30 people per session</span>
+                    <span className="text-gray-300">Around thirty guests per combined wave</span>
                   </li>
                 </ul>
                 <Link href="/team-building">
                   <Button className="bg-gradient-to-r from-cyan-500 to-green-500 hover:from-cyan-600 hover:to-green-600 text-white">
-                    Learn About Team Building
+                    Team-building options
                   </Button>
                 </Link>
               </div>
@@ -330,45 +329,41 @@ export default function EscapeRoomsPage() {
             variants={fadeIn}
           >
             <h2 className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-cyan-400 to-green-400 bg-clip-text text-transparent">
-              Frequently Asked Questions
+              Room FAQs
             </h2>
 
             <div className="space-y-4">
               <div className="bg-[#111] rounded-lg border border-[#222] p-6">
-                <h3 className="text-xl font-bold mb-2 text-white">How do I choose the right room?</h3>
+                <h3 className="text-xl font-bold mb-2 text-white">How do I pick between games?</h3>
                 <p className="text-gray-300">
-                  If you're new to escape rooms, we recommend starting with Operation Pitt(difficulty 3/5). For
-                  experienced players looking for a challenge, try Quest for The Ancient Tomb (4/5) or The Billion Dollar Heist
-                  (4.5/5). Each room has a different theme, so you can also choose based on what interests you most!
+                  New to the format? Operation Pitt sits around a 3/5 on our scale. After a few wins, Quest for the
+                  Ancient Tomb (about 4/5) or The Billion Dollar Heist (about 4.5/5) raise the bar. Theme matters too—spy,
+                  vault, or fantasy—choose what your crew will talk about all week.
                 </p>
               </div>
 
               <div className="bg-[#111] rounded-lg border border-[#222] p-6">
-                <h3 className="text-xl font-bold mb-2 text-white">What if we don't escape in time?</h3>
+                <h3 className="text-xl font-bold mb-2 text-white">What if the clock runs out?</h3>
                 <p className="text-gray-300">
-                  Don't worry! Many teams don't escape in 60 minutes, especially in our more challenging rooms. If you
-                  don't make it out in time, we will give you extra time to complete your game. All of our games are
-                  story based , so we want you to experience the end of the story even if you run a bit over time.
+                  Plenty of teams need the full hour, especially on harder rooms. If time’s up, we’ll usually give you a
+                  little runway to see the finale—our stories are written to land, not to cut off mid-reveal.
                 </p>
               </div>
 
               <div className="bg-[#111] rounded-lg border border-[#222] p-6">
-                <h3 className="text-xl font-bold mb-2 text-white">Can we take photos inside the rooms?</h3>
+                <h3 className="text-xl font-bold mb-2 text-white">Photography during play?</h3>
                 <p className="text-gray-300">
-                  You can take photos of your team while you are playing your game. However, we're happy to take a group
-                  photo of your team after your experience. It's probably better that way so you don't miss out on any
-                  of the experience.
+                  Snap away in the lobby; inside the sets we keep cameras tucked away so puzzles stay secret for the
+                  next group. We’ll grab a team shot afterward so you still go home with proof.
                 </p>
               </div>
 
               <div className="bg-[#111] rounded-lg border border-[#222] p-6">
-                <h3 className="text-xl font-bold mb-2 text-white">Do you offer gift vouchers?</h3>
+                <h3 className="text-xl font-bold mb-2 text-white">Gift vouchers?</h3>
                 <p className="text-gray-300">
-                  Yes! Escape room experiences make great gifts. You can purchase gift on our booking page. Vouchers are
-                  valid for 12 months from the date of purchase and can be emailed directly to the recipient or to you
-                  to give in person. Check out our souvenir gift card that we will send out for to for free. They make
-                  great little momentos. NB. If your date expires, we will always extend the voucher date. We want as
-                  many people to play our games as possible.
+                  Yes—buy through the booking flow. Codes last twelve months from purchase, deliver by email, and we can
+                  send a souvenir card on request. If life gets in the way and the date lapses, ask us—we’d rather extend
+                  than leave credit on the table.
                 </p>
               </div>
             </div>
@@ -388,14 +383,13 @@ export default function EscapeRoomsPage() {
           >
             <div className="p-8 md:p-12 text-center">
               <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-green-400 bg-clip-text text-transparent">
-                Ready for Your Next Adventure?
+                Pick a date
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Book your escape room experience today and put your problem-solving skills to the test. The clock is
-                ticking!
+                Lock in a slot and see how your crew handles the pressure when the countdown starts.
               </p>
-              <Link href="/contact" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                Book Now
+              <Link href="/booking" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                Reserve online
               </Link>
             </div>
           </motion.div>

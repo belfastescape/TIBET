@@ -1,5 +1,8 @@
-﻿import type { Metadata, Viewport } from "next"
-import { JsonLd } from '@/components/JsonLd'
+import type { Metadata, Viewport } from "next"
+import { JsonLd } from "@/components/JsonLd"
+import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd"
+import { buildOpenGraph, buildTwitter, indexableRobots } from "@/lib/seo/metadata-helpers"
+import { ORGANIZATION_ID, SITE_URL } from "@/lib/seo/site"
 
 export const viewport: Viewport = {
   themeColor: [
@@ -12,84 +15,48 @@ export const viewport: Viewport = {
   userScalable: false,
 }
 
+const title = "Operation Pitt | Spy escape room (2–8 players)"
+const description =
+  "Tibet-themed spy mission at the Pitt: intel, gadgets, and a race to stop the plot. Two identical rooms for head-to-head teams. 60 minutes."
+
 export const metadata: Metadata = {
-  title: "Operation Pitt | Tibet-Themed Spy Escape Room | Escape Rooms Tibet",
-  description:
-    "Experience Tibet's most unique escape room adventure at the Pitt. Navigate through political intrigue and government secrets in this immersive 60-minute challenge. Perfect for 2-8 players. Book your mission today!",
-  openGraph: {
-    title: "Operation Pitt | Tibet-Themed Spy Escape Room | Escape Rooms Tibet",
-    description:
-      "Experience Tibet's most unique escape room adventure at the Pitt. Navigate through political intrigue and government secrets in this immersive 60-minute challenge. Perfect for 2-8 players.",
-    url: "https://www.escaperoomstibet.com/escape-rooms/operation-pitt",
-    siteName: "Escape Rooms Tibet",
-    images: [
-      {
-        url: "https://www.escaperoomstibet.com/images/operation-pitt.png",
-        width: 1200,
-        height: 630,
-        alt: "Operation Pitt Escape Room",
-      },
-    ],
-    locale: "en_NZ",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Operation Pitt | Tibet-Themed Spy Escape Room | Escape Rooms Tibet",
-    description:
-      "Experience Tibet's most unique escape room adventure at the Pitt. Navigate through political intrigue and government secrets in this immersive 60-minute challenge.",
-    images: ["https://www.escaperoomstibet.com/images/operation-pitt.png"],
-  },
-  robots: {
-    index: false,
-    follow: false,
-    googleBot: {
-      index: false,
-      follow: false,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
+  title,
+  description,
+  alternates: { canonical: "/escape-rooms/operation-pitt" },
+  robots: indexableRobots,
+  openGraph: buildOpenGraph({
+    title,
+    description,
+    path: "/escape-rooms/operation-pitt",
+    imagePath: "/images/operation-pitt.png",
+    imageAlt: "Operation Pitt escape room",
+  }),
+  twitter: buildTwitter(title, description, `${SITE_URL}/images/operation-pitt.png`),
 }
 
 const operationPittSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
-  "name": "Operation Pitt - Tibet Spy Escape Room",
-  "description": "Experience Tibet's most unique escape room adventure at the Pitt. Navigate through political intrigue and government secrets in this immersive 60-minute challenge for 2-8 players.",
-  "image": "https://www.escaperoomstibet.com/images/operation-pitt.png",
-  "url": "https://www.escaperoomstibet.com/escape-rooms/operation-pitt",
-  "brand": {
-    "@type": "Brand",
-    "name": "Escape Rooms Tibet"
-  },
-  "offers": {
+  name: "Operation Pitt — Tibet spy escape room",
+  description,
+  image: `${SITE_URL}/images/operation-pitt.png`,
+  url: `${SITE_URL}/escape-rooms/operation-pitt`,
+  brand: { "@type": "Brand", name: "Escape Rooms Tibet" },
+  seller: { "@id": ORGANIZATION_ID },
+  offers: {
     "@type": "Offer",
-    "priceCurrency": "NZD",
-    "price": "35",
-    "availability": "https://schema.org/InStock",
-    "url": "https://www.escaperoomstibet.com/escape-rooms/operation-pitt",
-    "validFrom": "2024-01-01"
+    priceCurrency: "NZD",
+    price: "35",
+    availability: "https://schema.org/InStock",
+    url: `${SITE_URL}/escape-rooms/operation-pitt`,
+    validFrom: "2024-01-01",
   },
-  "category": "Escape Room Experience",
-  "additionalProperty": [
-    {
-      "@type": "PropertyValue",
-      "name": "Duration",
-      "value": "60 minutes"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "Players",
-      "value": "2-8"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "Difficulty",
-      "value": "Intermediate"
-    }
-  ]
+  category: "Escape room experience",
+  additionalProperty: [
+    { "@type": "PropertyValue", name: "Duration", value: "60 minutes" },
+    { "@type": "PropertyValue", name: "Players", value: "2-8" },
+    { "@type": "PropertyValue", name: "Difficulty", value: "Intermediate" },
+  ],
 }
 
 export default function OperationPittLayout({
@@ -100,6 +67,13 @@ export default function OperationPittLayout({
   return (
     <>
       <JsonLd data={operationPittSchema} />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", path: "/" },
+          { name: "Escape rooms", path: "/escape-rooms" },
+          { name: "Operation Pitt", path: "/escape-rooms/operation-pitt" },
+        ]}
+      />
       {children}
     </>
   )

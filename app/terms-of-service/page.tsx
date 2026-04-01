@@ -329,7 +329,7 @@ export default function TermsOfServicePage() {
                     variant="outline"
                     className="border-cyan-500 text-cyan-400 hover:bg-cyan-500/10 text-lg py-6 px-8"
                   >
-                    Book Now
+                    Reserve
                   </Button>
                 </Link>
               </div>

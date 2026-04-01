@@ -1,5 +1,8 @@
-﻿import type { Metadata, Viewport } from "next"
-import { JsonLd } from '@/components/JsonLd'
+import type { Metadata, Viewport } from "next"
+import { JsonLd } from "@/components/JsonLd"
+import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd"
+import { buildOpenGraph, buildTwitter, indexableRobots } from "@/lib/seo/metadata-helpers"
+import { ORGANIZATION_ID, SITE_URL } from "@/lib/seo/site"
 
 export const viewport: Viewport = {
   themeColor: [
@@ -12,87 +15,51 @@ export const viewport: Viewport = {
   userScalable: false,
 }
 
+const title = "The Billion Dollar Heist | Multi-room escape game"
+const description =
+  "Our toughest vault job: multiple rooms, layered puzzles, and a laser gauntlet. Best for experienced crews of 2–7. 60 minutes."
+
 export const metadata: Metadata = {
-  title: "The Billion Dollar Heist | Multi-Room Escape Adventure | Escape Rooms Tibet",
-  description:
-    "Plan the perfect heist in Tibet's most challenging escape room. Navigate through multiple rooms, solve intricate puzzles, and face a thrilling laser maze. Perfect for experienced teams of 2-7 players. Book your 60-minute adventure today!",
-  openGraph: {
-    title: "The Billion Dollar Heist | Multi-Room Escape Adventure | Escape Rooms Tibet",
-    description:
-      "Plan the perfect heist in Tibet's most challenging escape room. Navigate through multiple rooms, solve intricate puzzles, and face a thrilling laser maze. Perfect for experienced teams of 2-7 players.",
-    url: "https://www.escaperoomstibet.com/escape-rooms/billion-dollar-heist",
-    siteName: "Escape Rooms Tibet",
-    images: [
-      {
-        url: "https://www.escaperoomstibet.com/images/billion-dollar-heist.png",
-        width: 1200,
-        height: 630,
-        alt: "The Billion Dollar Heist Escape Room",
-      },
-    ],
-    locale: "en_NZ",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "The Billion Dollar Heist | Multi-Room Escape Adventure | Escape Rooms Tibet",
-    description:
-      "Plan the perfect heist in Tibet's most challenging escape room. Navigate through multiple rooms, solve intricate puzzles, and face a thrilling laser maze.",
-    images: ["https://www.escaperoomstibet.com/images/billion-dollar-heist.png"],
-  },
-  robots: {
-    index: false,
-    follow: false,
-    googleBot: {
-      index: false,
-      follow: false,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
+  title,
+  description,
+  alternates: { canonical: "/escape-rooms/billion-dollar-heist" },
+  robots: indexableRobots,
+  openGraph: buildOpenGraph({
+    title,
+    description,
+    path: "/escape-rooms/billion-dollar-heist",
+    imagePath: "/images/billion-dollar-heist.png",
+    imageAlt: "The Billion Dollar Heist escape room",
+  }),
+  twitter: buildTwitter(title, description, `${SITE_URL}/images/billion-dollar-heist.png`),
 }
 
 const diamondHeistSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
-  "name": "The Billion Dollar Heist - Multi-Room Escape Adventure",
-  "description": "Plan the perfect heist in Tibet's most challenging escape room. Navigate through multiple rooms, solve intricate puzzles, and face a thrilling laser maze. Perfect for experienced teams of 2-7 players.",
-  "image": "https://www.escaperoomstibet.com/images/billion-dollar-heist.png",
-  "url": "https://www.escaperoomstibet.com/escape-rooms/billion-dollar-heist",
-  "brand": {
-    "@type": "Brand",
-    "name": "Escape Rooms Tibet"
-  },
-  "offers": {
+  name: "The Billion Dollar Heist — multi-room escape adventure",
+  description,
+  image: `${SITE_URL}/images/billion-dollar-heist.png`,
+  url: `${SITE_URL}/escape-rooms/billion-dollar-heist`,
+  brand: { "@type": "Brand", name: "Escape Rooms Tibet" },
+  seller: { "@id": ORGANIZATION_ID },
+  offers: {
     "@type": "Offer",
-    "priceCurrency": "NZD",
-    "price": "35",
-    "availability": "https://schema.org/InStock",
-    "url": "https://www.escaperoomstibet.com/escape-rooms/billion-dollar-heist",
-    "validFrom": "2024-01-01"
+    priceCurrency: "NZD",
+    price: "35",
+    availability: "https://schema.org/InStock",
+    url: `${SITE_URL}/escape-rooms/billion-dollar-heist`,
+    validFrom: "2024-01-01",
   },
-  "category": "Escape Room Experience",
-  "additionalProperty": [
-    {
-      "@type": "PropertyValue",
-      "name": "Duration",
-      "value": "60 minutes"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "Players",
-      "value": "2-7"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "Difficulty",
-      "value": "Hard"
-    }
-  ]
+  category: "Escape room experience",
+  additionalProperty: [
+    { "@type": "PropertyValue", name: "Duration", value: "60 minutes" },
+    { "@type": "PropertyValue", name: "Players", value: "2-7" },
+    { "@type": "PropertyValue", name: "Difficulty", value: "Hard" },
+  ],
 }
 
-export default function DiamondHeistLayout({
+export default function BillionDollarHeistLayout({
   children,
 }: {
   children: React.ReactNode
@@ -100,6 +67,13 @@ export default function DiamondHeistLayout({
   return (
     <>
       <JsonLd data={diamondHeistSchema} />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", path: "/" },
+          { name: "Escape rooms", path: "/escape-rooms" },
+          { name: "The Billion Dollar Heist", path: "/escape-rooms/billion-dollar-heist" },
+        ]}
+      />
       {children}
     </>
   )

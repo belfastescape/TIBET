@@ -400,10 +400,10 @@ If you are wanting an escape room experience, we would 100% recommended this one
             variants={fadeIn}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-green-400 bg-clip-text text-transparent">
-              Frequently Asked Questions
+              Team-building FAQs
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to know about team building at Escape Rooms Tibet.
+              The usual questions before you block the calendar for your crew.
             </p>
           </motion.div>
 
@@ -708,7 +708,7 @@ If you are wanting an escape room experience, we would 100% recommended this one
                     className="bg-gradient-to-r from-cyan-500 to-green-500 hover:from-cyan-600 hover:to-green-600 text-white"
                     asChild
                   >
-                    <Link href="/booking">Book Now</Link>
+                    <Link href="/booking">Reserve</Link>
                   </Button>
                 </div>
               </motion.div>
@@ -766,7 +766,7 @@ If you are wanting an escape room experience, we would 100% recommended this one
                     className="bg-gradient-to-r from-cyan-500 to-green-500 hover:from-cyan-600 hover:to-green-600 text-white"
                     asChild
                   >
-                    <Link href="/booking">Book Now</Link>
+                    <Link href="/booking">Reserve</Link>
                   </Button>
                 </div>
               </motion.div>
@@ -824,7 +824,7 @@ If you are wanting an escape room experience, we would 100% recommended this one
                     className="bg-gradient-to-r from-cyan-500 to-green-500 hover:from-cyan-600 hover:to-green-600 text-white"
                     asChild
                   >
-                    <Link href="/booking">Book Now</Link>
+                    <Link href="/booking">Reserve</Link>
                   </Button>
                 </div>
               </motion.div>

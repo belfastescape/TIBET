@@ -11,10 +11,10 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { label: ["OUR", "GAMES"],   image: "/images/escape-rooms-tibet-hero.webp",                href: "#escape-rooms" },
-  { label: ["BOOK", "NOW"],    image: "/images/billion-dollar-heist/laser-team-4.webp",        href: "/booking" },
+  { label: ["OUR", "ROOMS"],   image: "/images/escape-rooms-tibet-hero.webp",                href: "#escape-rooms" },
+  { label: ["RESERVE"],    image: "/images/billion-dollar-heist/laser-team-4.webp",        href: "/booking" },
   { label: ["GROUPS"],         image: "/images/operation-pitt-team.webp",            href: "/team-building-tibet" },
-  { label: ["PRICES"],         image: "/images/ancient-tomb/examining-book.webp",         href: "/pricing" },
+  { label: ["RATES"],         image: "/images/ancient-tomb/examining-book.webp",         href: "/pricing" },
 ]
 
 const secondaryLinks = [
@@ -24,7 +24,7 @@ const secondaryLinks = [
 
 const dropdowns = [
   {
-    label: "Our Games",
+    label: "Our rooms",
     links: [
       { label: "Operation Pitt", href: "/escape-rooms/operation-pitt" },
       { label: "The Billion Dollar Heist", href: "/escape-rooms/billion-dollar-heist" },
@@ -32,7 +32,7 @@ const dropdowns = [
     ],
   },
   {
-    label: "Group Bookings",
+    label: "Groups & events",
     links: [{ label: "Team Building", href: "/team-building-tibet" }],
   },
 ]
@@ -168,12 +168,12 @@ export default function ParallaxNav() {
               </Link>
             ))}
 
-            {/* Book Now button */}
+            {/* Reserve CTA */}
             <Link
               href="/booking"
               className="bg-gradient-to-r from-cyan-500 to-green-500 hover:from-cyan-600 hover:to-green-600 text-white text-sm font-medium px-4 py-2 rounded-md transition-all duration-200"
             >
-              Book Now
+              Reserve
             </Link>
           </nav>
 
@@ -248,7 +248,7 @@ export default function ParallaxNav() {
               onClick={() => setMobileMenuOpen(false)}
               className="mt-4 bg-gradient-to-r from-cyan-500 to-green-500 hover:from-cyan-600 hover:to-green-600 text-white font-medium text-lg px-10 py-4 rounded-md"
             >
-              Book Now
+              Reserve
             </Link>
           </div>
         )}
@@ -305,7 +305,7 @@ export default function ParallaxNav() {
         {/* Bottom bar */}
         <footer className="flex items-center justify-between px-5 py-5 sm:px-8 sm:py-6 md:px-12 lg:px-16">
           <p className="text-white/40 text-[10px] sm:text-xs tracking-wide hidden sm:block">
-            Scroll to explore
+            Scroll for more
           </p>
           <div className="flex items-center gap-1 sm:gap-1.5 mx-auto sm:mx-0">
             {navItems.map((_, index) => (

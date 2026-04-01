@@ -30,41 +30,41 @@ export default function FAQPage() {
     // General Information
     {
       id: "what-is-escape-room",
-      question: "What is an escape room?",
+      question: "How would you describe an escape room?",
       answer:
-        "An escape room is a physical adventure game where players are placed in a themed room and have to solve a series of puzzles, find clues, and complete objectives within a set time limit (usually 60 minutes) to 'escape' or accomplish the mission. Our rooms are designed to challenge your mind, test your teamwork, and provide an unforgettable experience for friends, families, and colleagues.",
+        "Think of it as a live, themed puzzle experience: your group enters a story-driven space and works through riddles, hidden clues, and tasks before the clock runs out—typically one hour—to finish the mission or “break out.” Our games are built to stretch your thinking, strengthen collaboration, and give mates, whānau, and workmates a shared experience worth talking about.",
       category: "general",
       tags: ["basics", "new players"],
     },
     {
       id: "first-time-tips",
-      question: "I've never done an escape room before. Any tips?",
+      question: "It’s my first escape room—what should I know?",
       answer:
-        "For first-timers, we recommend: 1) Communicate with your team and share what you find, 2) Search thoroughly but respectfully - nothing needs to be forced or broken, 3) Organize your clues so you can keep track of what you've found, 4) Don't be afraid to ask for hints if you're stuck, and 5) Most importantly, have fun! Our Quest for the Ancient Tomb room is an excellent choice for beginners.",
+        "A few habits help: keep talking and call out anything odd you find; look everywhere without forcing props or breaking anything; keep clues in one place so nothing gets lost; ask for a nudge from the host if you’re going in circles; and treat it as play, not a test. Newcomers often enjoy Quest for the Ancient Tomb as a gentle introduction.",
       category: "general",
       tags: ["basics", "new players", "tips"],
     },
     {
       id: "what-to-bring",
-      question: "What should I bring to an escape room?",
+      question: "Should I pack anything for my visit?",
       answer:
-        "You don't need to bring anything special to enjoy our escape rooms. Just bring your enthusiasm, problem-solving skills, and team spirit! We provide everything needed to solve the puzzles. We do recommend wearing comfortable clothing and arriving 15 minutes before your scheduled time. Please note that food and drinks are not allowed in the escape rooms, and we have secure lockers for your personal belongings.",
+        "No kit list—just bring curiosity and a cooperative mindset. We supply what you need for the puzzles. Wear something you can move in easily and aim to arrive about fifteen minutes early. Eating and drinking inside the game spaces isn’t permitted; lockers are available for bags and valuables.",
       category: "general",
       tags: ["preparation", "new players"],
     },
     {
       id: "how-many-people",
-      question: "How many people can play in an escape room?",
+      question: "What group sizes do your rooms support?",
       answer:
-        "Each of our rooms has a minimum and maximum capacity: Operation Pitt accommodates 2-8 players, The Billion Dollar Heist works best with 2-7 players, and Quest for the Ancient Tomb is suitable for 2-6 players. For the best experience, we recommend 3-5 players for Operation Pitt and Quest for the Ancient Tomb, and 4-6 players for The Billion Dollar Heist due to its complexity and multi-room layout.",
+        "Capacities differ by game: Operation Pitt fits 2–8, The Billion Dollar Heist 2–7, and Quest for the Ancient Tomb 2–6. For pacing and space, we suggest 3–5 in Operation Pitt and Quest for the Ancient Tomb, and 4–6 in The Billion Dollar Heist because of its layout and difficulty.",
       category: "general",
       tags: ["group size", "booking"],
     },
     {
       id: "age-requirements",
-      question: "Is there a minimum age requirement?",
+      question: "Is there a minimum age?",
       answer:
-        "We recommend players be at least 10 years old to fully enjoy and participate in the puzzles. If you are looking at a group of kids playing together with an adult, then 12 years old is the minimum age. Players under 16 must be accompanied by an adult. Our Quest for the Ancient Tomb room is the most family-friendly option. The Billion Dollar Heist and Operation Pitt contain more complex puzzles that may be challenging for younger players. There's no maximum age limit - escape rooms are fun for everyone!",
+        "We suggest age 10+ so everyone can engage with the puzzles. For a kids-only group with an adult supervising, the floor is 12. Anyone under 16 needs an adult present. Quest for the Ancient Tomb skews most family-friendly; Billion Dollar Heist and Operation Pitt lean harder on logic and may be tough for very young players. There’s no upper age—everyone’s welcome.",
       category: "general",
       tags: ["age", "children", "family"],
     },
@@ -72,26 +72,26 @@ export default function FAQPage() {
     // Booking & Pricing
     {
       id: "book-a-room",
-      question: "How do I book a room?",
+      question: "How do I make a reservation?",
       answer:
-        "Booking is easy! You can book directly through our website by selecting your preferred room, date, and time. Payment is required at the time of booking to secure your reservation. You can also reach us via our contact page or email if you need help. We recommend booking in advance, especially for weekends and holidays, as our rooms often fill up quickly.",
+        "Pick a room, date, and slot on our site and pay when you confirm to lock it in. Need a hand? Use the contact page or email us. Peak nights and holidays get busy, so reserving early is smart.",
       category: "booking",
       tags: ["reservation", "payment"],
     },
-    
+
     {
       id: "cancellation-policy",
       question: "What is your cancellation policy?",
       answer:
-        "Our cancellation policy is as follows: With 48+ hours notice, you can receive a full refund or reschedule for free. With 24-48 hours notice, no refund is available, but you can reschedule at no additional cost. With less than 24 hours notice, no refund or rescheduling is available. For group bookings of 10+ people, cancellations require 7 days notice for a refund. Rescheduling is always subject to availability.",
+        "48+ hours before: full refund or reschedule at no charge. 24–48 hours before: no refund, but you may move the booking once without a fee. Under 24 hours: no refund and no reschedule. For 10+ guests, we need a week’s notice for cancellations that qualify for a refund. Moves depend on open slots.",
       category: "booking",
       tags: ["cancellation", "refund", "reschedule"],
     },
     {
       id: "gift-vouchers",
-      question: "Do you offer gift vouchers?",
+      question: "Can I buy gift vouchers?",
       answer:
-        "Yes! Escape room experiences make great gifts. You can purchase gift vouchers for specific rooms or for any value. Vouchers are valid for 12 months from the date of purchase and can be emailed directly to the recipient or to you to give in person. You can purchase gift vouchers through our website or contact us by email if you need assistance.",
+        "Absolutely—an hour in a room is a memorable present. Choose a room or a dollar amount; vouchers last twelve months from purchase and can go straight to the recipient’s inbox or to you to wrap. Buy online or email us if you need help choosing.",
       category: "booking",
       tags: ["gifts", "vouchers"],
     },
@@ -99,7 +99,7 @@ export default function FAQPage() {
       id: "discounts-available",
       question: "What discounts do you offer?",
       answer:
-        "We offer several discounts: Saturday morning special discount. All games before noon, $130 maximum charge for up to 8 players, weekday bookings (Monday-Friday, team deal.. $33 pp if you have a minimum of 7ppl. Contact us to ask for group discounts. Teenage birthday deal $25 pp, $28pp on saturday afternoons.",
+        "Saturday mornings: before noon, capped at $130 for up to eight players. Weekdays (Mon–Fri): team rate of $33 per person with seven or more. Ask us about larger group pricing. Teen birthday pricing: $25 per person, or $28 on Saturday afternoons.",
       category: "booking",
       tags: ["discounts", "savings", "special offers"],
     },
@@ -107,27 +107,26 @@ export default function FAQPage() {
     // Game Experience
     {
       id: "locked-in",
-      question: "Do we really get locked in?",
+      question: "Are we actually locked inside?",
       answer:
-        "No, you are never actually locked in the room. For safety reasons, you can exit the room at any time if needed. The goal is to solve the puzzles to 'escape' within the time limit, but the door is never physically locked. Our game masters monitor your progress throughout the experience to ensure your safety and enjoyment.",
+        "No—you’re never trapped. You can step out if you need to; the door isn’t physically barred from the inside. The “escape” is a story beat, not a safety risk. Staff keep an eye on your session so you stay safe and enjoy the run.",
       category: "experience",
       tags: ["safety", "gameplay"],
     },
-    
-    
+
     {
       id: "scary",
-      question: "Are the rooms scary?",
+      question: "Will I find the rooms frightening?",
       answer:
-        "No, our rooms are not designed to be scary. They are puzzle-based adventures that focus on problem-solving rather than fear factors. There are no jump scares, horror elements, or actors that will frighten you. All our rooms are suitable for players who don't enjoy horror elements. The rooms are challenging mentally, but not frightening.",
+        "They’re not horror experiences. Expect brain teasers and atmosphere, not jump scares or gore, and no actors designed to scare you. If you dislike spooky stuff, you’re still in good hands—the challenge is mental, not about fear.",
       category: "experience",
       tags: ["horror", "fear", "atmosphere"],
     },
     {
       id: "photos",
-      question: "Can we take photos inside the rooms?",
+      question: "Can we take pictures during the game?",
       answer:
-        "To preserve the mystery for future players and protect our room designs, we don't allow photos inside the rooms during gameplay. However, we're happy to take a group photo of your team before or after your experience that you can share on social media! We encourage you to tag us in your posts - we love seeing our players' excitement.",
+        "We ask you not to photograph inside the set so spoilers stay fresh for the next teams. We’re glad to snap a group shot before or after you play—feel free to post and tag us; we enjoy seeing the smiles.",
       category: "experience",
       tags: ["photography", "social media"],
     },
@@ -135,25 +134,20 @@ export default function FAQPage() {
     // Group Bookings & Events
     {
       id: "team-building",
-      question: "Do you offer team building events?",
+      question: "Do you host corporate or team events?",
       answer:
-        "Yes, we specialize in corporate team building events! Our escape rooms are perfect for improving communication, problem-solving, and teamwork. We offer several packages: Team Building Basic (up to 20 people, 2 hours) for $600, Team Building Premium (up to 30 people, half day) for $1,200, and Custom Corporate Events with flexible pricing. Visit our Team Building page for more details or contact us to discuss your specific needs.",
+        "Yes—corporate groups are a big part of what we do. The games sharpen communication, collaboration, and problem-solving under time pressure. Packages include Team Building Basic (up to 20 people, ~2 hours, $600), Team Building Premium (up to 30, half day, $1,200), and bespoke corporate options. See the Team Building page or reach out to tailor something.",
       category: "groups",
       tags: ["corporate", "team building", "work events"],
     },
     {
       id: "private-bookings",
-      question: "Do you offer private bookings?",
+      question: "Will our group have the room to ourselves?",
       answer:
-        "Yes, when you book an entire room, it's automatically private - we never combine different groups in the same room. For exclusive use of our entire facility, please contact us about our corporate packages or custom events. This is perfect for larger celebrations, team building events, or any occasion where you want a more personalized experience.",
+        "A full-room booking is always just your group—we don’t mix strangers. Want the whole venue? Talk to us about corporate or private-hire packages. That works well for big celebrations, offsites, or anything where you want the run of the place.",
       category: "groups",
       tags: ["private", "exclusive", "group booking"],
     },
-    
-    
-    
-
-    
   ]
 
   useEffect(() => {
@@ -217,7 +211,7 @@ export default function FAQPage() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/placeholder.svg?key=faq-hero"
-            alt="Escape Rooms Tibet FAQs"
+            alt="Escape Rooms Tibet help and answers"
             fill
             className="object-cover opacity-40"
             priority
@@ -233,10 +227,10 @@ export default function FAQPage() {
             variants={fadeIn}
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-green-400 bg-clip-text text-transparent">
-              Frequently Asked Questions
+              Answers to common questions
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Find answers to common questions about our escape rooms, booking process, and more.
+              Booking, gameplay, groups—what you need to know before you walk through our door.
             </p>
           </motion.div>
         </div>
@@ -255,7 +249,7 @@ export default function FAQPage() {
               <Search className="absolute left-4 top-3.5 h-5 w-5 text-gray-400" />
               <Input
                 type="text"
-                placeholder="Search for answers..."
+                placeholder="Type a topic or keyword…"
                 value={searchQuery}
                 onChange={handleSearchChange}
                 className="pl-12 pr-12 py-6 bg-[#111] border-[#333] focus:border-cyan-500 text-white text-lg rounded-full"
@@ -287,11 +281,11 @@ export default function FAQPage() {
             <Tabs defaultValue="all" value={activeCategory} onValueChange={setActiveCategory} className="w-full">
               <div className="mb-8 overflow-x-auto">
                 <TabsList className="bg-[#111] border border-[#222] p-1 inline-flex min-w-full md:min-w-0">
-                  <TabsTrigger value="all">All Questions</TabsTrigger>
-                  <TabsTrigger value="general">General Info</TabsTrigger>
-                  <TabsTrigger value="booking">Booking & Pricing</TabsTrigger>
-                  <TabsTrigger value="experience">Game Experience</TabsTrigger>
-                  <TabsTrigger value="groups">Group Bookings</TabsTrigger>
+                  <TabsTrigger value="all">Everything</TabsTrigger>
+                  <TabsTrigger value="general">Basics</TabsTrigger>
+                  <TabsTrigger value="booking">Booking & rates</TabsTrigger>
+                  <TabsTrigger value="experience">During the game</TabsTrigger>
+                  <TabsTrigger value="groups">Teams & groups</TabsTrigger>
                   <TabsTrigger value="accessibility">Accessibility</TabsTrigger>
                   <TabsTrigger value="location">Location</TabsTrigger>
                 </TabsList>
@@ -307,7 +301,7 @@ export default function FAQPage() {
                     </span>
                   ) : (
                     <span>
-                      Showing {filteredFaqs.length} question{filteredFaqs.length !== 1 ? "s" : ""}
+                      Showing {filteredFaqs.length} item{filteredFaqs.length !== 1 ? "s" : ""}
                     </span>
                   )}
                 </div>
@@ -349,16 +343,16 @@ export default function FAQPage() {
                   </Accordion>
                 ) : (
                   <div className="bg-[#111] rounded-lg border border-[#222] p-8 text-center">
-                    <h3 className="text-xl font-bold text-white mb-2">No results found</h3>
+                    <h3 className="text-xl font-bold text-white mb-2">Nothing matched</h3>
                     <p className="text-gray-400 mb-4">
-                      We couldn't find any FAQs matching your search. Try different keywords or browse by category.
+                      Try another word or switch tabs—your answer might be under a different topic.
                     </p>
                     <Button
                       variant="outline"
                       className="border-cyan-500 text-cyan-400 hover:bg-cyan-500/10"
                       onClick={clearSearch}
                     >
-                      Clear Search
+                      Reset search
                     </Button>
                   </div>
                 )}
@@ -385,15 +379,15 @@ export default function FAQPage() {
                 </div>
                 <div>
                   <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white text-center md:text-left">
-                    Still Have Questions?
+                    Need something else?
                   </h2>
                   <p className="text-gray-300 mb-6 text-center md:text-left">
-                    Can't find the answer you're looking for? Please feel free to contact us directly.
+                    If it’s not listed here, drop us a line—we’re happy to help with specifics.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Link href="/contact" className="flex-1">
                       <Button className="w-full bg-gradient-to-r from-cyan-500 to-green-500 hover:from-cyan-600 hover:to-green-600 text-white">
-                        Contact Us
+                        Get in touch
                       </Button>
                     </Link>
                   </div>
@@ -415,29 +409,29 @@ export default function FAQPage() {
             variants={fadeIn}
           >
             <h2 className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-cyan-400 to-green-400 bg-clip-text text-transparent">
-              Popular Questions
+              Shortcuts
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
                 {
-                  question: "What is the best room for beginners?",
-                  answer: "Operation Pitt is our recommended starting point.",
+                  question: "Which room suits first-timers?",
+                  answer: "Quest for the Ancient Tomb is our usual recommendation for a softer first run.",
                   link: "#first-time-tips",
                 },
                 {
-                  question: "Do you offer team building events?",
-                  answer: "Yes, we specialize in corporate team building events!",
+                  question: "Do you run corporate events?",
+                  answer: "Yes, we host team-building and workplace groups regularly.",
                   link: "#team-building",
                 },
                 {
-                  question: "How much does it cost?",
-                  answer: "Adultprices range from $35-$45 per person, and under 16's $25-$28 ,with group discounts available.",
+                  question: "What does pricing look like?",
+                  answer: "Adults roughly $35–$45 each; under 16s about $25–$28, with group deals on offer.",
                   link: "/pricing",
                 },
                 {
-                  question: "What is your cancellation policy?",
-                  answer: "24+ hours notice: Full refund or free rescheduling. If you can't make it, just tell us asap. We will be as reasonable as possible",
+                  question: "How do cancellations work?",
+                  answer: "48+ hours out: refund or free move. Closer in, rules tighten—see the full policy for detail.",
                   link: "#cancellation-policy",
                 },
               ].map((item, index) => (
@@ -451,7 +445,7 @@ export default function FAQPage() {
                   </h3>
                   <p className="text-gray-400 mb-2">{item.answer}</p>
                   <div className="flex items-center text-cyan-400 text-sm">
-                    <span>Read more</span>
+                    <span>See details</span>
                     <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </Link>
@@ -473,22 +467,21 @@ export default function FAQPage() {
           >
             <div className="p-8 md:p-12 text-center">
               <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-green-400 bg-clip-text text-transparent">
-                Ready to Book Your Adventure?
+                Time to lock in a slot?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Now that you have all the information you need, it's time to put your problem-solving skills to the
-                test. The clock is ticking!
+                You’ve got the basics—now bring your crew and see how you fare before the timer hits zero.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button className="bg-gradient-to-r from-cyan-500 to-green-500 hover:from-cyan-600 hover:to-green-600 text-white text-lg py-6 px-8">
-                  Book Now
+                  Reserve a game
                 </Button>
                 <Link href="/contact">
                   <Button
                     variant="outline"
                     className="border-cyan-500 text-cyan-400 hover:bg-cyan-500/10 text-lg py-6 px-8"
                   >
-                    Contact Us
+                    Get in touch
                   </Button>
                 </Link>
               </div>

@@ -422,10 +422,10 @@ export default function GroupBookingsPage() {
           >
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-green-400 bg-clip-text text-transparent">
-                Frequently Asked Questions
+                Group booking Q&amp;A
               </h2>
               <p className="text-xl text-gray-300">
-                Everything you need to know about group bookings at Escape Rooms Tibet.
+                What organisers usually ask before they hold a date.
               </p>
             </div>
 

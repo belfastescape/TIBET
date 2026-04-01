@@ -14,14 +14,11 @@ export function Footer() {
       <section className="py-12 bg-[#0c0c0c] border-t border-[#222]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl font-bold text-white mb-4">About Escape Rooms Tibet</h2>
+            <h2 className="text-2xl font-bold text-white mb-4">Who we are</h2>
             <p className="text-gray-400 leading-relaxed">
-              Escape Rooms Tibet was established in 2021 with a vision to provide exhilarating escape room
-              adventures in the heart of Tibet City Centre. Our mission is to create unforgettable experiences that
-              challenge the mind and foster teamwork. We pride ourselves on our core values: Customer Satisfaction,
-              Teamwork, and Innovation. These principles guide us in delivering exceptional entertainment for friends,
-              families, and corporate groups alike. Join us for an adventure that promises excitement and collaboration,
-              making every visit a memorable one.
+              Since 2021 we’ve welcomed players to live puzzle adventures in Tibet’s city centre. We’re here to spark
+              curiosity, reward cooperation, and send groups out laughing about what just happened. Our compass points to
+              guest care, collaboration, and fresh ideas—whether you’re here with mates, relatives, or colleagues.
             </p>
           </div>
         </div>
@@ -40,8 +37,7 @@ export function Footer() {
                 style={{ width: '100px', height: '40px' }}
               />
               <p className={`${footerMuted} mb-4 max-w-md`}>
-                Tibet's premier escape room experience, offering immersive adventures for friends, families, and
-                corporate teams. One of the best fun indoor activities in Tibet.
+                A top pick for indoor fun in Tibet—story-led rooms for friends, families, and work outings alike.
               </p>
               <div className="flex space-x-4">
                 <Link
@@ -57,7 +53,7 @@ export function Footer() {
             </div>
 
             <div>
-              <h3 className="text-lg font-bold mb-4 text-white">Quick Links</h3>
+              <h3 className="text-lg font-bold mb-4 text-white">Explore</h3>
               <ul className="space-y-2">
                 <li>
                   <Link href="/" className={footerLink}>
@@ -66,7 +62,7 @@ export function Footer() {
                 </li>
                 <li>
                   <Link href="/escape-rooms" className={footerLink}>
-                    Our Escape Rooms
+                    All rooms
                   </Link>
                 </li>
                 
@@ -89,7 +85,7 @@ export function Footer() {
             </div>
 
             <div>
-              <h3 className="text-lg font-bold mb-4 text-white">Our Rooms</h3>
+              <h3 className="text-lg font-bold mb-4 text-white">Scenarios</h3>
               <ul className="space-y-2">
                 <li>
                   <Link href="/escape-rooms/operation-pitt" className={footerLink}>
@@ -110,7 +106,7 @@ export function Footer() {
             </div>
 
             <div>
-              <h3 className="text-lg font-bold mb-4 text-white">Group Events</h3>
+              <h3 className="text-lg font-bold mb-4 text-white">Groups</h3>
               <ul className="space-y-2">
                 <li>
                   <Link href="/team-building" className={footerLink}>
@@ -126,7 +122,7 @@ export function Footer() {
             </div>
 
             <div>
-              <h3 className="text-lg font-bold mb-4 text-white">Resources</h3>
+              <h3 className="text-lg font-bold mb-4 text-white">Helpful links</h3>
               <ul className="space-y-2">
                 <li>
                   <Link href="/faq" className={footerLink}>
@@ -157,7 +153,7 @@ export function Footer() {
             </div>
 
             <div>
-              <h3 className="text-lg font-bold mb-4 text-white">Contact Information</h3>
+              <h3 className="text-lg font-bold mb-4 text-white">Reach us</h3>
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <MapPin className="w-5 h-5 text-cyan-400 mr-2 mt-0.5" />

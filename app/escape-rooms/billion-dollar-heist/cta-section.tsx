@@ -135,7 +135,7 @@ export function CtaSection() {
             title="Want to book this game?"
             subtitle="Check out all availability on our booking page."
             href="/booking"
-            label="Book Now"
+            label="Reserve"
             variant="primary"
             buttonColor="green"
             delay={0.1}
