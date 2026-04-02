@@ -8,6 +8,8 @@ import { motion, useScroll, useTransform } from "framer-motion"
 import { Clock, Users, ArrowRight, MapPin, PartyPopper } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import { HomeSocialProofStrip } from "@/components/home-page/HomeSocialProofStrip"
+import { roomPriceAndPlayersLine } from "@/lib/room-offers"
 
 const PriceComparisonWidget = dynamic(
   () => import("@/components/PriceComparisonWidget").then((m) => ({ default: m.PriceComparisonWidget })),
@@ -31,6 +33,8 @@ export function HomeBelowHero() {
 
   return (
     <>
+      <HomeSocialProofStrip />
+
       {/* About Section */}
       <section id="about" className="py-24 bg-[#0c0c0c]">
         <div className="container mx-auto px-4 max-w-4xl text-center">
@@ -94,6 +98,9 @@ export function HomeBelowHero() {
                   <span className="inline-flex items-center text-sm text-cyan-400 mb-3 gap-1.5">
                     <Users className="w-4 h-4" /> 2–7 people &nbsp;·&nbsp; 60 minutes
                   </span>
+                  <p className="text-sm font-medium text-white/90 mb-3">
+                    {roomPriceAndPlayersLine("billion-dollar-heist")}
+                  </p>
                   <h3 className="text-4xl md:text-6xl font-bold text-white mb-4">Billion Dollar Heist</h3>
                   <p className="text-gray-200 text-lg md:text-xl mb-8 max-w-xl">
                     The Phantom syndicate has stashed a billion-dollar haul inside the world&apos;s most secure vault.
@@ -137,6 +144,9 @@ export function HomeBelowHero() {
                   <span className="inline-flex items-center text-sm text-cyan-400 mb-3 gap-1.5">
                     <Users className="w-4 h-4" /> 2–6 people &nbsp;·&nbsp; 60 minutes
                   </span>
+                  <p className="text-sm font-medium text-white/90 mb-3">
+                    {roomPriceAndPlayersLine("ancient-tomb")}
+                  </p>
                   <h3 className="text-4xl md:text-6xl font-bold text-white mb-4">Quest for The Ancient Tomb</h3>
                   <p className="text-gray-200 text-lg md:text-xl mb-8 max-w-xl">
                     Step into a world of magic and mystery where ancient spells and enchanted artifacts await. Your team
@@ -181,6 +191,9 @@ export function HomeBelowHero() {
                   <span className="inline-flex items-center text-sm text-cyan-400 mb-3 gap-1.5">
                     <Users className="w-4 h-4" /> 2–8 people &nbsp;·&nbsp; 60 minutes
                   </span>
+                  <p className="text-sm font-medium text-white/90 mb-3">
+                    {roomPriceAndPlayersLine("operation-pitt")}
+                  </p>
                   <h3 className="text-4xl md:text-6xl font-bold text-white mb-4">Operation Pitt</h3>
                   <p className="text-gray-200 text-lg md:text-xl mb-8 max-w-xl">
                     The Tibetan Secret Service is hearing a lot of internet intelligence about something called Operation

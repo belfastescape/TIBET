@@ -1,7 +1,9 @@
 "use client"
 
 import Link from "next/link"
+import { BookingTrustBlock } from "@/components/booking/BookingTrustBlock"
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb"
+import { ROOM_TRUST_TESTIMONIALS } from "@/lib/room-offers"
 import { HeroSection } from "./hero-section"
 import { DescriptionSection } from "./description-section"
 import { GameStats } from "./game-stats"
@@ -38,10 +40,16 @@ export default function OperationPitt() {
 
       {/* Booking CTA */}
       <section className="py-12 md:py-16 bg-[#0a0a0a] border-y border-[#222]">
-        <div className="container mx-auto px-4 flex justify-center">
+        <div className="container mx-auto flex max-w-3xl flex-col items-center gap-6 px-4">
+          <BookingTrustBlock
+            quote={ROOM_TRUST_TESTIMONIALS["operation-pitt"].quote}
+            attribution={ROOM_TRUST_TESTIMONIALS["operation-pitt"].attribution}
+            roomName={ROOM_TRUST_TESTIMONIALS["operation-pitt"].roomLabel}
+            className="w-full"
+          />
           <Link
             href="/booking"
-            className="inline-flex w-full max-w-3xl items-center justify-center rounded-xl bg-gradient-to-r from-cyan-500 to-green-500 px-6 py-5 text-center text-base font-bold leading-snug text-white shadow-lg shadow-cyan-500/20 transition hover:from-cyan-400 hover:to-green-400 hover:shadow-cyan-500/30 md:px-10 md:py-6 md:text-xl lg:text-2xl"
+            className="inline-flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-cyan-500 to-green-500 px-6 py-5 text-center text-base font-bold leading-snug text-white shadow-lg shadow-cyan-500/20 transition hover:from-cyan-400 hover:to-green-400 hover:shadow-cyan-500/30 md:px-10 md:py-6 md:text-xl lg:text-2xl"
           >
             Check Availability on the Booking Page
           </Link>

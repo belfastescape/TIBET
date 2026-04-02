@@ -1,6 +1,8 @@
 'use client'
 
 import { useRef } from 'react'
+import { BookingTrustBlock } from '@/components/booking/BookingTrustBlock'
+import { BOOKING_PAGE_TESTIMONIAL } from '@/lib/room-offers'
 
 export default function BookingPage() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -9,7 +11,12 @@ export default function BookingPage() {
     <div className="min-h-screen bg-[#0c0c0c] pt-24">
       {/* Booking Widget Section */}
       <section className="py-8">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto max-w-3xl px-4">
+          <BookingTrustBlock
+            quote={BOOKING_PAGE_TESTIMONIAL.quote}
+            attribution={BOOKING_PAGE_TESTIMONIAL.attribution}
+            className="mb-8"
+          />
           <div className="bg-[#333] rounded-xl p-6 md:p-8">
             {/* Booking widget placeholder — replace with your booking system */}
             <div

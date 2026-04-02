@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { roomPriceAndPlayersLine } from "@/lib/room-offers"
 
 export function HeroSection() {
   return (
@@ -24,6 +25,9 @@ export function HeroSection() {
             <span className="text-cyan-400">Pitt</span>
           </h1>
           <p className="mt-4 text-lg text-gray-400 font-mono">The Ultimate Spy Escape Room &mdash; Ages 12+</p>
+          <p className="mt-4 text-base font-semibold text-cyan-300/95 font-mono">
+            {roomPriceAndPlayersLine("operation-pitt")}
+          </p>
         </div>
       </div>
     </section>

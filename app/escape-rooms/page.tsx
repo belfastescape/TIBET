@@ -12,6 +12,7 @@ import { HeroSection } from "@/components/hero-section"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import GoogleIcon from '@/components/GoogleIcon'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { roomPriceAndPlayersLine, type RoomSlug } from "@/lib/room-offers"
 
 interface RoomCardProps {
   room: {
@@ -62,6 +63,9 @@ function RoomCard({ room }: RoomCardProps) {
       <div className="p-6 flex-grow flex flex-col">
         <div className="flex-grow">
           <h3 className="text-2xl font-bold text-white mb-2">{room.name}</h3>
+          <p className="text-sm font-medium text-cyan-300/90 mb-2">
+            {roomPriceAndPlayersLine(room.id as RoomSlug)}
+          </p>
           <p className="text-gray-300 mb-4">{room.description}</p>
         </div>
         <div className="flex flex-wrap gap-2 mb-4">
@@ -122,7 +126,7 @@ export default function EscapeRoomsPage() {
       image: "/images/spiesnoir.webp",
 
       minPeople: 2,
-      maxPeople: 14,
+      maxPeople: 8,
       duration: 60,
       tags: ["spy themed", "advanced", "teamwork"],
     },
